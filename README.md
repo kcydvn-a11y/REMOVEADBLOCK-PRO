@@ -96,7 +96,7 @@ Trái tim của **RemoveAdblock Pro** là hệ thống phòng thủ đa lớp:
 
 ![Bank Support](bank.png)
 
-- **Tác giả:** Thái Thông (Jungle)
+- **Tác giả:** Thái Thông
 - **Email:** [ThaiThongsj@gmail.com](mailto:ThaiThongsj@gmail.com)
 
 **Ủng hộ duy trì dự án:**  
