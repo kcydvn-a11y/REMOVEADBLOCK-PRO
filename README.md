@@ -1,6 +1,6 @@
 # 🛡️ **REMOVEADBLOCK PRO**  
 **YouTube Ad Blocker - Version 14.9.5**
-![Bank Support](bg.png)
+![Bank Support](bg.jng)
 > Advanced YouTube Ad Blocker with **Stealth Injection Technology** and Intelligent Adaptive Recovery System.
 
 ---
