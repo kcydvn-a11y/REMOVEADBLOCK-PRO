@@ -1,82 +1,98 @@
-# 🛡️ **REMOVEADBLOCK PRO**  
-**YouTube Ad Blocker - Version 14.9.5**
+# 🛡️ **Jungle Diamond 14.9.12**  
+**Advanced YouTube Ad Blocker with Self-Healing Intelligence**
 
-> Advanced YouTube Ad Blocker with **Stealth Injection Technology** and Intelligent Adaptive Recovery System.
+![Version](https://img.shields.io/badge/Version-14.9.12-blue?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-YouTube-red?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
----
-
-## ✨ CORE FEATURES
-
-- **Complete Ad Elimination**: Fully removes pre-roll, mid-roll, overlay, banner, and sponsored content
-- **Enforcement Destruction**: Automatically eliminates "Continue Watching", "Ad blocker detected", and enforcement dialogs
-- **Smart Auto-Skip & Acceleration**: Intelligent fast-forward and instant ad skipping
-- **Emergency Stream Recovery**: Automatically restores video playback when YouTube attempts to block it
-- **Hardware Interaction Protection**: Monitors real user clicks, Space, and K key presses to distinguish genuine interaction
-- **High Performance**: Lightweight, does not slow down the browser
-- **Adaptive Updates**: Dynamically adapts to YouTube's frequent UI changes
+> **Next-generation YouTube Ad Blocker** featuring **Self-Healing Anti-Throttle**, **Biometric Entropy**, and **Persistent Fingerprint Shielding**.
 
 ---
 
-## 🧠 MULTI-LAYER ALGORITHM
+### 🎥 **Demo on YouTube**
+[![Watch Demo](https://img.shields.io/badge/Watch_Demo_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=PGSILkWrKjU)
 
-The heart of **RemoveAdblock Pro** is its intelligent multi-layered defense system:
+---
 
-**Core Engine = (Stealth Injection + JSON Proxy) × Recovery System × Anti-Detection**
+## ✨ **Core Features**
+
+- **Ultra Flash Skip** — Instantly mutes and skips ads with realistic biometric reaction delay
+- **Self-Healing Engine** — Automatically detects and counters YouTube’s throttling, stalled streams, and forced playback manipulation
+- **Persistent Fingerprint Shield** — Defeats Canvas, AudioContext, WebGL, and hardware fingerprinting with session-consistent noise
+- **Behavioral Entropy System** — Simulates natural human interactions (mouse movement, scroll, keyboard)
+- **Memory Leak Protection** — Advanced lifecycle management using AbortController and Central Registry
+- **SPA Optimization** — Perfect handling of YouTube’s Single Page Application navigation
+- **Hardware Interaction Protection** — Distinguishes real user actions from automated detection
+- **High Performance** — Extremely lightweight with adaptive CPU throttling
+
+---
+
+## 🧠 **Multi-Layer Algorithm**
+
+The core of **Jungle Diamond** is built on an intelligent, adaptive defense architecture:
+
+**Core Engine = (Persistent Fingerprint Shield + JSON Proxy) × Self-Healing Recovery × Biometric Entropy**
 
 ### Technology Layers:
 
-- **Main World Injection**: Injects directly into the page's main JavaScript context (bypassing traditional content script limitations)
-- **JSON Proxy Manipulation**: Deep real-time manipulation of `playerResponse` and `ytplayer.config`
-- **Hardware Tracker**: Detects genuine physical user interactions
-- **Network Interceptor**: Completely blocks YouTube's tracking & reporting requests
-- **Nonstop Recovery Engine**: Continuous monitoring and automatic video resumption
-- **Stealth CSS + DOM Observer**: Visually hides all advertising elements
+- **Persistent Session Seed** — Consistent fingerprint spoofing across page refreshes
+- **Biometric Jitter Arc** — Realistic human reaction timing for ad skipping
+- **Self-Healing Core** — Real-time detection and recovery from throttling & stalls
+- **Central Lifecycle Registry** — Advanced memory management with AbortController
+- **Behavioral Entropy Engine** — Mouse, scroll, and keyboard simulation
+- **Stealth CSS + DOM Observer** — Visually eliminates all ad elements
+- **Network Interceptor** — Blocks tracking and reporting requests
 
 ---
 
-## 🎯 KEY PROTECTION MECHANISMS
+## 🎯 **Key Protection Mechanisms**
 
-| Layer | Mechanism Name              | Description |
-|-------|-----------------------------|-----------|
-| 1     | **Stealth Injection**       | Direct script injection into Main World |
-| 2     | **JSON Proxy**              | Real-time manipulation of player data |
-| 3     | **Hardware Tracker**        | Monitors real user interactions |
-| 4     | **Nonstop Recovery**        | Automatic stream recovery on interruption |
-| 5     | **Anti-Detection**          | Counters YouTube's adblock detection |
-
----
-
-## 📥 INSTALLATION GUIDE
-
-1. Download the extension source code (folder or zip)
-2. Open your browser (**Chrome / Edge / Brave**)
-3. Go to `chrome://extensions/` or `edge://extensions/`
-4. Enable **Developer Mode**
-5. Click **"Load unpacked"** → Select the folder containing the extension
-6. Done! The extension will activate immediately
+| Layer | Mechanism | Description |
+|-------|---------|-----------|
+| 1 | **Persistent Fingerprint Shield** | Canvas, Audio, WebGL & Hardware spoofing with session seed |
+| 2 | **Self-Healing Anti-Throttle** | Detects and counters playback manipulation & stalled streams |
+| 3 | **Biometric Jitter** | Realistic reaction delays when skipping ads |
+| 4 | **Behavioral Entropy** | Natural mouse, scroll & keyboard interactions |
+| 5 | **Memory Shield** | Central Registry + AbortController for long sessions |
+| 6 | **JSON Proxy** | Deep real-time manipulation of `playerResponse` |
 
 ---
 
-## ⚙️ DEVELOPMENT & ARCHITECTURE
+## 📥 **Installation Guide**
 
-- **Language**: Pure JavaScript with direct injection into YouTube
-- **Core Technologies**: Proxy, MutationObserver, RequestAnimationFrame, Network Interception
-- **Goal**: Deliver a **clean, smooth, uninterrupted** YouTube experience
+1. Install **Tampermonkey** or **Violentmonkey** in your browser
+2. Click the **Raw** button on the script file
+3. Confirm installation in the userscript manager
+4. Refresh any YouTube page — **Jungle Diamond activates automatically**
 
----
-
-## 📬 CONTACT & SUPPORT
-
-- **Author**: Thái Thông
-- **Email**: ThaiThongsj@gmail.com
-- **Donation Account** (Vietcombank):  
-  `9898661918` — **NGUYỄN NGỌC THÁI THÔNG**
+**No configuration required.** Works on both desktop and mobile YouTube.
 
 ---
 
-**Thank you for using RemoveAdblock Pro!**  
+## ⚙️ **Development & Architecture**
+
+- **Language**: Pure JavaScript (Userscript)
+- **Injection**: `@run-at document-start`
+- **Core Technologies**: Proxy, MutationObserver, AbortController, Session Storage, Performance API
+- **Design Philosophy**: Maximum stealth + self-adaptation with minimal performance impact
+
+---
+
+## 🔧 **Contact & Support**
+
+- **Author**: Thai Thong + Vietnamese Community
+- **Email**: [ThaiThongsj@gmail.com](mailto:ThaiThongsj@gmail.com)
+
+### 💰 **Support the Project**
+
+![Bank Support](bank.png)
+
+**Vietcombank Account**  
+`9898661918` — **NGUYỄN NGỌC THÁI THÔNG**
+
+---
+
+**Thank you for using Jungle Diamond!**  
 Enjoy YouTube without interruptions. ✨
-
----
 
 **Made with ❤️ for a better viewing experience**
