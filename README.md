@@ -1,81 +1,111 @@
-# 🛡️ **REMOVEADBLOCK PRO**  
-**YouTube Ad Blocker - Version 14.9.5**
-![Bank Support](bg.jpg)
-> Advanced YouTube Ad Blocker with **Stealth Injection Technology** and Intelligent Adaptive Recovery System.
+# 🛡️ **REMOVEADBLOCK PRO**
+**YouTube Ad Blocker - Phiên bản 14.9.20 Ultra**
+
+![Banner](bg.jpg)
+
+> Hệ thống chặn quảng cáo YouTube cao cấp với công nghệ **Stealth Injection** + **Adaptive Recovery** + **Anti-Detection 2026**.
+
+> Giữ nguyên cấu trúc mượt mà của bản gốc, đồng thời bổ sung lớp khiên chống bóp băng thông và đồng bộ hóa phiên mạnh mẽ.
 
 ---
 
-## ✨ CORE FEATURES
+## ✨ TÍNH NĂNG CỐT LÕI
 
-- **Complete Ad Elimination**: Fully removes pre-roll, mid-roll, overlay, banner, and sponsored content
-- **Enforcement Destruction**: Automatically eliminates "Continue Watching", "Ad blocker detected", and enforcement dialogs
-- **Smart Auto-Skip & Acceleration**: Intelligent fast-forward and instant ad skipping
-- **Emergency Stream Recovery**: Automatically restores video playback when YouTube attempts to block it
-- **Hardware Interaction Protection**: Monitors real user clicks, Space, and K key presses to distinguish genuine interaction
-- **High Performance**: Lightweight, does not slow down the browser
-- **Adaptive Updates**: Dynamically adapts to YouTube's frequent UI changes
+- **Chặn quảng cáo triệt để**  
+  Loại bỏ hoàn toàn pre-roll, mid-roll, overlay, banner, sponsored content và mealbar promo.
 
----
+- **Tiêu diệt Enforcement**  
+  Tự động xóa dialog “Continue watching”, “Ad block detected”, “Tạm dừng video”, và mọi thông báo vi phạm.
 
-## 🧠 MULTI-LAYER ALGORITHM
+- **Tự động tua & Skip thông minh**  
+  Tăng tốc quảng cáo cực nhanh + hiện màn che logo đẹp mắt trong lúc bỏ qua.
 
-The heart of **RemoveAdblock Pro** is its intelligent multi-layered defense system:
+- **Khôi phục Stream khẩn cấp**  
+  Tự động phục hồi video khi YouTube cố tình chặn hoặc làm gián đoạn.
 
-**Core Engine = (Stealth Injection + JSON Proxy) × Recovery System × Anti-Detection**
+- **Hardware Interaction Protection**  
+  Giám sát click thật, phím Space và phím K để phân biệt thao tác người dùng.
 
-### Technology Layers:
+- **Self-Healing Core**  
+  Tự chữa lành luồng phát, chống bóp băng thông và stall video.
 
-- **Main World Injection**: Injects directly into the page's main JavaScript context (bypassing traditional content script limitations)
-- **JSON Proxy Manipulation**: Deep real-time manipulation of `playerResponse` and `ytplayer.config`
-- **Hardware Tracker**: Detects genuine physical user interactions
-- **Network Interceptor**: Completely blocks YouTube's tracking & reporting requests
-- **Nonstop Recovery Engine**: Continuous monitoring and automatic video resumption
-- **Stealth CSS + DOM Observer**: Visually hides all advertising elements
+- **Hiệu suất cao**  
+  Không làm chậm trình duyệt, tối ưu tài nguyên, hỗ trợ cả Desktop – Mobile – YouTube Music – YouTube TV.
 
----
-
-## 🎯 KEY PROTECTION MECHANISMS
-
-| Layer | Mechanism Name              | Description |
-|-------|-----------------------------|-----------|
-| 1     | **Stealth Injection**       | Direct script injection into Main World |
-| 2     | **JSON Proxy**              | Real-time manipulation of player data |
-| 3     | **Hardware Tracker**        | Monitors real user interactions |
-| 4     | **Nonstop Recovery**        | Automatic stream recovery on interruption |
-| 5     | **Anti-Detection**          | Counters YouTube's adblock detection |
+- **Thích ứng linh hoạt**  
+  Tự động thích nghi với mọi thay đổi giao diện của YouTube.
 
 ---
 
-## 📥 INSTALLATION GUIDE
+## 🧠 THUẬT TOÁN ĐA TẦNG
 
-1. Download the extension source code (folder or zip)
-2. Open your browser (**Chrome / Edge / Brave**)
-3. Go to `chrome://extensions/` or `edge://extensions/`
-4. Enable **Developer Mode**
-5. Click **"Load unpacked"** → Select the folder containing the extension
-6. Done! The extension will activate immediately
+Trái tim của **RemoveAdblock Pro** là hệ thống phòng thủ đa lớp:
+
+**Core Engine = (Stealth Injection + JSON Proxy) × Recovery System × Anti-Detection × Self-Healing**
+
+### Chi tiết các lớp công nghệ:
+
+- **Main World Injection** — Tiêm script trực tiếp vào ngữ cảnh trang web
+- **JSON Proxy Manipulation** — Can thiệp sâu vào `playerResponse`, `ytplayer.config` và `ytInitialPlayerResponse`
+- **Network Interceptor** — Chặn toàn bộ tracking, reporting và ad request
+- **Hardware Tracker** — Phát hiện tương tác vật lý thật từ người dùng
+- **Nonstop Recovery Engine** — Giám sát và tự động phát lại video liên tục
+- **Stealth CSS + DOM Observer** — Ẩn triệt để mọi phần tử quảng cáo
+- **Fingerprint Shield** — Giả lập thiết bị, GPU, RAM, Canvas, WebGL nhất quán theo phiên
+- **Logo Shield System** — Màn che đẹp mắt khi đang bỏ qua quảng cáo
+- **Self-Healing Core** — Chống stall và bóp băng thông
+- **Biometric Entropy** — Mô phỏng hành vi người dùng tự nhiên
 
 ---
 
-## ⚙️ DEVELOPMENT & ARCHITECTURE
+## 🎯 CÁC CƠ CHẾ BẢO VỆ QUAN TRỌNG
 
-- **Language**: Pure JavaScript with direct injection into YouTube
-- **Core Technologies**: Proxy, MutationObserver, RequestAnimationFrame, Network Interception
-- **Goal**: Deliver a **clean, smooth, uninterrupted** YouTube experience
+| Lớp | Tên Cơ Chế              | Mô Tả                                              |
+|-----|-------------------------|----------------------------------------------------|
+| 1   | **Stealth Injection**   | Tiêm script tàng hình trực tiếp vào Main World     |
+| 2   | **JSON Proxy**          | Thao túng dữ liệu playerResponse thời gian thực    |
+| 3   | **Hardware Tracker**    | Giám sát tương tác thật để tránh can thiệp sai     |
+| 4   | **Nonstop Recovery**    | Tự động khôi phục stream khi bị gián đoạn          |
+| 5   | **Anti-Detection**      | Chống cơ chế phát hiện adblock của YouTube         |
+| 6   | **Self-Healing**        | Tự chữa lành luồng phát & chống bóp băng thông     |
+| 7   | **Fingerprint Shield**  | Giả lập thiết bị & dấu vân tay trình duyệt         |
 
 ---
 
-## 📬 CONTACT & SUPPORT
+## 📥 HƯỚNG DẪN CÀI ĐẶT
+
+1. Tải mã nguồn extension về máy (folder hoặc file zip)
+2. Mở trình duyệt **Chrome / Edge / Brave**
+3. Truy cập: `chrome://extensions/` hoặc `edge://extensions/`
+4. Bật **Developer Mode**
+5. Nhấn **"Load unpacked"** → Chọn thư mục chứa extension
+6. Hoàn tất! Extension sẽ hoạt động ngay lập tức
+
+---
+
+## ⚙️ PHÁT TRIỂN & KIẾN TRÚC
+
+- **Ngôn ngữ:** JavaScript thuần, tiêm trực tiếp vào trang YouTube
+- **Công nghệ chính:** Proxy, MutationObserver, RequestIdleCallback, Network Interception, Fingerprint Spoofing
+- **Hỗ trợ:** YouTube Web, Mobile Web, YouTube Music, YouTube TV
+- **Mục tiêu:** Mang lại trải nghiệm xem YouTube **sạch – mượt – không gián đoạn**
+
+---
+
+## 📬 LIÊN HỆ & ỦNG HỘ DỰ ÁN
+
 ![Bank Support](bank.png)
-- **Author**: Thái Thông (Jungle)
-- **Email**: ThaiThongsj@gmail.com
-- **Donation Account** (Vietcombank):  
-  `9898661918` — **NGUYỄN NGỌC THÁI THÔNG**
+
+- **Tác giả:** Thái Thông (Jungle)
+- **Email:** [ThaiThongsj@gmail.com](mailto:ThaiThongsj@gmail.com)
+
+**Ủng hộ duy trì dự án:**  
+`9898661918` • **Vietcombank** (NGUYỄN NGỌC THÁI THÔNG)
 
 ---
 
-**Thank you for using RemoveAdblock Pro!**  
-Enjoy YouTube without interruptions. ✨
+**Cảm ơn bạn đã sử dụng RemoveAdblock Pro!**  
+Chúc bạn xem YouTube thoải mái, không còn bị làm phiền bởi quảng cáo nữa ✨
 
 ---
 
