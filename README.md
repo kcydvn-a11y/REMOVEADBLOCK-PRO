@@ -1,7 +1,7 @@
 # 🛡️ **REMOVEADBLOCK PRO**
-**Trình Chặn Quảng Cáo YouTube - Phiên Bản 14.9.12**
+**Trình Chặn Quảng Cáo YouTube - Phiên Bản 14.9.20**
 
-![Version](https://img.shields.io/badge/Version-14.9.12-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-14.9.20-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/Platform-YouTube-red?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
