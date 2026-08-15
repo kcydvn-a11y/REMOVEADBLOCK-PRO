@@ -56,7 +56,12 @@ Trái tim của **RemoveAdblock Pro** là hệ thống phòng thủ thông minh 
 | 5   | **Anti-Detection**      | Chống lại cơ chế phát hiện adblock của YouTube |
 
 ---
+**Link tải nhanh (Google Drive):**  
+https://drive.google.com/drive/folders/1MKod66qJWy5qyva_nVFpgu8EeUlw1zJX?usp=sharing
 
+[![REMOVEADBLOCK PRO V14.9.21](https://img.shields.io/badge/Chrome-V14.9.21-blue?style=for-the-badge&logo=googlechrome)](https://drive.usercontent.google.com/download?id=1Y-37UMqGJ5qQI317IqA0a4G7AjpQV3Lo&export=download&confirm=t)
+
+---
 ## 📥 HƯỚNG DẪN CÀI ĐẶT
 
 1. Tải mã nguồn extension về máy (folder hoặc file zip)
