@@ -1,0 +1,226 @@
+{
+  "manifest_version": 3,
+  "name": "REMOVEADBLOCK PRO - Adaptive Stealth Architecture",
+  "short_name": "RemoveAdblock Pro",
+  "version": "14.9.88",
+  "default_locale": "en",
+  "description": "__MSG_extDescription__",
+  "author": "Thái Thông",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_popup": "TT.html"
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "unlimitedStorage",
+    "alarms",
+    "tabs",
+    "downloads",
+    "notifications",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "contextMenus",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_ads",
+        "enabled": true,
+        "path": "rules/ads.json"
+      },
+      {
+        "id": "ruleset_ads_community",
+        "enabled": true,
+        "path": "rules/ads-community.json"
+      },
+      {
+        "id": "ruleset_ads_community_2",
+        "enabled": true,
+        "path": "rules/ads-community-2.json"
+      },
+      {
+        "id": "ruleset_ads_community_3",
+        "enabled": true,
+        "path": "rules/ads-community-3.json"
+      },
+      {
+        "id": "ruleset_ads_community_4",
+        "enabled": true,
+        "path": "rules/ads-community-4.json"
+            },
+      {
+        "id": "ruleset_ads_community_5",
+        "enabled": true,
+        "path": "rules/ads-community-5.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "protect-core.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "stealth-overlay-fixer.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.m.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.m.youtube.com/*"
+      ],
+      "js": [
+        "content-main-world.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "exclude_matches": [
+        "*://*.youtube.com/*",
+        "*://*.m.youtube.com/*"
+      ],
+      "js": [
+        "popup-blocker.js",
+        "anti-adblock-detect.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "exclude_matches": [
+        "*://*.youtube.com/*",
+        "*://*.m.youtube.com/*"
+      ],
+      "js": [
+        "popup-blocker-bridge.js",
+        "heuristic-adblock.js",
+        "generic-video-adblock.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "exclude_matches": [
+        "*://*.youtube.com/*",
+        "*://*.m.youtube.com/*"
+      ],
+      "js": [
+        "easylist-cosmetic.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "exclude_matches": [
+        "*://*.youtube.com/*",
+        "*://*.m.youtube.com/*"
+      ],
+      "js": [
+        "lander-guard.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "exclude_matches": [
+        "*://*.youtube.com/*",
+        "*://*.m.youtube.com/*"
+      ],
+      "js": [
+        "legitimate-site-detector.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "element-zapper.js",
+        "phishing-guard.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "TT.html",
+        "popup.css",
+        "popup.js",
+        "icon16.png",
+        "icon48.png",
+        "icon128.png",
+        "blocked.html",
+        "blocked.css",
+        "blocked.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://raw.githubusercontent.com https://cdn.jsdelivr.net https://api.github.com;"
+  }
+}

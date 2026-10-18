@@ -1,0 +1,23 @@
+(function () {
+    const v = document.querySelector('video');
+    const player = document.getElementById('movie_player') || document.querySelector('.html5-video-player');
+    console.log('=== JD AD DIAGNOSTIC v2 ===');
+    console.log('video.currentSrc:', v && v.currentSrc);
+    console.log('video.duration:', v && v.duration, '| currentTime:', v && v.currentTime);
+    console.log('ad-showing class?:', player && (player.classList.contains('ad-showing') || player.classList.contains('ad-interrupting')));
+    // Đúng selector nút Skip Ad THẬT (khớp với code chính đang dùng để tự bấm), không lấy nhầm
+    // "Skip navigation" (nút hỗ trợ bàn phím có sẵn của Google, không liên quan tới quảng cáo).
+    const realSkipBtn = document.querySelector('.ytp-ad-skip-button, .ytp-skip-ad-button, .ytp-ad-skip-button-modern, .ytp-ad-skip-button-icon-delhi, button.ytp-ad-skip-button-modern, .ytp-ad-skip-button-container button, .ytp-ad-skip-button-slot button');
+    console.log('nút Skip Ad THẬT có tồn tại?:', !!realSkipBtn, realSkipBtn ? realSkipBtn.outerHTML.slice(0, 200) : 'KHÔNG CÓ');
+    try {
+        console.log('player.getAdState():', typeof player.getAdState === 'function' ? player.getAdState() : 'không có hàm này');
+    } catch (e) { console.log('getAdState lỗi:', e.message); }
+    const adRequests = performance.getEntriesByType('resource')
+        .filter(r => /ad|doubleclick|googlesyndication|googleads|pagead|videoplayback/i.test(r.name))
+        .slice(-20)
+        .map(r => ({ url: r.name, type: r.initiatorType }));
+    // In ra dạng CHUỖI VĂN BẢN đầy đủ (JSON.stringify) thay vì object console có thể bị thu gọn
+    // thành "{...}" khi copy-paste text ra ngoài - lần trước bị mất đúng phần quan trọng nhất này.
+    console.log('20 request mạng gần nhất (dạng text đầy đủ):\n' + JSON.stringify(adRequests, null, 2));
+    console.log('=== HẾT — COPY TOÀN BỘ KHỐI TRÊN (kể cả phần JSON dài) GỬI LẠI ===');
+})();

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Blocked - RemoveAdblock Pro</title>
+  <link rel="stylesheet" href="blocked.css">
+</head>
+<body>
+  <div class="card">
+    <div class="icon-container">
+      <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+    </div>
+    <h1>Ad Network Blocked</h1>
+    <p class="subtitle">RemoveAdblock Pro prevented this popup or redirect page from loading.</p>
+    
+    <div class="url-box">
+      <span class="url-label">Blocked URL</span>
+      <div id="target-url" class="url-text">Loading...</div>
+      <div id="block-count" class="count-badge" style="display:none;"></div>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-close" id="btn-close">Close Tab</button>
+      <button class="btn btn-allow" id="btn-proceed">Proceed Anyway</button>
+    </div>
+
+    <div class="unblock-section">
+      <p class="unblock-title">Is this page blocked by mistake?</p>
+      <button class="btn-link" id="btn-whitelist">Always allow access to this domain</button>
+      <button class="btn-always-block" id="btn-always-block">Always block this domain</button>
+    </div>
+  </div>
+
+  <script src="blocked.js"></script>
+</body>
+</html>

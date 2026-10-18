@@ -1,0 +1,313 @@
+/* ==================== ẨN COSMETIC QUẢNG CÁO PHỔ BIẾN TRÊN MỌI TRANG (KHÔNG PHẢI YOUTUBE) ====================
+   Chỉ dùng các pattern AN TOÀN, đặc trưng rõ ràng cho quảng cáo (tránh selector quá chung chung
+   như .ad/.ads dễ ẩn nhầm nội dung thật không liên quan quảng cáo). */
+
+ins.adsbygoogle,
+/* Lớp phủ nền đen (backdrop) của thư viện react-modal - tên class CHUẨN MẶC ĐỊNH công khai của thư
+   viện này (không phải đoán riêng cho site nào), luôn bọc ngoài .ReactModal__Content. Khi nội dung
+   dialog bên trong đã bị 1 lớp khác đánh dấu là quảng cáo (data-jd-heuristic-hidden), lớp phủ nền
+   đen bọc ngoài cũng vô nghĩa theo - ẩn nó đi để không còn che kín màn hình không cho vào trang. */
+.ReactModal__Overlay:has([data-jd-heuristic-hidden]),
+/* Modal chống adblock (React): chỉ khi có nút allow-ads — không đụng login/cookie dialog */
+.ReactModal__Content:has(.allow-ads-button),
+.ReactModal__Content:has([class*="allow-ads" i]),
+.ReactModal__Overlay:has(.allow-ads-button),
+.ReactModal__Overlay:has([class*="allow-ads" i]),
+/* rel="sponsored" - thuộc tính CHUẨN HTML chính thức đánh dấu link tài trợ/quảng cáo, do CHÍNH SITE
+   tự khai báo rõ ràng theo chuẩn (không phải suy đoán) - rất an toàn, áp dụng được cho mọi site tuân
+   thủ chuẩn HTML này, không cần biết trước domain quảng cáo cụ thể nào. */
+a[rel~="sponsored"],
+/* Quảng cáo giả dạng "thông báo hệ thống" (VD tự xưng "Say Goodbye to Popups" trong khi chính nó là
+   1 popup quảng cáo) - bằng chứng thật: id dạng "note-0"/"note-1"..., z-index cực lớn 2147483642 cố
+   định trong style inline (không phải nội dung thật nào cần z-index sát mức tối đa 32-bit này). */
+[id^="note-"][style*="2147483642"],
+/* Ảnh banner đúng kích thước chuẩn banner IAB (300x250, 728x90, 336x280...) - ẩn tức thì bằng CSS
+   thuần ngay lúc document_start, tránh lóe lên ~1s rồi mới bị ẩn như khi phải đợi lớp quét JS (100ms
+   debounce) trong heuristic-adblock.js. Cùng danh sách kích thước, chỉ khác tầng chặn để không có độ
+   trễ. Khớp theo thuộc tính width/height khai trong HTML - ảnh nội dung thật hiếm khi tình cờ đúng
+   y hệt 1 trong các kích thước banner công nghiệp này. */
+img[width="300"][height="250"]:not([class*="thumb" i]):not([class*="album" i]):not([src*="/thumb"]):not([src*="thumbnail"]),
+img[width="728"][height="90"],
+img[width="320"][height="50"],
+img[width="160"][height="600"],
+img[width="300"][height="600"],
+img[width="970"][height="250"],
+img[width="980"][height="250"],
+img[width="336"][height="280"]:not([class*="thumb" i]):not([class*="album" i]):not([src*="/thumb"]),
+img[width="250"][height="250"]:not([class*="thumb" i]):not([class*="album" i]):not([class*="cover" i]):not([src*="/thumb"]):not([src*="thumbnail"]),
+img[width="200"][height="200"]:not([class*="thumb" i]):not([class*="album" i]):not([src*="/thumb"]),
+img[width="125"][height="125"]:not([class*="thumb" i]):not([src*="/thumb"]),
+img[width="240"][height="400"],
+img[width="980"][height="120"],
+img[width="750"][height="100"],
+img[width="750"][height="200"],
+img[width="750"][height="300"],
+img[width="800"][height="250"],
+img[width="300"][height="100"],
+img[width="320"][height="100"],
+img[width="970"][height="90"],
+img[width="468"][height="60"],
+img[width="234"][height="60"],
+img[width="120"][height="600"],
+img[width="300"][height="50"],
+/* Revive Adserver (phần mềm ad-server mã nguồn mở, tự lưu trên subdomain riêng của site, KHÔNG phải
+   mạng quảng cáo bên thứ 3) - mọi banner của nó LUÔN bọc trong <ins> có data-revive-id/data-z, id
+   dạng "revive-0-N". Đây là dấu hiệu của CHÍNH PHẦN MỀM nên áp dụng được cho MỌI site dùng Revive
+   Adserver, không riêng site cụ thể nào. */
+ins[data-revive-id],
+ins[data-z],
+[id^="revive-0-"],
+/* Modal popup quảng cáo dạng "popup-ad-*" (box/body/link/img/nút đóng) - ảnh bên trong có thể đã bị
+   chặn domain (VD ads.skydancersintl.com) nhưng khung/backdrop rỗng vẫn còn chiếm màn hình nếu không
+   ẩn luôn container. */
+[id^="popup-ad-"],
+[id^="google_ads_iframe"],
+iframe[id^="google_ads_iframe"],
+[id^="div-gpt-ad"],
+[id*="google_ads_"],
+iframe[src*="doubleclick.net"],
+iframe[src*="googlesyndication.com"],
+iframe[src*="googleadservices.com"],
+iframe[src*="amazon-adsystem.com"],
+iframe[src*="adnxs.com"],
+iframe[src*="pubmatic.com"],
+iframe[src*="rubiconproject.com"],
+iframe[src*="openx.net"],
+[class*="advertisement" i],
+[class*="ad-container" i],
+[class*="ad-banner" i],
+[class*="ad-slot" i],
+[class*="ad-wrapper" i],
+[data-ad-slot],
+[data-ad-client],
+[data-google-query-id],
+[id^="__clb-spot_"],
+[id*="-spot_"][id*="_container"],
+/* Khung quảng cáo overlay của KVS Player (fxPane) — ẩn từ đầu để chính script của nó tự nhận
+   thấy khung rộng 0px và KHÔNG BAO GIỜ chạy tới bước hiện quảng cáo dự phòng/chuyển hướng. */
+.fxPane,
+#fxStartPane,
+.fxFallback,
+.fxMid,
+.fxMidGrid,
+.fxMidWrap,
+.video-ad-wrap,
+.sponsor,
+aside[data-atc="atc-nonstar"],
+[id^="zone-"],
+[id^="placement-"][revenue="cpm"],
+[id^="placement-"][revenue="cpd"],
+[id^="admzone"],
+[id^="nativezone_"],
+[id^="ssppagebid_"],
+#wrapperNative,
+#clickPopupNative,
+[data-cl-spot],
+.taboola,
+#taboola-below-article-thumbnails,
+.OUTBRAIN,
+.ob-widget,
+.mgid-widget,
+[id*="mgid-"],
+.revcontent,
+[id*="rc-widget"],
+.video-bottom-banner,
+.video-banner-item,
+/* Quy ước đặt tên container quảng cáo phổ biến ở nhiều site VN (bằng chứng thật: vl-underplayer-adx,
+   vl-header-adx, xx-ads, ads-wrap, catfishAds) - ẩn bằng CSS thuần chạy NGAY LÚC document_start,
+   không có độ trễ debounce JS như heuristic-adblock.js nên banner không kịp lóe lên trước khi mất. */
+[id*="-adx" i],
+[id$="adx" i],
+/* "LeaderBoard" - thuật ngữ ngành quảng cáo chuẩn cho banner 728x90 đặt đầu trang, nhiều site tự
+   đặt tên khung NGOÀI CÙNG theo quy ước này (VD "LeaderBoardTop") với chiều cao riêng do CHÍNH SITE
+   quy định (không phụ thuộc nội dung quảng cáo con) - dù quảng cáo bên trong đã bị chặn hoàn toàn
+   (rỗng), khung ngoài này vẫn giữ nguyên kích thước nếu không ẩn thẳng chính nó. */
+[id*="leaderboard" i],
+[class*="leaderboard" i],
+[class*="xx-ads" i],
+[class*="ads-wrap" i],
+[id*="catfish" i],
+[class*="catfish" i],
+[class*="ads-flex" i],
+.section-brand-add,
+[class*="banner-wrapper" i][data-banner-id],
+/* Icon "ảnh vỡ" trang tự hiện (onerror) khi ảnh quảng cáo bị chặn ở tầng mạng - ẩn luôn icon và cả
+   thẻ <a> chứa nó (:has - Chrome hiện đại hỗ trợ) để không còn vùng trống có thể bấm nhầm dẫn tới
+   trang quảng cáo/cờ bạc đích, dù ảnh minh hoạ đã bị chặn. */
+.vnx_err_wrap,
+a:has(.vnx_err_wrap),
+/* Khung cha (thường là <aside>) bọc nhiều ảnh quảng cáo dùng chung hàm onerror="vnx_err(this)" của
+   site - không có class/id riêng để CSS trên nhắm trúng, nên dù từng thẻ <a> con đã bị ẩn, khung cha
+   vẫn còn khoảng trống rỗng. Ẩn thẳng khung cha nếu nó chứa ảnh dùng đúng hàm lỗi này. */
+aside:has(img[onerror*="vnx_err"]),
+div:has(> img[onerror*="vnx_err"]),
+/* Bằng chứng thật (heovl.im): khung banner đầu trang/nổi giữa trang/cuối trang do 1 thư viện quảng
+   cáo dùng chung tự đặt tên ("topBannerContainer"/"popBannerAds"/"bottom-banner-wrapper") - cả khung
+   NGOÀI, ảnh BÊN TRONG lẫn nút đóng ĐỀU được gắn chung 1 class "overlay-ad" (do CHÍNH SITE tự khai
+   báo, không phải đoán riêng cho site này) - đủ đặc trưng, hiếm khi trùng ngẫu nhiên với nội dung
+   thật không liên quan quảng cáo. Ảnh nguồn từ mạng quảng cáo cũng đã bị chặn thẳng ở tầng mạng (xem
+   rules/ads.json) - CSS này là lớp phòng thủ thứ 2, ẩn ngay cả khi ảnh đã kịp tải/cache trước đó. */
+.overlay-ad,
+#topBannerContainer,
+#popBannerAds,
+.top-banner-wrapper,
+.bottom-banner-wrapper,
+.top-banner-close-btn,
+.pop-banner-close-btn,
+.bottom-banner-close-btn,
+/* Bằng chứng thật (player "xplayer" - xHamster và các site dùng chung framework, VD sexviet360.com):
+   khối quảng cáo native tự đặt tên rất rõ ràng "xplayer-ads-block" (tự khai đây là khối quảng cáo).
+   CỐ TÌNH liệt kê từng class con CỤ THỂ thay vì dùng [class*="xplayer-ads-block" i] chung chung - lý
+   do: cách viết chung chung đó sẽ khớp LUÔN CẢ ".xplayer-ads-block__skip" (nút Skip Ad, vì tên nó
+   cũng CHỨA chuỗi "xplayer-ads-block") - ẩn luôn nút Skip Ad bằng CSS sẽ khiến logic tự bấm skip ở
+   generic-video-adblock.js (dựa vào getComputedStyle để biết nút có đang hiển thị không) không bao
+   giờ thấy nút này là "đang hiển thị" nữa, tự bấm sẽ không bao giờ chạy - PHẢN TÁC DỤNG ngay chính
+   tính năng vừa xây. Chỉ ẩn đúng phần quảng cáo/banner/link quảng cáo, giữ lại nút Skip Ad để logic
+   tự bấm còn hoạt động được. */
+.xplayer-ads-block__link,
+.xplayer-ads-block-links,
+.xplayer-ads-block-companion,
+.xplayer-ads-block-companion-completed,
+.xplayer-ads-block__footer,
+.xplayer-ads-block__footer-completed,
+.xplayer-ads-block__cta,
+.xplayer-ads-block__callToAction,
+.xplayer-ads-block__info-new {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Parent div bọc iframe QC (tránh khung rỗng) */
+div:has(> iframe[src*="doubleclick.net"]),
+div:has(> iframe[src*="googlesyndication.com"]),
+div:has(> iframe[src*="amazon-adsystem.com"]) {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Banner nhà cái / affiliate dưới player — chỉ khi có dấu hiệu rõ (shortener, alt=ads, path /ads/, size 728x70)
+   Không ẩn mọi #ads hay mọi ảnh 728 trên web chính thống. */
+a[href*="154.82.109.156"],
+a[href*="154.82.109.138"],
+a[href*="tinyurl.com"]:has(img[src*="728x90"]),
+a[href*="tinyurl.com"]:has(img[src*="728x70"]),
+a[href*="tinyurl.com"]:has(img[src*="_CPD_"]),
+a[href*="tinyurl.com"]:has(img[src*="CPD-"]),
+a[href*="tinyurl.com"]:has(img[src*="CPD_"]),
+a[href*="bit.ly"]:has(img[src*="728x90"]),
+a[href*="bit.ly"]:has(img[src*="728x70"]),
+a[href*="bit.ly"]:has(img[src*="_CPD_"]),
+a[href*="bit.ly"]:has(img[src*="/ads/"]),
+a[href*="bit.ly"]:has(img[alt="ads" i]),
+a[href*="cutt.ly"]:has(img[src*="728x90"]),
+a[href*="cutt.ly"]:has(img[src*="728x70"]),
+a[href*="cutt.ly"]:has(img[src*="/ads/"]),
+a[href*="ok999.me"],
+/* Ảnh: size 728x70/90 + (alt=ads HOẶC path /ads/ HOẶC filename banner casino) */
+img[width="728"][height="70"][alt="ads" i],
+img[width="728"][height="90"][alt="ads" i],
+img[width="728"][height="70"][src*="/ads/"],
+img[width="728"][height="90"][src*="/ads/"],
+img[width="728"][height="70"][src*="728x90"],
+img[width="728"][height="70"][src*="728x70"],
+img[src*="storage.haysexcdn.net/ads/"],
+img[src*="/ads/"][alt="ads" i],
+img[src*="banner-gif-"][src*="728"],
+img[src*="ok9-728"],
+/* Khung cha: #ads / id^=ad / .under-player chỉ khi BÊN TRONG có shortener hoặc ảnh QC */
+#ads:has(a[href*="bit.ly"]),
+#ads:has(a[href*="cutt.ly"]),
+#ads:has(a[href*="tinyurl.com"]),
+#ads:has(a[href*="ok999"]),
+#ads:has(img[alt="ads" i]),
+#ads:has(img[src*="/ads/"]),
+[id^="ad"]:has(a[href*="bit.ly"]),
+[id^="ad"]:has(a[href*="cutt.ly"]),
+[id^="ad"]:has(a[href*="ok999"]),
+[id^="ad"]:has(img[alt="ads" i]),
+[id^="ad"]:has(img[src*="/ads/"]),
+[id^="ad"]:has(img[src*="728x"]),
+.under-player:has(#ads),
+.under-player:has([id^="ad"]),
+.under-player:has(a[href*="bit.ly"]),
+.under-player:has(a[href*="cutt.ly"]),
+.under-player:has(a[href*="ok999"]),
+.under-player:has(img[alt="ads" i]),
+.under-player:has(img[src*="/ads/"]),
+div:has(> a[href*="bit.ly"]:has(img[src*="728x"])),
+div:has(> a[href*="bit.ly"]:has(img[alt="ads" i])),
+div:has(> a[href*="cutt.ly"]:has(img[src*="728x"])),
+div:has(> a[href*="ok999.me"]),
+div:has(> img[alt="ads" i][src*="/ads/"]),
+p:has(> a[href*="154.82.109.156"]),
+p:has(> a[href*="tinyurl.com"]:has(img[src*="728x90"])),
+p:has(> a[href*="tinyurl.com"]:has(img[src*="_CPD_"])),
+p:has(> a[href*="tinyurl.com"]:has(img[src*="CPD-"])),
+p:has(> a[href*="bit.ly"]:has(img[src*="728x"])) {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+
+/* Video.js in-player ad residual (eporner & videojs-contrib-ads):
+   Sau khi VAST/preroll bị chặn mạng, player còn "Close & Play" / close-button.
+   Class CHỈ của UI quảng cáo trong player — không đụng vjs-control-bar / vjs-big-play. */
+.vjs-inplayer-resume-button,
+.vjs-inplayer-close-button,
+.vjs-ad-control-bar,
+.vjs-ad-playing .vjs-ad-playing-ui,
+.movieplayer-box-adv-box.adsinfo:empty,
+.movieplayer-box-adv-box.adsinfo:not(:has(iframe[src]:not([src=""]))) {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* ========================================================================
+   Video.js black poster rỗng (eporner & videojs-contrib-ads / tương tự)
+   BẰNG CHỨNG DOM report 2026-10-01 it.eporner.com:
+   - .vjs-black-poster 1280x834, pointer-events:auto, rỗng, phủ đúng giữa player
+   - emptyPlayerUiBlockingClick: true → click Play bị lớp này NUỐT (không tới <video>)
+   - KHÔNG phải redirect sang domain lạ; trang vẫn còn, chỉ không bấm được Play
+   Site khác dùng Video.js + VAST bị chặn cũng có thể còn poster rỗng giống vậy.
+   AN TOÀN: chỉ pointer-events:none / ẩn khi rỗng hoặc player đã started.
+   KHÔNG display:none wrapper player, KHÔNG đụng .vjs-control-bar / .vjs-big-play-button.
+   ======================================================================== */
+.video-js .vjs-black-poster:empty,
+.vjs-black-poster:not(:has(img)):not(:has(video)):not(:has(iframe)):not(:has(button)):not(:has(a[href])) {
+    pointer-events: none !important;
+}
+/* Khi player đã có tech / đã started / đang play — poster không được chặn click */
+.video-js.vjs-has-started .vjs-black-poster,
+.video-js.vjs-playing .vjs-black-poster,
+.video-js.vjs-paused .vjs-black-poster,
+.video-js .vjs-tech ~ .vjs-black-poster {
+    pointer-events: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+
+/* Gallery nav — luôn hover/click được (erome lightGallery, Fancybox, PhotoSwipe, mọi site) */
+.lg-next, .lg-prev, .lg-close, .lg-icon,
+button.lg-next, button.lg-prev, button.lg-close,
+.fancybox-nav, .fancybox-prev, .fancybox-next, .fancybox-close, .fancybox-close-small,
+.pswp__button, .glightbox-next, .glightbox-prev, .gclose, .mfp-close, .mfp-arrow {
+    pointer-events: auto !important;
+    visibility: visible !important;
+    /* không ép opacity — giữ hiệu ứng fade khi hover của thư viện */
+}

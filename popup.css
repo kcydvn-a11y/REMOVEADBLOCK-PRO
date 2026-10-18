@@ -1,0 +1,437 @@
+:root {
+    --bg-main: #090d16;
+    --bg-card: #111827;
+    --bg-darker: #070a10;
+    --accent: #00f2fe;
+    --accent-gradient: linear-gradient(135deg, #00f2fe, #4facfe);
+    --accent-glow: rgba(0, 242, 254, 0.2);
+    --text-main: #f3f4f6;
+    --text-sub: #9ca3af;
+    --text-strong: #ffffff;
+    --border: #1f2937;
+    --success: #10b981;
+    --success-rgb: 16, 185, 129;
+    --shadow-soft: rgba(0, 0, 0, 0.5);
+}
+
+/* ==================== GIAO DIỆN SÁNG (LIGHT THEME) ====================
+   THEO YÊU CẦU NGƯỜI DÙNG: thêm bản "sáng" bên cạnh bản "tối" mặc định hiện có - CHỈ ghi đè lại đúng
+   các biến màu ở :root (không viết lại bất kỳ luật CSS nào khác bên dưới) vì toàn bộ file này đã dùng
+   var(--...) nhất quán cho gần hết màu sắc - đổi màu bằng cách gắn/gỡ 1 class DUY NHẤT lên <body>
+   (xem applyTheme() trong popup.js) là đủ để toàn bộ giao diện đổi theo, không cần đụng JS render lại
+   bất cứ phần tử nào. ĐÚNG YÊU CẦU "công nghệ nạp 1 lần" người dùng nhấn mạnh: applyTheme() chỉ gắn/gỡ
+   1 class lên <body> MỘT LẦN DUY NHẤT mỗi khi bấm nút đổi giao diện - sau đó trình duyệt tự vẽ lại theo
+   CSS thuần (cascade biến số), không có vòng lặp JS/timer/interval nào chạy tiếp phía sau, không tốn
+   thêm tài nguyên theo thời gian dù mở popup bao lâu hay bao nhiêu lần. */
+body.theme-light {
+    --bg-main: #f4f6fb;
+    --bg-card: #ffffff;
+    --bg-darker: #eef1f7;
+    --accent: #0891b2;
+    --accent-gradient: linear-gradient(135deg, #0891b2, #06b6d4);
+    --accent-glow: rgba(8, 145, 178, 0.18);
+    --text-main: #1f2937;
+    --text-sub: #64748b;
+    --text-strong: #0f172a;
+    --border: #dbe2ea;
+    --success: #059669;
+    --success-rgb: 5, 150, 105;
+    --shadow-soft: rgba(15, 23, 42, 0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        
+body { 
+    background-color: var(--bg-main); 
+    color: var(--text-main); 
+    width: 430px; 
+    max-height: 580px; 
+    overflow-y: auto; 
+    padding: 16px; 
+}
+
+body::-webkit-scrollbar { width: 5px; }
+body::-webkit-scrollbar-track { background: var(--bg-main); }
+body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-card);
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+}
+.logo-area { display: flex; flex-direction: column; }
+.logo-text {
+    font-size: 1.15rem; font-weight: 800; letter-spacing: 1px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+/* SỬA LẠI: chữ trắng mờ (rgba(255,255,255,0.7)) copy y nguyên từ mẫu tham khảo BỊ LỖI THẬT trên giao
+   diện SÁNG (nền trắng) - chữ gần như trắng trên nền trắng thì KHÔNG THẤY GÌ CẢ, không hề kiểm tra qua
+   cả 2 theme trước khi áp dụng. THEO ĐÚNG YÊU CẦU: chữ dùng CHUNG màu với chấm bên cạnh (giống bản gốc
+   trước khi thử nghiệm đỏ) - màu xanh lá #00e676 hiển thị tốt trên CẢ nền tối lẫn nền sáng, không bị
+   lỗi "chữ biến mất" như màu trắng thuần. */
+.status-badge {
+    display: flex; align-items: center; gap: 5px; font-size: 0.75rem; font-weight: 600; margin-top: 2px;
+    color: #00e676;
+}
+@keyframes statusDotPulseGreen {
+    0%, 100% { transform: scale(0.9); box-shadow: 0 0 4px #00e676; opacity: 0.7; }
+    50% { transform: scale(1.2); box-shadow: 0 0 12px #00e676; opacity: 1; }
+}
+.status-dot {
+    width: 6px; height: 6px; background-color: #00e676; border-radius: 50%;
+    animation: statusDotPulseGreen 1.5s infinite;
+}
+        
+.header-right { display: flex; align-items: flex-start; gap: 8px; }
+.version-col { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.version { font-size: 0.75rem; color: var(--text-sub); background: var(--bg-darker); padding: 4px 8px; border-radius: 6px; border: 1px solid var(--border); font-weight: 600; }
+/* Ảnh bản đồ Việt Nam (hình chữ S) - thu nhỏ vừa phải, đặt ngay dưới số phiên bản, thêm bóng đổ
+   phát sáng nhẹ theo màu thương hiệu cho có hiệu ứng đẹp thay vì 1 ảnh dán trơ trọi. */
+/* drop-shadow bám sát đúng viền hình chữ S thật (theo kênh alpha, không phải khung chữ nhật) -
+   viền sáng lan toả nhẹ theo đúng hình dạng, lặp lại nhấp nháy nhẹ nhàng cho có sức sống. */
+@keyframes vnMapGlow {
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(0, 242, 254, 0.35)) drop-shadow(0 0 5px rgba(0, 242, 254, 0.2)); }
+    50% { filter: drop-shadow(0 0 4px rgba(0, 242, 254, 0.6)) drop-shadow(0 0 9px rgba(0, 242, 254, 0.4)); }
+}
+.vn-map-badge {
+    /* Ảnh gốc 674x674 có viền trong suốt khá rộng quanh hình chữ S thật - phải để kích thước hiển
+       thị lớn hơn trực giác 1 chút (28px, không phải 16-20px như icon thường) thì hình mới đủ rõ
+       để nhận ra, không bị teo nhỏ tới mức không thấy được. */
+    width: 28px; height: auto;
+    opacity: 0.95;
+    animation: vnMapGlow 2.4s ease-in-out infinite;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.vn-map-badge:hover { transform: scale(1.15); opacity: 1; }
+        
+.lang-btn {
+    background: var(--bg-darker);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.lang-btn:hover { border-color: var(--accent); box-shadow: 0 0 5px var(--accent-glow); }
+
+.action-zone { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 12px; }
+
+/* ==================== HÀNG NÚT TRÒN GỌN (thay cho 3 thanh ngang cũ) ==================== */
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 2px;
+    transition: transform 0.2s ease;
+    font-family: inherit;
+}
+.icon-btn:hover { transform: translateY(-2px); }
+.icon-btn:active { transform: translateY(1px); }
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    font-size: 1.15rem;
+    transition: all 0.2s ease;
+}
+.icon-btn:hover .icon-circle { border-color: var(--accent); box-shadow: 0 0 10px var(--accent-glow); }
+
+.icon-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-sub);
+    max-width: 72px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon-btn-reset .icon-circle { background: var(--accent-gradient); color: #000; box-shadow: 0 4px 15px var(--accent-glow); border: none; }
+.icon-btn-reset .icon-circle svg { transition: transform 0.4s ease; }
+.icon-btn-reset.loading .icon-circle svg { transform: rotate(360deg); }
+
+.icon-btn-pause .icon-circle { border: 1px solid rgba(245, 166, 35, 0.4); color: #f5a623; }
+.icon-btn-pause.is-paused .icon-circle { background: rgba(245, 166, 35, 0.18); box-shadow: 0 0 12px rgba(245, 166, 35, 0.4); }
+.icon-btn-pause.is-paused .icon-label { color: #f5a623; }
+/* Đang chạy bình thường -> hiện icon Pause (nhấn để tạm dừng); đang tạm dừng -> hiện icon Play
+   (nhấn để tiếp tục) - đổi hẳn hình icon thay vì chỉ đổi màu, nhìn phát biết ngay trạng thái. */
+.icon-play-shape { display: none; }
+.icon-btn-pause.is-paused .icon-pause-shape { display: none; }
+.icon-btn-pause.is-paused .icon-play-shape { display: block; }
+
+.icon-btn-donate .icon-circle { background: rgba(245, 166, 35, 0.12); color: #f5a623; border: 1px solid rgba(245, 166, 35, 0.4); }
+.icon-btn-donate:hover .icon-circle { background: rgba(245, 166, 35, 0.22); border-color: rgba(245, 166, 35, 0.4); box-shadow: none; }
+
+/* Vẫn dùng cho nút "Khôi phục tất cả" trong panel Ống Ngắm - không liên quan tới hàng nút tròn */
+.btn-secondary {
+    background: var(--bg-darker);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+.btn-secondary:active { transform: translateY(1px); }
+
+.zap-host { font-size: 0.7rem; color: var(--text-sub); margin-bottom: 8px; word-break: break-all; }
+.zap-days-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.zap-empty { font-size: 0.78rem; color: var(--text-sub); text-align: center; padding: 6px 0; }
+.zap-day-row {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--bg-darker); border: 1px solid var(--border); border-radius: 8px;
+    padding: 6px 10px; font-size: 0.78rem;
+}
+.zap-day-row .zap-date { color: var(--text-main); font-weight: 600; }
+.zap-day-row .zap-count { color: var(--text-sub); font-size: 0.72rem; margin-left: 6px; }
+.zap-day-row button {
+    background: transparent; border: 1px solid var(--accent); color: var(--accent);
+    font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; cursor: pointer; font-weight: 600;
+}
+.zap-day-row button:hover { background: var(--accent); color: #000; }
+/* THEO YÊU CẦU NGƯỜI DÙNG: mỗi dòng nhóm ngày tự đóng/mở riêng (xem appendBucketGroup() trong
+   popup.js) - toàn hàng bấm được (không chỉ đúng 1 nút nhỏ), mũi tên xoay khi mở để biết trạng thái. */
+.zap-bucket-header { cursor: pointer; user-select: none; }
+.zap-bucket-header:hover { border-color: var(--accent); }
+.zap-bucket-header .zap-today-arrow { color: var(--text-sub); transition: transform 0.2s ease; }
+.zap-bucket-header.open .zap-today-arrow { transform: rotate(180deg); }
+.btn-restore-all { width: 100%; margin-bottom: 8px; }
+/* THEO YÊU CẦU NGƯỜI DÙNG: viền nét đứt để 4 nút "khôi phục/bỏ miễn trừ TẤT CẢ" (cả 2 tab "Đã xoá" và
+   "Đã miễn trừ") dễ nhận diện hơn, tách khỏi các hàng danh sách phía trên - dùng border-style riêng
+   (không phải div bọc ngoài) để khi nút tự ẩn (display:none lúc danh sách rỗng) thì viền cũng biến
+   mất theo, không để lại 1 đường kẻ trơ trọi. */
+/* THEO YÊU CẦU NGƯỜI DÙNG: màu trắng/xám mặc định (kế thừa từ .btn-secondary) khó thấy, không có điểm
+   nhấn - đổi sang màu xanh chuối/vàng nhẹ cho CẢ 4 nút "TẤT CẢ" (2 bên "Đã xoá" + "Đã miễn trừ") để nổi
+   bật rõ ràng, dễ phân biệt với các hàng danh sách xám xung quanh. */
+.btn-restore-all-dashed {
+    border-style: dashed;
+    margin-top: 6px;
+    color: #d4e157;
+    border-color: #d4e157;
+}
+.btn-restore-all-dashed:hover {
+    border-style: dashed;
+    background: color-mix(in srgb, #d4e157 16%, var(--bg-darker));
+}
+/* THEO YÊU CẦU NGƯỜI DÙNG: dòng "Xem tất cả trang..." bị chê khó thấy - thêm nền màu accent mờ (thay
+   vì chỉ đổi màu chữ) để cả HÀNG nổi bật hẳn lên như 1 nút bấm thật, không lẫn vào các hàng xám xung
+   quanh dù đang ở theme nào. */
+.zap-today-toggle {
+    display: flex; align-items: center; justify-content: space-between;
+    background: color-mix(in srgb, var(--accent) 14%, var(--bg-darker));
+    border: 1px solid var(--accent); border-radius: 8px;
+    padding: 8px 10px; font-size: 0.75rem; color: var(--accent); cursor: pointer;
+    margin-bottom: 8px; font-weight: 700;
+}
+.zap-today-toggle:hover { background: color-mix(in srgb, var(--accent) 24%, var(--bg-darker)); }
+.zap-today-arrow { transition: transform 0.2s ease; }
+.zap-today-toggle.open .zap-today-arrow { transform: rotate(180deg); }
+.zap-today-panel { margin-bottom: 8px; }
+/* Khung riêng có viền + nền tối hơn hẳn phần bên dưới để tách bạch rõ ràng, cuộn được, chỉ hiện
+   vừa khoảng 5 dòng cùng lúc (mỗi dòng ~36px) - danh sách dài (nhiều trang trong ngày) không đẩy
+   phình cả popup ra, cuộn mượt bằng scrollbar mảnh giống thanh cuộn chính của popup. */
+/* THEO YÊU CẦU NGƯỜI DÙNG: danh sách CHÍNH của tab "Đã xoá" (#zapperDaysList - các dòng tổng hợp
+   Hôm nay/Hôm qua/7 ngày/30 ngày/Cũ hơn) trước đây KHÔNG có cuộn giới hạn như #zapTodayList bên dưới -
+   không đồng bộ giữa 2 danh sách trong CÙNG 1 tab. Áp dụng chung 1 kiểu cho cả 2. */
+#zapperDaysList, #zapTodayList {
+    max-height: 188px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-main);
+    padding: 6px;
+}
+#zapperDaysList::-webkit-scrollbar, #zapTodayList::-webkit-scrollbar { width: 5px; }
+#zapperDaysList::-webkit-scrollbar-track, #zapTodayList::-webkit-scrollbar-track { background: transparent; }
+#zapperDaysList::-webkit-scrollbar-thumb, #zapTodayList::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+#zapperDaysList .zap-today-row:last-child, #zapTodayList .zap-today-row:last-child { margin-bottom: 0; }
+#zapperDaysList .zap-day-row:last-child { margin-bottom: 0; }
+/* THEO YÊU CẦU NGƯỜI DÙNG: bên "Đã miễn trừ" (2 danh sách: theo trang hiện tại + theo hôm nay trên
+   mọi trang) cũng cuộn giới hạn ~5 dòng y hệt #zapTodayList ở trên, không để danh sách dài đẩy phình
+   cả popup ra. */
+#zapProtectedList, #zapProtectedTodayList {
+    max-height: 188px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-main);
+    padding: 6px;
+}
+#zapProtectedList::-webkit-scrollbar, #zapProtectedTodayList::-webkit-scrollbar { width: 5px; }
+#zapProtectedList::-webkit-scrollbar-track, #zapProtectedTodayList::-webkit-scrollbar-track { background: transparent; }
+#zapProtectedList::-webkit-scrollbar-thumb, #zapProtectedTodayList::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+#zapProtectedList .zap-today-row:last-child, #zapProtectedTodayList .zap-today-row:last-child { margin-bottom: 0; }
+.zap-today-row {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--bg-darker); border: 1px solid var(--border); border-radius: 8px;
+    padding: 6px 10px; font-size: 0.78rem; margin-bottom: 6px;
+}
+.zap-today-row .zap-today-host { color: var(--text-main); font-weight: 600; word-break: break-all; }
+.zap-today-row .zap-today-count { color: var(--text-sub); font-size: 0.72rem; margin-left: 6px; }
+.zap-today-row button {
+    background: transparent; border: 1px solid var(--accent); color: var(--accent);
+    font-size: 0.7rem; padding: 3px 8px; border-radius: 6px; cursor: pointer; font-weight: 600;
+    flex-shrink: 0; margin-left: 8px;
+}
+.zap-today-row button:hover { background: var(--accent); color: #000; }
+.zap-io-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.zap-io-desc { margin: 8px 0 0; }
+.zap-io-btn { flex-direction: row; justify-content: center; gap: 8px; padding: 8px; border-radius: 10px; background: var(--bg-darker); border: 1px solid var(--border); }
+.zap-io-btn:hover { border-color: var(--accent); }
+.zap-io-btn .icon-circle { width: 30px; height: 30px; background: none; border: none; color: var(--accent); }
+.zap-io-btn .icon-label { color: var(--text-main); font-size: 0.78rem; max-width: none; }
+
+/* ==================== ỦNG HỘ DỰ ÁN (DONATE) ==================== */
+.modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+    z-index: 1000; display: flex; align-items: center; justify-content: center;
+    animation: fadeIn 0.2s ease-in-out;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.donate-modal-content {
+    position: relative; background: var(--bg-card);
+    border: 1.5px solid #f5a623; border-radius: 14px;
+    max-width: 260px; width: 88%; padding: 18px 16px 14px;
+    text-align: center; box-shadow: 0 10px 40px var(--shadow-soft);
+}
+.donate-modal-content h2 { color: #f5a623; font-size: 1rem; letter-spacing: 0.5px; margin-bottom: 12px; }
+.modal-close {
+    position: absolute; top: 8px; right: 12px; font-size: 1.3rem;
+    cursor: pointer; color: var(--text-sub); line-height: 1;
+}
+.modal-close:hover { color: var(--text-strong); }
+
+.donate-qr-wrap {
+    background: var(--bg-darker); border: 1px solid rgba(245, 166, 35, 0.25);
+    border-radius: 10px; padding: 8px; display: flex; justify-content: center;
+}
+.donate-qr-img { width: 100%; max-width: 200px; height: auto; border-radius: 6px; display: block; }
+
+.donate-download-btn {
+    display: inline-block; margin: 10px 0 12px; padding: 6px 14px;
+    background: none; border: 1px solid #f5a623; color: #f5a623;
+    border-radius: 6px; font-size: 0.7rem; font-weight: 700;
+    text-decoration: none; cursor: pointer; transition: background 0.2s;
+}
+.donate-download-btn:hover { background: rgba(245, 166, 35, 0.15); }
+
+.donate-name { color: #f5a623; font-weight: 700; letter-spacing: 0.5px; font-size: 0.85rem; margin-bottom: 4px; }
+.donate-account, .donate-email {
+    font-family: monospace; font-weight: 700; color: var(--text-main);
+    cursor: pointer; padding: 4px 8px; border-radius: 6px;
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem;
+    transition: background 0.2s;
+}
+.donate-account:hover, .donate-email:hover { background: rgba(255,255,255,0.08); }
+.donate-copy-icon { font-size: 0.68rem; opacity: 0.7; }
+.donate-caption { color: var(--text-sub); font-size: 0.7rem; margin: 8px 0 0; }
+.donate-contact { border-top: 1px solid var(--border); margin-top: 10px; padding-top: 10px; }
+.donate-email { color: var(--success); }
+
+.donate-toast {
+    position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
+    background: var(--success); color: #000; font-size: 0.75rem; font-weight: 700;
+    padding: 6px 14px; border-radius: 20px; z-index: 1100;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+}
+.donate-toast.show { opacity: 1; }
+
+.panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; }
+.panel-title { font-size: 0.9rem; color: var(--text-strong); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; font-weight: 600; letter-spacing: 0.5px; }
+.panel-title::before { content: ''; width: 3px; height: 12px; background: var(--accent); border-radius: 2px; }
+.panel-desc { font-size: 0.72rem; color: var(--text-sub); margin: -4px 0 8px; line-height: 1.4; }
+
+/* THEO YÊU CẦU NGƯỜI DÙNG: gộp CORE FEATURES + MULTI-LAYER ALGORITHM vào tab, đỡ phải cuộn dài */
+.tab-bar { display: flex; gap: 6px; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
+.tab-btn {
+    flex: 1; background: none; border: none; color: var(--text-sub); font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.3px; padding: 8px 4px 10px; cursor: pointer; border-bottom: 2px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+.tab-btn:hover { color: var(--text-main); }
+.tab-btn.is-active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-panel.is-active { display: block; }
+
+.aggressive-mode-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.aggressive-mode-info { flex: 1; min-width: 0; }
+.aggressive-mode-label { font-size: 0.82rem; font-weight: 700; color: var(--text-main); margin-bottom: 2px; }
+.aggressive-mode-row .panel-desc { margin: 0; }
+.toggle-switch { position: relative; display: inline-block; width: 40px; height: 22px; flex-shrink: 0; }
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+.toggle-slider { position: absolute; cursor: pointer; inset: 0; background: var(--border); border-radius: 22px; transition: 0.2s; }
+.toggle-slider::before { content: ""; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: 0.2s; }
+.toggle-switch input:checked + .toggle-slider { background: var(--accent); }
+.toggle-switch input:checked + .toggle-slider::before { transform: translateX(18px); }
+
+ul { list-style: none; }
+li { margin-bottom: 6px; color: var(--text-sub); font-size: 0.8rem; display: flex; align-items: flex-start; gap: 6px; }
+li::before { content: "✓"; color: var(--accent); font-weight: bold; }
+
+.algo-box { background: var(--bg-darker); border: 1px dashed var(--border); padding: 10px; border-radius: 8px; text-align: center; font-family: monospace; color: var(--accent); font-size: 0.75rem; margin-bottom: 8px; }
+        
+table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+th, td { padding: 8px; text-align: left; border-bottom: 1px solid var(--border); }
+th { color: var(--accent); font-weight: 600; background: rgba(0, 0, 0, 0.15); }
+td { color: var(--text-sub); }
+
+.footer-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 10px; }
+.author-box { font-size: 0.75rem; color: var(--text-sub); display: flex; flex-direction: column; justify-content: center; }
+.author-box strong { color: var(--text-strong); }
+        
+.bank-box {
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-darker));
+    border: 1px solid var(--border);
+    border-radius: 10px; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.bank-num { font-size: 0.95rem; font-weight: 700; color: var(--text-strong); font-family: monospace; margin-top: 2px; }
+.bank-label { font-size: 0.65rem; color: var(--text-sub); }
+.badge-name { font-size: 0.65rem; background: #10b981; color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+/* Hiệu ứng rung lắc nhảy nhảy khi phát hiện bản mới */
+@keyframes excitedJump {
+    0%, 100% { transform: translateY(0) scale(1); }
+    20% { transform: translateY(-4px) scale(1.03); }
+    40% { transform: translateY(2px) scale(0.98); }
+    60% { transform: translateY(-2px) scale(1.01); }
+    80% { transform: translateY(1px) scale(1); }
+}
+
+/* Lớp hiệu ứng được thêm vào nút bằng Javascript */
+.icon-btn-reset.has-update .icon-circle {
+    animation: excitedJump 1.2s ease-in-out infinite;
+    background: linear-gradient(135deg, #ff007f, #ff7b00) !important; /* Đổi màu cam hồng rực cháy */
+    color: #fff !important;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6) !important;
+}
+.icon-btn-reset.has-update .icon-label { color: #ff7b00; font-weight: 700; }

@@ -1,0 +1,63 @@
+/* --- CHẶN KHUNG QUẢNG CÁO TRANG CHỦ --- */
+ytd-rich-item-renderer:has(ytd-ad-slot-renderer, ytm-promoted-sparkles-web-renderer, ad-slot-renderer, [class*="ad-slot"], ytd-statement-banner-renderer) {
+    display: none !important;
+}
+
+/* --- CHẶN THẺ QUẢNG CÁO + MEALBAR PROMO --- */
+square-image-layout-view-model, ad-image-view-model,
+feed-ad-metadata-view-model, ad-button-view-model,
+ytd-ad-slot-renderer, ytm-promoted-sparkles-web-renderer,
+ad-slot-renderer, ytlr-ad-slot-renderer,
+ytlr-ad-avatar-lockup-renderer, ytlr-ad-hover-text-button-renderer,
+ytlr-ad-skip-or-preview,
+ytd-statement-banner-renderer,
+ytd-rich-section-renderer:has(ytd-statement-banner-renderer),
+.ytwSquareImageLayoutViewModelHost, .ytp-ad-module, .ytp-ad-overlay-container,
+#player-ads, ytd-enforcement-message-view-model,
+tp-yt-paper-dialog:has(ytd-enforcement-message-view-model),
+.yt-playability-error-supported-renderers,
+ytd-engagement-panel-title-header-renderer > #banner,
+#ads-info-button.style-scope.ytd-engagement-panel-title-header-renderer,
+ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"],
+ytd-engagement-panel-section-list-renderer:has(panel-ad-header-image-lockup-view-model),
+panel-ad-header-image-lockup-view-model, ad-avatar-lockup-view-model,
+ad-image-view-model.ytwAdImageViewModelHostIsClickableAdComponent,
+yt-mealbar-promo-renderer,
+ytmusic-mealbar-promo-renderer,
+tp-yt-paper-dialog:has(yt-mealbar-promo-renderer),
+tp-yt-paper-dialog:has(ytmusic-mealbar-promo-renderer),
+.ytmusic-popup-container,
+ytmusic-guide-entry-renderer:has([aria-label*="Upgrade"]),
+ytmusic-app-layout ytmusic-mealbar-promo-renderer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none !important;
+}
+
+/* --- CHẶN SPONSORED + SKIP HIỆN ĐẠI --- */
+.ytp-ad-action-interstitial,
+.ytp-ad-action-interstitial-slot,
+.ytp-ad-action-interstitial-background-container,
+.ytp-ad-action-interstitial-card,
+.ytp-ad-module,
+.video-ads,
+.ytp-ad-player-overlay,
+.ytp-ad-overlay-container,
+.ytp-ad-timed-pie-countdown-container,
+.ytp-ad-skip-button-slot,
+[class*="ad-action-interstitial"],
+[class*="ytp-ad-action"],
+.ytp-ad-image {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    max-height: 0 !important;
+}
