@@ -4,7 +4,7 @@ set "TARGET_DIR=%~dp0"
 cd /d "%TARGET_DIR%"
 
 echo [1/4] Dang tai ban cap nhat (Thu link Google Drive)...
-powershell -Command "try { Invoke-WebRequest -Uri 'https://drive.usercontent.google.com/download?id=1Fk3-SQlH5bJ0l9AH0oJh7EyAuL8JIzUJ&export=download&confirm=t' -OutFile 'update_temp.zip'; exit 0 } catch { exit 1 }"
+powershell -Command "try { Invoke-WebRequest -Uri 'https://drive.usercontent.google.com/download?id=19PlZ9cUp24cZmIC3_pmg_R7WL9Uis298&export=download&confirm=t' -OutFile 'update_temp.zip'; exit 0 } catch { exit 1 }"
 
 :: Kiểm tra xem file tải về từ Drive có thực sự tồn tại và dung lượng > 0 hay không
 if exist "update_temp.zip" (
