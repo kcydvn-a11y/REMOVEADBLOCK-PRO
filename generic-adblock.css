@@ -8,11 +8,6 @@ ins.adsbygoogle,
    dialog bên trong đã bị 1 lớp khác đánh dấu là quảng cáo (data-jd-heuristic-hidden), lớp phủ nền
    đen bọc ngoài cũng vô nghĩa theo - ẩn nó đi để không còn che kín màn hình không cho vào trang. */
 .ReactModal__Overlay:has([data-jd-heuristic-hidden]),
-/* Modal chống adblock (React): chỉ khi có nút allow-ads — không đụng login/cookie dialog */
-.ReactModal__Content:has(.allow-ads-button),
-.ReactModal__Content:has([class*="allow-ads" i]),
-.ReactModal__Overlay:has(.allow-ads-button),
-.ReactModal__Overlay:has([class*="allow-ads" i]),
 /* rel="sponsored" - thuộc tính CHUẨN HTML chính thức đánh dấu link tài trợ/quảng cáo, do CHÍNH SITE
    tự khai báo rõ ràng theo chuẩn (không phải suy đoán) - rất an toàn, áp dụng được cho mọi site tuân
    thủ chuẩn HTML này, không cần biết trước domain quảng cáo cụ thể nào. */
@@ -34,9 +29,10 @@ img[width="300"][height="600"],
 img[width="970"][height="250"],
 img[width="980"][height="250"],
 img[width="336"][height="280"]:not([class*="thumb" i]):not([class*="album" i]):not([src*="/thumb"]),
-img[width="250"][height="250"]:not([class*="thumb" i]):not([class*="album" i]):not([class*="cover" i]):not([src*="/thumb"]):not([src*="thumbnail"]),
-img[width="200"][height="200"]:not([class*="thumb" i]):not([class*="album" i]):not([src*="/thumb"]),
-img[width="125"][height="125"]:not([class*="thumb" i]):not([src*="/thumb"]),
+/* Vuông IAB: vẫn chặn banner; bỏ qua CDN ảnh user Paltalk (palassets /size125|/size240) */
+img[width="250"][height="250"]:not([src*="palassets"]):not([src*="/size"]):not([src*="/thumb"]):not([class*="thumb" i]):not([class*="album" i]),
+img[width="200"][height="200"]:not([src*="palassets"]):not([src*="/size"]):not([src*="/thumb"]):not([class*="thumb" i]):not([class*="album" i]),
+img[width="125"][height="125"]:not([src*="palassets"]):not([src*="/size"]):not([src*="/thumb"]):not([class*="thumb" i]):not([class*="album" i]),
 img[width="240"][height="400"],
 img[width="980"][height="120"],
 img[width="750"][height="100"],
@@ -122,8 +118,13 @@ aside[data-atc="atc-nonstar"],
    đặt tên khung NGOÀI CÙNG theo quy ước này (VD "LeaderBoardTop") với chiều cao riêng do CHÍNH SITE
    quy định (không phụ thuộc nội dung quảng cáo con) - dù quảng cáo bên trong đã bị chặn hoàn toàn
    (rỗng), khung ngoài này vẫn giữ nguyên kích thước nếu không ẩn thẳng chính nó. */
-[id*="leaderboard" i],
-[class*="leaderboard" i],
+/* LeaderBoard ad slot — không ẩn UI ranking leaderboard-room-card (Paltalk TOP ROOMS) */
+[id*="LeaderBoard"],
+[id*="leaderboard-ad" i], [id*="leaderboard_ad" i],
+[id*="leaderboardtop" i], [id*="leaderboard-top" i], [id*="leaderboard_top" i],
+[class*="LeaderBoard"]:not([class*="room"]):not([class*="card"]),
+[class*="leaderboard-ad" i], [class*="leaderboard_ad" i],
+[class*="leaderboard-banner" i],
 [class*="xx-ads" i],
 [class*="ads-wrap" i],
 [id*="catfish" i],
@@ -179,17 +180,108 @@ div:has(> img[onerror*="vnx_err"]),
     width: 0 !important;
     pointer-events: none !important;
 }
-
-/* Parent div bọc iframe QC (tránh khung rỗng) */
 div:has(> iframe[src*="doubleclick.net"]),
 div:has(> iframe[src*="googlesyndication.com"]),
 div:has(> iframe[src*="amazon-adsystem.com"]) {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+}
+
+/* ========== Paltalk: ÉP HIỆN room card / avatar ========== */
+[class*="leaderboard-room-card"] img,
+[class*="room-content_groupPic"] img,
+[class*="group-follower"] img,
+[class*="gallery_myPhoto"] img,
+img[src*="groups.palassets"],
+img[src*="people.palassets"],
+img[src*="/size125/"],
+img[src*="/size240/"] {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    width: auto !important;
+    max-width: 100% !important;
+    pointer-events: auto !important;
+    overflow: visible !important;
+}
+[class*="leaderboard-room-card_container"],
+[class*="room-content_wrapper"],
+[class*="group-follower-card_follower"],
+[class*="gallery_myPhoto"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    pointer-events: auto !important;
+}
+
+/* erome album grid + gallery thumbs */
+.album-thumbnail,
+img.album-thumbnail,
+.album-thumbnail-container img,
+img[src*="/thumbs/"],
+img[src*="erome.com"][src*="/thumb"] {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    width: auto !important;
+    max-width: 100% !important;
+    pointer-events: auto !important;
+}
+.album-thumbnail-container,
+div.album,
+a.album-link {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    pointer-events: auto !important;
+}
+
+/* Modal chống adblock React — không đụng login/cookie */
+.ReactModal__Content:has(.allow-ads-button),
+.ReactModal__Content:has([class*="allow-ads" i]),
+.ReactModal__Overlay:has(.allow-ads-button),
+.ReactModal__Overlay:has([class*="allow-ads" i]) {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Video.js in-player ad residual */
+.vjs-inplayer-resume-button,
+.vjs-inplayer-close-button,
+.vjs-ad-control-bar,
+.vjs-ad-playing .vjs-ad-playing-ui,
+.movieplayer-box-adv-box.adsinfo:empty,
+.movieplayer-box-adv-box.adsinfo:not(:has(iframe[src]:not([src=""]))) {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    height: 0 !important;
     max-height: 0 !important;
     overflow: hidden !important;
+}
+.video-js .vjs-black-poster:empty,
+.vjs-black-poster:not(:has(img)):not(:has(video)):not(:has(iframe)):not(:has(button)):not(:has(a[href])) {
     pointer-events: none !important;
+}
+.video-js.vjs-has-started .vjs-black-poster,
+.video-js.vjs-playing .vjs-black-poster,
+.video-js.vjs-paused .vjs-black-poster,
+.video-js .vjs-tech ~ .vjs-black-poster {
+    pointer-events: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 
 /* Banner nhà cái / affiliate dưới player — chỉ khi có dấu hiệu rõ (shortener, alt=ads, path /ads/, size 728x70)
@@ -260,54 +352,32 @@ p:has(> a[href*="bit.ly"]:has(img[src*="728x"])) {
 }
 
 
-/* Video.js in-player ad residual (eporner & videojs-contrib-ads):
-   Sau khi VAST/preroll bị chặn mạng, player còn "Close & Play" / close-button.
-   Class CHỈ của UI quảng cáo trong player — không đụng vjs-control-bar / vjs-big-play. */
-.vjs-inplayer-resume-button,
-.vjs-inplayer-close-button,
-.vjs-ad-control-bar,
-.vjs-ad-playing .vjs-ad-playing-ui,
-.movieplayer-box-adv-box.adsinfo:empty,
-.movieplayer-box-adv-box.adsinfo:not(:has(iframe[src]:not([src=""]))) {
+/* Popup casino/affiliate tự khai alt="Advertisement" + z-index max (zero-flash).
+   Ngân hàng/login KHÔNG dùng alt="Advertisement" trên ảnh — an toàn. */
+img[alt="Advertisement" i],
+img[alt="advertisement" i],
+a:has(> img[alt="Advertisement" i]),
+a:has(> img[alt="advertisement" i]),
+div[style*="2147483647"]:has(img[alt="Advertisement" i]),
+div[style*="2147483646"]:has(img[alt="Advertisement" i]),
+div[style*="2147483647"]:has(img[alt="advertisement" i]),
+div[style*="2147483646"]:has(img[alt="advertisement" i]),
+div[style*="position: fixed"][style*="2147483647"]:has(a[href*="shortlink"]),
+div[style*="position: fixed"][style*="2147483647"]:has(a[href*="affiliateCode"]) {
     display: none !important;
     visibility: hidden !important;
+    opacity: 0 !important;
     pointer-events: none !important;
     height: 0 !important;
     max-height: 0 !important;
     overflow: hidden !important;
 }
 
-/* ========================================================================
-   Video.js black poster rỗng (eporner & videojs-contrib-ads / tương tự)
-   BẰNG CHỨNG DOM report 2026-10-01 it.eporner.com:
-   - .vjs-black-poster 1280x834, pointer-events:auto, rỗng, phủ đúng giữa player
-   - emptyPlayerUiBlockingClick: true → click Play bị lớp này NUỐT (không tới <video>)
-   - KHÔNG phải redirect sang domain lạ; trang vẫn còn, chỉ không bấm được Play
-   Site khác dùng Video.js + VAST bị chặn cũng có thể còn poster rỗng giống vậy.
-   AN TOÀN: chỉ pointer-events:none / ẩn khi rỗng hoặc player đã started.
-   KHÔNG display:none wrapper player, KHÔNG đụng .vjs-control-bar / .vjs-big-play-button.
-   ======================================================================== */
-.video-js .vjs-black-poster:empty,
-.vjs-black-poster:not(:has(img)):not(:has(video)):not(:has(iframe)):not(:has(button)):not(:has(a[href])) {
-    pointer-events: none !important;
-}
-/* Khi player đã có tech / đã started / đang play — poster không được chặn click */
-.video-js.vjs-has-started .vjs-black-poster,
-.video-js.vjs-playing .vjs-black-poster,
-.video-js.vjs-paused .vjs-black-poster,
-.video-js .vjs-tech ~ .vjs-black-poster {
-    pointer-events: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
-
-/* Gallery nav — luôn hover/click được (erome lightGallery, Fancybox, PhotoSwipe, mọi site) */
+/* Gallery nav — luôn click được (erome lightGallery, Fancybox, PhotoSwipe) */
 .lg-next, .lg-prev, .lg-close, .lg-icon,
 button.lg-next, button.lg-prev, button.lg-close,
 .fancybox-nav, .fancybox-prev, .fancybox-next, .fancybox-close, .fancybox-close-small,
 .pswp__button, .glightbox-next, .glightbox-prev, .gclose, .mfp-close, .mfp-arrow {
     pointer-events: auto !important;
     visibility: visible !important;
-    /* không ép opacity — giữ hiệu ứng fade khi hover của thư viện */
 }
