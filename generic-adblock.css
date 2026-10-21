@@ -190,34 +190,33 @@ div:has(> iframe[src*="amazon-adsystem.com"]) {
     pointer-events: none !important;
 }
 
-/* ========== Paltalk: ÉP HIỆN room card / avatar ========== */
+/* ========== Paltalk: giữ avatar/room card luôn hiển thị ==========
+   SỬA (lỗi chập chờn / hiện chậm ở khối Leaderboard "MOST GIFTED"): bản cũ ép thêm
+   width:auto / height:auto / max-height:none / overflow:visible !important lên <img>, đè mất kích
+   thước 100x100 do chính site khai (thuộc tính width/height + CSS-module). Ảnh lại có loading="lazy"
+   nên lúc chưa tải xong khung bị co/giãn (layout shift), tải xong mới "nhảy" về cỡ thật -> trông như
+   chập chờn, hiện chậm. Giờ CHỈ đảm bảo không bị ẩn (visibility/opacity/pointer-events), KHÔNG đụng
+   tới kích thước hay display của site. */
 [class*="leaderboard-room-card"] img,
+[class*="leaderboard_"] img,
 [class*="room-content_groupPic"] img,
 [class*="group-follower"] img,
 [class*="gallery_myPhoto"] img,
 img[src*="groups.palassets"],
 img[src*="people.palassets"],
+img[src*="palassets.com"],
 img[src*="/size125/"],
 img[src*="/size240/"] {
-    display: inline-block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    height: auto !important;
-    max-height: none !important;
-    width: auto !important;
-    max-width: 100% !important;
     pointer-events: auto !important;
-    overflow: visible !important;
 }
 [class*="leaderboard-room-card_container"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 [class*="room-content_wrapper"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 [class*="group-follower-card_follower"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 [class*="gallery_myPhoto"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]) {
-    display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    height: auto !important;
-    max-height: none !important;
     pointer-events: auto !important;
 }
 
