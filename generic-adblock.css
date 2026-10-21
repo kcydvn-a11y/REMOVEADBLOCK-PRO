@@ -60,7 +60,7 @@ ins[data-z],
 [id^="google_ads_iframe"],
 iframe[id^="google_ads_iframe"],
 [id^="div-gpt-ad"],
-[id*="google_ads_"],
+[id*="google_ads_"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 iframe[src*="doubleclick.net"],
 iframe[src*="googlesyndication.com"],
 iframe[src*="googleadservices.com"],
@@ -69,16 +69,16 @@ iframe[src*="adnxs.com"],
 iframe[src*="pubmatic.com"],
 iframe[src*="rubiconproject.com"],
 iframe[src*="openx.net"],
-[class*="advertisement" i],
-[class*="ad-container" i],
-[class*="ad-banner" i],
-[class*="ad-slot" i],
-[class*="ad-wrapper" i],
+[class*="advertisement" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="ad-container" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="ad-banner" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="ad-slot" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="ad-wrapper" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 [data-ad-slot],
 [data-ad-client],
 [data-google-query-id],
 [id^="__clb-spot_"],
-[id*="-spot_"][id*="_container"],
+[id*="-spot_"][id*="_container"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 /* Khung quảng cáo overlay của KVS Player (fxPane) — ẩn từ đầu để chính script của nó tự nhận
    thấy khung rộng 0px và KHÔNG BAO GIỜ chạy tới bước hiện quảng cáo dự phòng/chuyển hướng. */
 .fxPane,
@@ -104,34 +104,34 @@ aside[data-atc="atc-nonstar"],
 .OUTBRAIN,
 .ob-widget,
 .mgid-widget,
-[id*="mgid-"],
+[id*="mgid-"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 .revcontent,
-[id*="rc-widget"],
+[id*="rc-widget"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 .video-bottom-banner,
 .video-banner-item,
 /* Quy ước đặt tên container quảng cáo phổ biến ở nhiều site VN (bằng chứng thật: vl-underplayer-adx,
    vl-header-adx, xx-ads, ads-wrap, catfishAds) - ẩn bằng CSS thuần chạy NGAY LÚC document_start,
    không có độ trễ debounce JS như heuristic-adblock.js nên banner không kịp lóe lên trước khi mất. */
-[id*="-adx" i],
-[id$="adx" i],
+[id*="-adx" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[id$="adx" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 /* "LeaderBoard" - thuật ngữ ngành quảng cáo chuẩn cho banner 728x90 đặt đầu trang, nhiều site tự
    đặt tên khung NGOÀI CÙNG theo quy ước này (VD "LeaderBoardTop") với chiều cao riêng do CHÍNH SITE
    quy định (không phụ thuộc nội dung quảng cáo con) - dù quảng cáo bên trong đã bị chặn hoàn toàn
    (rỗng), khung ngoài này vẫn giữ nguyên kích thước nếu không ẩn thẳng chính nó. */
 /* LeaderBoard ad slot — không ẩn UI ranking leaderboard-room-card (Paltalk TOP ROOMS) */
-[id*="LeaderBoard"],
-[id*="leaderboard-ad" i], [id*="leaderboard_ad" i],
-[id*="leaderboardtop" i], [id*="leaderboard-top" i], [id*="leaderboard_top" i],
-[class*="LeaderBoard"]:not([class*="room"]):not([class*="card"]),
-[class*="leaderboard-ad" i], [class*="leaderboard_ad" i],
-[class*="leaderboard-banner" i],
-[class*="xx-ads" i],
-[class*="ads-wrap" i],
-[id*="catfish" i],
-[class*="catfish" i],
-[class*="ads-flex" i],
+[id*="LeaderBoard"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[id*="leaderboard-ad" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]), [id*="leaderboard_ad" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[id*="leaderboardtop" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]), [id*="leaderboard-top" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]), [id*="leaderboard_top" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="LeaderBoard"]:not([class*="room"]):not([class*="card"]):not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="leaderboard-ad" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]), [class*="leaderboard_ad" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="leaderboard-banner" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="xx-ads" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="ads-wrap" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[id*="catfish" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="catfish" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="ads-flex" i]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 .section-brand-add,
-[class*="banner-wrapper" i][data-banner-id],
+[class*="banner-wrapper" i][data-banner-id]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
 /* Icon "ảnh vỡ" trang tự hiện (onerror) khi ảnh quảng cáo bị chặn ở tầng mạng - ẩn luôn icon và cả
    thẻ <a> chứa nó (:has - Chrome hiện đại hỗ trợ) để không còn vùng trống có thể bấm nhầm dẫn tới
    trang quảng cáo/cờ bạc đích, dù ảnh minh hoạ đã bị chặn. */
@@ -209,10 +209,10 @@ img[src*="/size240/"] {
     pointer-events: auto !important;
     overflow: visible !important;
 }
-[class*="leaderboard-room-card_container"],
-[class*="room-content_wrapper"],
-[class*="group-follower-card_follower"],
-[class*="gallery_myPhoto"] {
+[class*="leaderboard-room-card_container"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="room-content_wrapper"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="group-follower-card_follower"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]),
+[class*="gallery_myPhoto"]:not(html):not(body):not([style*="left:-" i]):not([style*="left: -" i]) {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
