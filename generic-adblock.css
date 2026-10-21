@@ -380,3 +380,28 @@ button.lg-next, button.lg-prev, button.lg-close,
     pointer-events: auto !important;
     visibility: visible !important;
 }
+
+/* ===== V2 (phimsexvietzolo.com và site cùng kiểu): banner ảnh bọc link affiliate + popup nền đen =====
+   Ẩn ngay từ document_start các THẺ LINK có bằng chứng QC tự khai (short-link.app, tham số đặt chỗ
+   c=cpd/cpc, m=catfish|preload|top-banner|popup, rel=sponsored kèm ảnh). Khung cha (nền đen, lưới banner)
+   do JS dọn qua hide() -> collapseEmptyAncestors + màn che mồ côi. */
+a[href*="short-link.app/"]:has(img),
+a[href*="c=cpd&"]:has(img),
+a[href*="c=cpc&"]:has(img),
+a[href*="m=catfish"]:has(img),
+a[href*="m=preload"]:has(img),
+a[href*="m=top-banner"]:has(img),
+a[href*="m=popup"]:has(img),
+a[rel~="sponsored"]:has(img),
+#simple-ad-popup,
+#header-banner-ads,
+a.hay-banner-link:has(img[alt="ads" i]),
+#bottomBanner:has(img[alt="ads" i]) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+}
