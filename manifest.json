@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "REMOVEADBLOCK PRO - Adaptive Stealth Architecture",
   "short_name": "RemoveAdblock Pro",
-  "version": "14.9.93",
+  "version": "14.9.94",
   "default_locale": "en",
   "description": "__MSG_extDescription__",
   "author": "Thái Thông",
@@ -143,7 +143,9 @@
       "js": [
         "popup-blocker-bridge.js",
         "heuristic-adblock.js",
-        "generic-video-adblock.js"
+		"generic-video-adblock.js",
+		"generic-video-adblock-passThrough.js"
+        
       ],
       "run_at": "document_start",
       "all_frames": true

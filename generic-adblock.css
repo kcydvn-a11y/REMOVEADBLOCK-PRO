@@ -405,3 +405,134 @@ a.hay-banner-link:has(img[alt="ads" i]),
     max-height: 0 !important;
     overflow: hidden !important;
 }
+
+/* ============================================================
+   FLOWPLAYER / xNhau-style – Empty player UI chặn click Play
+   Áp dụng TOÀN SITE dùng Flowplayer (.fp-ui / .fp-poster)
+   Nguyên tắc: pointer-events:none (KHÔNG display:none) trên lớp
+   rỗng/poster; giữ control thật (play/timeline/volume) nhận click.
+   Bằng chứng: xnhau.pub — .fp-ui + poster + xnp-zone che center,
+   emptyPlayerUiBlockingClick = true trong DOM report.
+   ============================================================ */
+
+/* 1. Lớp UI rỗng + poster + zone che giữa màn hình → click xuyên qua */
+.fp-ui,
+.fp-ui-block,
+.fp-ui-inline,
+.fp-poster,
+.fp-player > img,
+.fp-player img[fetchpriority],
+.player-wrap .fp-ui,
+.player-wrap .fp-poster,
+.player-holder .fp-ui,
+.player-holder .fp-poster,
+#xn_player .fp-ui,
+#xn_player .fp-poster,
+.xnp-zone,
+.xnp-zone-l,
+.xnp-zone-r {
+    pointer-events: none !important;
+}
+
+/* 2. Control thật luôn nhận click (không bị rule trên đè) */
+.fp-controls,
+.fp-play,
+.fp-playbtn,
+.fp-ui .fp-play,
+.fp-ui .fp-playbtn,
+.fp-engine,
+video.fp-engine,
+.fp-player video,
+.fp-timeline,
+.fp-volume,
+.fp-fullscreen,
+.fp-ui button,
+.fp-controls button,
+button[aria-label*="play" i],
+button[title*="play" i] {
+    pointer-events: auto !important;
+}
+
+/* 3. Poster sau khi player ready — vẫn tắt tương tác, không ẩn hẳn */
+.is-ready .fp-poster,
+.is-playing .fp-poster,
+.is-paused.is-ready .fp-poster,
+.fp-player.is-ready .fp-poster {
+    pointer-events: none !important;
+}
+
+/* ============================================================
+   xnhau.pub (+ site cùng kiểu) – Popup Fancybox “Chọn Gói Nâng Cấp”
+   CHỈ ẩn popup có .xnnp-up / form /upgrade/ / title nâng cấp.
+   KHÔNG ẩn .fancybox-overlay chung (gallery cần overlay + Next/Prev).
+   KHÔNG dùng :has(.popup-title) trần (dễ dính gallery/html khác).
+   ============================================================ */
+.fancybox-wrap:has(.xnnp-up),
+.fancybox-wrap:has(form[action*="/upgrade/"]),
+.fancybox-skin:has(.xnnp-up),
+.fancybox-skin:has(form[action*="/upgrade/"]),
+.fancybox-inner:has(.xnnp-up),
+.fancybox-inner:has(form[action*="/upgrade/"]),
+.fancybox-opened:has(.xnnp-up),
+.fancybox-wrap:has(.popup-title):not(:has(.fancybox-image)):not(:has(.fancybox-nav)),
+div.fancybox-wrap.fancybox-desktop.fancybox-type-html:has(.xnnp-up) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+/* Gallery Next/Prev/Close — luôn bấm được (bổ sung lớp gallery nav phía trên) */
+.fancybox-nav,
+.fancybox-prev,
+.fancybox-next,
+.fancybox-close,
+.fancybox-close-small,
+a.fancybox-nav,
+a.fancybox-item.fancybox-close {
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* ============================================================
+   VieON – banner “Đăng ký gói / Full HD” đè player (mạnh hơn)
+   Bám path ảnh conversion/payment + alt package poster + class appeal.
+   Ẩn từ banner__body / banner__inner / .banner cha.
+   ============================================================ */
+.player__banner-appeal-vip,
+.banner.player__banner-appeal-vip,
+.player__controls-wrap .banner.player__banner-appeal-vip,
+div.banner.player__banner-appeal-vip.radius-2,
+/* Theo ảnh payment VieON */
+.banner__body:has(img[src*="vieon-images/conversion/payment"]),
+.banner__body:has(img[src*="/conversion/payment/"]),
+.banner__body:has(img[alt="VieON package poster"]),
+.banner__inner:has(img[src*="vieon-images/conversion/payment"]),
+.banner__inner:has(img[alt="VieON package poster"]),
+.banner:has(img[src*="vieon-images/conversion/payment"]),
+.banner:has(img[alt="VieON package poster"]),
+.player__controls-wrap:has(img[src*="vieon-images/conversion/payment"]) > .banner,
+.player__controls-wrap:has(img[alt="VieON package poster"]) > .banner,
+/* Lớp mask / content trực tiếp */
+.mask:has(img[src*="vieon-images/conversion/payment"]),
+.mask:has(img[alt="VieON package poster"]),
+.mask__img[src*="vieon-images/conversion/payment"],
+.mask__img[alt="VieON package poster"],
+.banner__content:has(button.button--light span),
+.banner__body .banner__content.layer-2 {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* Khi chỉ còn khung rỗng sau khi ẩn body */
+.player__controls-wrap .banner:not(:has(img)):not(:has(button)) {
+    display: none !important;
+    height: 0 !important;
+}
