@@ -143,9 +143,7 @@
       "js": [
         "popup-blocker-bridge.js",
         "heuristic-adblock.js",
-		"generic-video-adblock.js",
-		"generic-video-adblock-passThrough.js"
-        
+        "generic-video-adblock.js"
       ],
       "run_at": "document_start",
       "all_frames": true
