@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "REMOVEADBLOCK PRO - Adaptive Stealth Architecture",
   "short_name": "RemoveAdblock Pro",
-  "version": "14.9.94",
+  "version": "14.9.99",
   "default_locale": "en",
   "description": "__MSG_extDescription__",
   "author": "Thái Thông",
@@ -61,11 +61,16 @@
         "id": "ruleset_ads_community_4",
         "enabled": true,
         "path": "rules/ads-community-4.json"
-            },
+      },
       {
         "id": "ruleset_ads_community_5",
         "enabled": true,
         "path": "rules/ads-community-5.json"
+      },
+      {
+        "id": "ruleset_easyprivacy",
+        "enabled": true,
+        "path": "rules/easyprivacy.json"
       }
     ]
   },
@@ -200,6 +205,16 @@
       ],
       "run_at": "document_start",
       "all_frames": false
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "link-risk-hover.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
     }
   ],
   "web_accessible_resources": [
@@ -221,6 +236,6 @@
     }
   ],
   "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://raw.githubusercontent.com https://cdn.jsdelivr.net https://api.github.com;"
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https: http:;"
   }
 }

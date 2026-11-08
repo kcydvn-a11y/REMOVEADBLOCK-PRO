@@ -17,7 +17,7 @@
             <button class="lang-btn" id="themeToggleBtn" title="Đổi giao diện sáng/tối">🌙</button>
             <button class="lang-btn" id="langToggleBtn">VN</button>
             <div class="version-col">
-                <div class="version">v14.9.94</div>
+                <div class="version">v14.9.99</div>
                 <img src="vnn.png" alt="VN" class="vn-map-badge">
             </div>
         </div>
@@ -100,10 +100,13 @@
 
         <!-- THEO YÊU CẦU NGƯỜI DÙNG: thay vì xếp chồng 2 khối "Đã xoá"/"Đã miễn trừ" dọc theo nhau
              (nhìn rối), gộp thành TAB 2 mục - đúng kiểu đã làm cho Tính năng/Công nghệ bên dưới. -->
-        <div class="tab-bar">
+        <div class="tab-bar tab-bar-wrap">
             <button class="tab-btn is-active" id="tabBtnDestroyed" data-tab="tabPanelDestroyed" data-i18n="tabDestroyed">🗑️ Đã xoá</button>
             <button class="tab-btn" id="tabBtnProtected" data-tab="tabPanelProtected" data-i18n="tabProtected">🟢 Đã miễn trừ</button>
             <button class="tab-btn" id="tabBtnExcluded" data-tab="tabPanelExcluded" data-i18n="tabExcluded">🚫 Đã loại trừ</button>
+            <button class="tab-btn" id="tabBtnBlocked" data-tab="tabPanelBlocked" data-i18n="tabBlocked">🛡️ Tab này</button>
+            <button class="tab-btn" id="tabBtnActivity" data-tab="tabPanelActivity" data-i18n="tabActivity">📋 Log 24h</button>
+            <button class="tab-btn" id="tabBtnAdvanced" data-tab="tabPanelAdvanced" data-i18n="tabAdvanced">⚙️ Nâng cao</button>
         </div>
 
         <div class="tab-panel is-active" id="tabPanelDestroyed">
@@ -171,7 +174,88 @@
             </button>
         </div>
 
-        <div class="zap-io-row">
+        <div class="tab-panel" id="tabPanelBlocked" style="display:none;">
+            <div class="panel-desc" data-i18n="blockedDesc">Tracker / quảng cáo bị chặn trên tab hiện tại (tầng mạng + báo cáo nội bộ). Danh sách làm mới khi tải lại trang.</div>
+            <div class="blocked-summary" id="blockedSummary">
+                <span id="blockedTotalText" data-i18n="blockedLoading">Đang tải...</span>
+            </div>
+            <div class="stealth-status-row" id="stealthStatusRow">
+                <span class="stealth-pill" id="stealthPillEasyprivacy" title="EasyPrivacy ruleset">EasyPrivacy</span>
+                <span class="stealth-pill" id="stealthPillFp" title="Fingerprint cloaking">Fingerprint</span>
+            </div>
+            <div id="blockedDomainList" class="zap-days-list blocked-domain-list">
+                <div class="zap-empty" data-i18n="blockedEmpty">Chưa ghi nhận domain bị chặn trên tab này.</div>
+            </div>
+        </div>
+
+        <!-- Giai đoạn 2: Activity Log 24h -->
+        <div class="tab-panel" id="tabPanelActivity" style="display:none;">
+            <div class="panel-desc" data-i18n="activityDesc">Request bị chặn trong 24 giờ gần nhất (tầng mạng + content). Có thể tạm cho phép domain.</div>
+            <div class="blocked-summary" style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+                <span id="activityTotalText" data-i18n="activityLoading">Đang tải...</span>
+                <button class="btn-link" id="activityClearBtn" data-i18n="activityClear" style="font-size:0.72rem;">Xoá log</button>
+            </div>
+            <div id="activityLogList" class="zap-days-list blocked-domain-list">
+                <div class="zap-empty" data-i18n="activityEmpty">Chưa có hoạt động bị chặn.</div>
+            </div>
+        </div>
+
+        <!-- Giai đoạn 2: Custom User Rules -->
+                <!-- Nâng cao: Thêm rule + DNS -->
+        <div class="tab-panel" id="tabPanelAdvanced" style="display:none;">
+            <div class="panel-desc" style="margin-bottom:10px;font-weight:600;color:var(--text-main);" data-i18n="advancedIntro">Hầu hết người dùng không cần dùng tab này. Extension đã tự chặn sẵn. Chỉ mở khi bạn muốn tùy chỉnh thêm.</div>
+
+            <div class="dns-guide-title" style="margin:8px 0 6px;" data-i18n="advancedRulesTitle">✏️ Thêm rule tùy chỉnh</div>
+            <div class="panel-desc" style="white-space:pre-line;" data-i18n="customDesc">Quy tắc tự thêm — chỉ cần gõ hoặc dán rồi bấm Lưu. Không cần hiểu sâu.
+
+||tracker.example.com^     → chặn domain này
+@@||goodcdn.com^           → cho phép (ngoại lệ)
+##.banner-qc               → ẩn phần tử có class này
+example.com##.sponsor      → chỉ ẩn trên trang đó</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;">
+                <button type="button" class="btn-secondary" style="padding:6px 10px;font-size:0.72rem;" id="copyRuleBlock" data-copy="||tracker.example.com^" data-i18n="copyRuleBlock">Copy chặn domain</button>
+                <button type="button" class="btn-secondary" style="padding:6px 10px;font-size:0.72rem;" id="copyRuleAllow" data-copy="@@||goodcdn.com^" data-i18n="copyRuleAllow">Copy ngoại lệ</button>
+                <button type="button" class="btn-secondary" style="padding:6px 10px;font-size:0.72rem;" id="copyRuleHide" data-copy="##.banner-qc" data-i18n="copyRuleHide">Copy ẩn class</button>
+            </div>
+            <textarea id="customRulesText" class="custom-rules-textarea" spellcheck="false" placeholder="||tracker.example.com^&#10;@@||goodcdn.com^&#10;##.banner-qc&#10;example.com##.sponsor"></textarea>
+            <div class="custom-rules-actions">
+                <button class="btn-secondary" id="customRulesSaveBtn" data-i18n="customSave">Lưu &amp; áp dụng</button>
+                <button class="btn-secondary" id="customRulesExportBtn" data-i18n="customExport">Xuất</button>
+                <button class="btn-secondary" id="customRulesImportBtn" data-i18n="customImport">Nhập</button>
+                <input type="file" id="customRulesImportFile" accept="text/plain,.txt" style="display:none;">
+            </div>
+            <div class="panel-desc" id="customRulesStatus" style="margin-top:6px;"></div>
+
+            <div style="border-top:1px solid var(--border);margin:14px 0 10px;"></div>
+
+            <div class="dns-guide-title" style="margin-bottom:6px;" data-i18n="advancedDnsTitle">🌐 DNS hệ thống (tùy chọn)</div>
+            <div class="panel-desc" data-i18n="dnsDesc">Extension đã chặn mạnh bên trong trình duyệt. Nếu muốn thêm lớp chặn tracker ngay từ hệ thống (trước khi request vào Chrome, và áp dụng cả app khác), hãy bật Private DNS / DNS over HTTPS trên thiết bị.</div>
+            
+            <div class="dns-guide-box">
+                <div class="dns-guide-title" data-i18n="dnsAdguardTitle">AdGuard DNS (dễ nhất)</div>
+                <div class="dns-guide-line"><code>dns.adguard-dns.com</code> <button class="btn-link dns-copy" data-copy="dns.adguard-dns.com" data-i18n="copyBtn">Copy</button></div>
+                <div class="dns-guide-line">DoH: <code>https://dns.adguard-dns.com/dns-query</code></div>
+            </div>
+            
+            <div class="dns-guide-box">
+                <div class="dns-guide-title" data-i18n="dnsNextTitle">NextDNS (có bảng điều khiển)</div>
+                <div class="dns-guide-line"><span data-i18n="dnsNextHint">Tạo config miễn phí tại</span> <a href="https://nextdns.io" target="_blank" rel="noopener">nextdns.io</a></div>
+                <div class="dns-guide-line">DoH: <code>https://dns.nextdns.io/YOUR_ID</code></div>
+            </div>
+            
+            <div class="dns-guide-box">
+                <div class="dns-guide-title" data-i18n="dnsHowTitle">Cách bật nhanh</div>
+                <ul style="margin:6px 0 0 16px;font-size:0.75rem;color:var(--text-sub);">
+                    <li data-i18n="dnsHowAndroid"><strong>Android:</strong> Cài đặt → Mạng & internet → Private DNS → gõ hostname</li>
+                    <li data-i18n="dnsHowWin"><strong>Windows 11:</strong> Cài đặt → Mạng → DNS → bật DNS over HTTPS</li>
+                    <li data-i18n="dnsHowIos"><strong>iPhone/iPad:</strong> Cài profile từ AdGuard DNS hoặc NextDNS</li>
+                    <li data-i18n="dnsHowRouter"><strong>Router:</strong> trỏ DNS WAN sang 94.140.14.14 (AdGuard)</li>
+                </ul>
+            </div>
+            
+            <div class="panel-desc" style="margin-top:8px;" data-i18n="dnsNote">Không bắt buộc. Extension vẫn chạy tốt nếu không làm bước này. Gợi ý miễn phí: AdGuard DNS hoặc NextDNS.</div>
+        </div>
+<div class="zap-io-row">
             <button class="icon-btn zap-io-btn" id="zapperExportBtn">
                 <span class="icon-circle">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>

@@ -435,3 +435,188 @@ td { color: var(--text-sub); }
     box-shadow: 0 0 20px rgba(255, 0, 127, 0.6) !important;
 }
 .icon-btn-reset.has-update .icon-label { color: #ff7b00; font-weight: 700; }
+
+/* ==================== TAB ĐÃ CHẶN (Tracking Protection — Giai đoạn 1) ==================== */
+.blocked-summary {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    background: color-mix(in srgb, var(--accent) 12%, var(--bg-darker));
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+.stealth-status-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+.stealth-pill {
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-darker);
+    color: var(--text-sub);
+}
+.stealth-pill.is-on {
+    border-color: var(--success);
+    color: var(--success);
+    background: color-mix(in srgb, var(--success) 14%, var(--bg-darker));
+}
+.blocked-domain-list {
+    max-height: 220px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-main);
+    padding: 6px;
+}
+.blocked-domain-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: var(--bg-darker);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+}
+.blocked-domain-row .bd-host {
+    color: var(--text-main);
+    font-weight: 600;
+    word-break: break-all;
+}
+.blocked-domain-row .bd-count {
+    flex-shrink: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.72rem;
+}
+.blocked-domain-row .bd-tag {
+    flex-shrink: 0;
+    font-size: 0.62rem;
+    color: var(--text-sub);
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ==================== Giai đoạn 2–3 UI ==================== */
+.tab-bar-wrap {
+    flex-wrap: wrap;
+}
+.tab-bar-wrap .tab-btn {
+    flex: 1 1 auto;
+    min-width: 72px;
+    font-size: 0.68rem;
+    padding: 7px 3px 9px;
+}
+
+.custom-rules-textarea {
+    width: 100%;
+    min-height: 140px;
+    max-height: 220px;
+    resize: vertical;
+    background: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.74rem;
+    line-height: 1.45;
+    margin-bottom: 8px;
+}
+.custom-rules-textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-glow);
+}
+.custom-rules-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.custom-rules-actions .btn-secondary {
+    flex: 1 1 auto;
+    min-width: 90px;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+}
+
+.activity-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    background: var(--bg-darker);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 0.72rem;
+    margin-bottom: 6px;
+}
+.activity-row .act-main {
+    min-width: 0;
+    flex: 1;
+}
+.activity-row .act-host {
+    color: var(--text-main);
+    font-weight: 600;
+    word-break: break-all;
+}
+.activity-row .act-meta {
+    color: var(--text-sub);
+    font-size: 0.66rem;
+    margin-top: 2px;
+}
+.activity-row .act-allow {
+    flex-shrink: 0;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.66rem;
+    padding: 3px 7px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.activity-row .act-allow:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+.dns-guide-box {
+    background: var(--bg-darker);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+}
+.dns-guide-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+.dns-guide-line {
+    font-size: 0.72rem;
+    color: var(--text-sub);
+    margin-top: 3px;
+    word-break: break-all;
+}
+.dns-guide-line code {
+    color: var(--accent);
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+}
+.dns-guide-line a {
+    color: var(--accent);
+}

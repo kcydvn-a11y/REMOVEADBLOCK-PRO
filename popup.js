@@ -88,6 +88,48 @@ const i18n = {
         zapExportToast: "Exported {n} items (+ config)!",
         zapImportToast: "Imported {imp}, rejected {rej}, patterns {pat}, excluded {exc}, allow+{allow}/block+{block}!",
         zapImportError: "Invalid file — could not import.",
+        tabBlocked: "🛡️ This tab",
+        blockedDesc: "Trackers & ads blocked on the current tab (network + internal reports). Resets when you reload the page.",
+        blockedLoading: "Loading...",
+        blockedEmpty: "No blocked domains recorded on this tab yet.",
+        blockedTotal: "{n} blocked on this tab",
+        blockedTotalZero: "0 blocked on this tab",
+        blockedHintNoDebug: "Tip: full domain list needs declarativeNetRequestFeedback (already requested). Some browsers only expose totals.",
+        tabActivity: "📋 24h Log",
+        tabAdvanced: "⚙️ Advanced",
+        advancedIntro: "Most users do not need this tab. The extension already blocks a lot. Only open it when you want extra custom rules or system DNS.",
+        advancedRulesTitle: "✏️ Custom rules",
+        advancedDnsTitle: "🌐 System DNS (optional)",
+        copyRuleBlock: "Copy block domain",
+        copyRuleAllow: "Copy exception",
+        copyRuleHide: "Copy hide class",
+        copyBtn: "Copy",
+        dnsAdguardTitle: "AdGuard DNS (easiest)",
+        dnsNextTitle: "NextDNS (has dashboard)",
+        dnsNextHint: "Create a free config at",
+        dnsHowTitle: "Quick setup",
+        dnsHowAndroid: "Android: Settings → Network & internet → Private DNS → enter hostname",
+        dnsHowWin: "Windows 11: Settings → Network → DNS → turn on DNS over HTTPS",
+        dnsHowIos: "iPhone/iPad: Install profile from AdGuard DNS or NextDNS",
+        dnsHowRouter: "Router: point WAN DNS to 94.140.14.14 (AdGuard)",
+
+        activityDesc: "Requests blocked in the last 24 hours. You can temporarily allow a domain for this session.",
+        activityLoading: "Loading...",
+        activityEmpty: "No blocked activity yet.",
+        activityTotal: "{n} entries (24h)",
+        activityClear: "Clear log",
+        activityAllow: "Allow",
+        activityAllowed: "Allowed this session",
+        tabCustom: "✏️ Add rules",
+        customDesc: "Easy custom rules — just type or paste, then click Save. No advanced knowledge needed.\n\n||tracker.example.com^     → block this domain\n@@||goodcdn.com^           → allow (exception)\n##.ad-banner               → hide elements with this class\nexample.com##.sponsor      → hide only on that site",
+        customSave: "Save & apply",
+        customExport: "Export",
+        customImport: "Import",
+        customSaved: "Saved — {net} network rules, {cos} cosmetic",
+        customError: "Could not apply rules",
+        tabDns: "🌐 System DNS",
+        dnsDesc: "This extension already blocks strongly inside the browser. For an extra layer that blocks trackers before they even reach Chrome (and works for other apps), set Private DNS / DNS over HTTPS on your device.",
+        dnsNote: "Not required. The extension works well without it. Recommended free options: AdGuard DNS or NextDNS.",
         donateBtn: "Support this project",
         donateTitle: "❤️ SUPPORT THIS PROJECT",
         donateDownload: "⬇ Save QR image",
@@ -184,6 +226,48 @@ const i18n = {
         zapExportToast: "Đã xuất {n} mục (+ cấu hình)!",
         zapImportToast: "Nhập {imp}, bỏ {rej}, mẫu {pat}, loại trừ {exc}, allow+{allow}/block+{block}!",
         zapImportError: "File không hợp lệ — không thể nhập.",
+        tabBlocked: "🛡️ Tab này",
+        blockedDesc: "Tracker & quảng cáo bị chặn trên tab hiện tại (tầng mạng + báo cáo nội bộ). Danh sách làm mới khi tải lại trang.",
+        blockedLoading: "Đang tải...",
+        blockedEmpty: "Chưa ghi nhận domain bị chặn trên tab này.",
+        blockedTotal: "{n} đã chặn trên tab này",
+        blockedTotalZero: "0 đã chặn trên tab này",
+        blockedHintNoDebug: "Gợi ý: danh sách domain đầy đủ cần quyền declarativeNetRequestFeedback (đã xin). Một số trình duyệt chỉ trả tổng số.",
+        tabActivity: "📋 Log 24h",
+        tabAdvanced: "⚙️ Nâng cao",
+        advancedIntro: "Hầu hết người dùng không cần dùng tab này. Extension đã tự chặn sẵn. Chỉ mở khi bạn muốn tùy chỉnh thêm.",
+        advancedRulesTitle: "✏️ Thêm rule tùy chỉnh",
+        advancedDnsTitle: "🌐 DNS hệ thống (tùy chọn)",
+        copyRuleBlock: "Copy chặn domain",
+        copyRuleAllow: "Copy ngoại lệ",
+        copyRuleHide: "Copy ẩn class",
+        copyBtn: "Copy",
+        dnsAdguardTitle: "AdGuard DNS (dễ nhất)",
+        dnsNextTitle: "NextDNS (có bảng điều khiển)",
+        dnsNextHint: "Tạo config miễn phí tại",
+        dnsHowTitle: "Cách bật nhanh",
+        dnsHowAndroid: "Android: Cài đặt → Mạng & internet → Private DNS → gõ hostname",
+        dnsHowWin: "Windows 11: Cài đặt → Mạng → DNS → bật DNS over HTTPS",
+        dnsHowIos: "iPhone/iPad: Cài profile từ AdGuard DNS hoặc NextDNS",
+        dnsHowRouter: "Router: trỏ DNS WAN sang 94.140.14.14 (AdGuard)",
+
+        activityDesc: "Request bị chặn trong 24 giờ gần nhất. Có thể tạm cho phép domain trong phiên này.",
+        activityLoading: "Đang tải...",
+        activityEmpty: "Chưa có hoạt động bị chặn.",
+        activityTotal: "{n} mục (24h)",
+        activityClear: "Xoá log",
+        activityAllow: "Cho phép",
+        activityAllowed: "Đã cho phép phiên này",
+        tabCustom: "✏️ Thêm rule",
+        customDesc: "Quy tắc tự thêm — chỉ cần gõ hoặc dán rồi bấm Lưu. Không cần hiểu sâu.\n\n||tracker.example.com^     → chặn domain này\n@@||goodcdn.com^           → cho phép (ngoại lệ)\n##.banner-qc               → ẩn phần tử có class này\nexample.com##.sponsor      → chỉ ẩn trên trang đó",
+        customSave: "Lưu & áp dụng",
+        customExport: "Xuất",
+        customImport: "Nhập",
+        customSaved: "Đã lưu — {net} rule mạng, {cos} cosmetic",
+        customError: "Không áp dụng được rule",
+        tabDns: "🌐 DNS hệ thống",
+        dnsDesc: "Extension đã chặn mạnh bên trong trình duyệt. Nếu muốn thêm lớp chặn tracker ngay từ hệ thống (trước khi request vào Chrome, và áp dụng cả app khác), hãy bật Private DNS / DNS over HTTPS trên thiết bị.",
+        dnsNote: "Không bắt buộc. Extension vẫn chạy tốt nếu không làm bước này. Gợi ý miễn phí: AdGuard DNS hoặc NextDNS.",
         donateBtn: "Ủng hộ dự án",
         donateTitle: "❤️ ỦNG HỘ DỰ ÁN",
         donateDownload: "⬇ Lưu ảnh QR về máy",
@@ -1298,4 +1382,218 @@ window.addEventListener('pagehide', () => {
         chrome.runtime.sendMessage({ action: 'jdSleepInjectedDevMode', tabId: injectedDevTabId }).catch(() => {});
     }
 }, { once: true });
+})();
+
+// ==================== Giai đoạn 1: TAB ĐÃ CHẶN (Tracking Protection) ====================
+(function initBlockedTab() {
+    const listEl = document.getElementById('blockedDomainList');
+    const totalEl = document.getElementById('blockedTotalText');
+    const pillEp = document.getElementById('stealthPillEasyprivacy');
+    const pillFp = document.getElementById('stealthPillFp');
+    if (!listEl || !totalEl) return;
+
+    function renderBlocked(resp) {
+        const pack = (typeof i18n !== 'undefined' && i18n[currentLang]) ? i18n[currentLang] : {};
+        const total = (resp && resp.ok) ? (resp.total || 0) : 0;
+        const domains = (resp && resp.ok && Array.isArray(resp.domains)) ? resp.domains : [];
+        if (total > 0) {
+            totalEl.textContent = (pack.blockedTotal || '{n} blocked').replace('{n}', total);
+        } else {
+            totalEl.textContent = pack.blockedTotalZero || '0 blocked on this tab';
+        }
+        if (!domains.length) {
+            listEl.innerHTML = `<div class="zap-empty">${pack.blockedEmpty || 'No blocked domains yet.'}</div>`;
+            return;
+        }
+        listEl.innerHTML = '';
+        domains.slice(0, 60).forEach((d) => {
+            const row = document.createElement('div');
+            row.className = 'blocked-domain-row';
+            const tag = (d.rulesetId || '').replace(/^ruleset_/, '');
+            row.innerHTML = `
+                <span class="bd-host">${d.host || ''}</span>
+                <span class="bd-tag" title="${d.rulesetId || ''}">${tag}</span>
+                <span class="bd-count">×${d.count || 1}</span>
+            `;
+            listEl.appendChild(row);
+        });
+    }
+
+    function loadBlockedStats() {
+        if (typeof chrome === 'undefined' || !chrome.runtime) return;
+        chrome.runtime.sendMessage({ action: 'jdGetBlockedStats' }, (resp) => {
+            if (chrome.runtime.lastError) {
+                renderBlocked({ ok: false });
+                return;
+            }
+            renderBlocked(resp || { ok: false });
+        });
+        chrome.runtime.sendMessage({ action: 'jdGetStealthStatus' }, (resp) => {
+            if (chrome.runtime.lastError || !resp || !resp.ok) return;
+            if (pillEp) pillEp.classList.toggle('is-on', !!resp.easyprivacyEnabled);
+            if (pillFp) pillFp.classList.toggle('is-on', !!resp.fingerprintCloaking);
+        });
+    }
+
+    // Load when user opens the Blocked tab
+    const btn = document.getElementById('tabBtnBlocked');
+    if (btn) {
+        btn.addEventListener('click', () => loadBlockedStats());
+    }
+    // Prefetch lightly
+    setTimeout(loadBlockedStats, 400);
+})();
+
+// ==================== Giai đoạn 2: Activity Log + Custom Rules + DNS guide ====================
+(function initPhase2Panels() {
+    const pack = () => (typeof i18n !== 'undefined' && i18n[currentLang]) ? i18n[currentLang] : {};
+
+    // --- Activity Log ---
+    function formatTime(ts) {
+        try {
+            const d = new Date(ts);
+            const pad = (n) => String(n).padStart(2, '0');
+            return pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+        } catch (_) { return ''; }
+    }
+
+    function renderActivity(resp) {
+        const listEl = document.getElementById('activityLogList');
+        const totalEl = document.getElementById('activityTotalText');
+        if (!listEl || !totalEl) return;
+        const p = pack();
+        const entries = (resp && resp.ok && Array.isArray(resp.entries)) ? resp.entries : [];
+        const total = (resp && resp.ok) ? (resp.total || entries.length) : 0;
+        totalEl.textContent = (p.activityTotal || '{n} entries').replace('{n}', total);
+        if (!entries.length) {
+            listEl.innerHTML = `<div class="zap-empty">${p.activityEmpty || 'No activity'}</div>`;
+            return;
+        }
+        listEl.innerHTML = '';
+        entries.slice(0, 80).forEach((e) => {
+            const row = document.createElement('div');
+            row.className = 'activity-row';
+            const host = e.host || '';
+            const tag = (e.rulesetId || e.source || '').replace(/^ruleset_/, '');
+            row.innerHTML = `
+                <div class="act-main">
+                    <div class="act-host">${host || (e.url || '').slice(0, 60)}</div>
+                    <div class="act-meta">${formatTime(e.time)} · ${tag} · ${(e.type || '').slice(0, 20)}</div>
+                </div>
+                <button class="act-allow" data-host="${host}" ${host ? '' : 'disabled'}>${p.activityAllow || 'Allow'}</button>
+            `;
+            const btn = row.querySelector('.act-allow');
+            if (btn && host) {
+                btn.addEventListener('click', () => {
+                    chrome.runtime.sendMessage({ action: 'jdAllowHostOnceFromLog', host }, (r) => {
+                        void chrome.runtime.lastError;
+                        btn.textContent = p.activityAllowed || 'Allowed';
+                        btn.disabled = true;
+                    });
+                });
+            }
+            listEl.appendChild(row);
+        });
+    }
+
+    function loadActivity() {
+        if (typeof chrome === 'undefined' || !chrome.runtime) return;
+        chrome.runtime.sendMessage({ action: 'jdGetActivityLog', limit: 100 }, (resp) => {
+            if (chrome.runtime.lastError) { renderActivity({ ok: false }); return; }
+            renderActivity(resp || { ok: false });
+        });
+    }
+
+    document.getElementById('tabBtnActivity')?.addEventListener('click', loadActivity);
+    document.getElementById('activityClearBtn')?.addEventListener('click', () => {
+        chrome.runtime.sendMessage({ action: 'jdClearActivityLog' }, () => {
+            void chrome.runtime.lastError;
+            loadActivity();
+        });
+    });
+
+    // --- Custom Rules ---
+    function loadCustomRules() {
+        const ta = document.getElementById('customRulesText');
+        if (!ta) return;
+        chrome.runtime.sendMessage({ action: 'jdGetUserRules' }, (resp) => {
+            if (chrome.runtime.lastError || !resp || !resp.ok) return;
+            ta.value = resp.text || '';
+        });
+    }
+
+    function saveCustomRules() {
+        const ta = document.getElementById('customRulesText');
+        const status = document.getElementById('customRulesStatus');
+        if (!ta) return;
+        const p = pack();
+        status.textContent = '...';
+        chrome.runtime.sendMessage({ action: 'jdSetUserRules', text: ta.value }, (resp) => {
+            if (chrome.runtime.lastError || !resp || !resp.ok) {
+                status.textContent = p.customError || 'Error';
+                return;
+            }
+            const cos = (resp.cosmeticGlobal || 0) + (resp.cosmeticDomain || 0);
+            status.textContent = (p.customSaved || 'Saved — {net} network, {cos} cosmetic')
+                .replace('{net}', resp.networkApplied || 0)
+                .replace('{cos}', cos);
+            if (resp.netError) status.textContent += ' (' + resp.netError + ')';
+        });
+    }
+
+    document.getElementById('tabBtnCustom')?.addEventListener('click', loadCustomRules);
+    document.getElementById('tabBtnAdvanced')?.addEventListener('click', loadCustomRules);
+    document.getElementById('customRulesSaveBtn')?.addEventListener('click', saveCustomRules);
+
+    // Copy example rule buttons
+    document.querySelectorAll('#copyRuleBlock, #copyRuleAllow, #copyRuleHide').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const t = btn.getAttribute('data-copy') || '';
+            if (!t) return;
+            navigator.clipboard.writeText(t).then(() => {
+                if (typeof showToast === 'function') showToast('Copied: ' + t);
+            }).catch(() => {});
+        });
+    });
+    document.getElementById('customRulesExportBtn')?.addEventListener('click', () => {
+        const ta = document.getElementById('customRulesText');
+        if (!ta) return;
+        const blob = new Blob([ta.value || ''], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'removeadblock-pro-user-rules.txt';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1500);
+    });
+    document.getElementById('customRulesImportBtn')?.addEventListener('click', () => {
+        document.getElementById('customRulesImportFile')?.click();
+    });
+    document.getElementById('customRulesImportFile')?.addEventListener('change', (ev) => {
+        const file = ev.target.files && ev.target.files[0];
+        ev.target.value = '';
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+            const ta = document.getElementById('customRulesText');
+            if (ta) ta.value = String(reader.result || '');
+        };
+        reader.readAsText(file);
+    });
+
+    // --- DNS copy buttons ---
+    document.querySelectorAll('.dns-copy').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const t = btn.getAttribute('data-copy') || '';
+            if (!t) return;
+            navigator.clipboard.writeText(t).then(() => {
+                if (typeof showToast === 'function') showToast('Copied: ' + t);
+            }).catch(() => {});
+        });
+    });
+
+    // Prefetch lightly when popup opens
+    setTimeout(loadActivity, 600);
 })();

@@ -1,1 +1,939 @@
-function _0x5d77(_0x3b65b6,_0x5b421b){_0x3b65b6=_0x3b65b6-0x177;const _0x2961cf=_0x2961();let _0x5d770f=_0x2961cf[_0x3b65b6];if(_0x5d77['lWiAYd']===undefined){var _0x34cd3a=function(_0x50bfb2){const _0x4dfe8e='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x5e1cdb='',_0x54f43b='';for(let _0x417505=0x0,_0x5ae558,_0x4e1c25,_0x563349=0x0;_0x4e1c25=_0x50bfb2['charAt'](_0x563349++);~_0x4e1c25&&(_0x5ae558=_0x417505%0x4?_0x5ae558*0x40+_0x4e1c25:_0x4e1c25,_0x417505++%0x4)?_0x5e1cdb+=String['fromCharCode'](0xff&_0x5ae558>>(-0x2*_0x417505&0x6)):0x0){_0x4e1c25=_0x4dfe8e['indexOf'](_0x4e1c25);}for(let _0x1cea37=0x0,_0x298ef0=_0x5e1cdb['length'];_0x1cea37<_0x298ef0;_0x1cea37++){_0x54f43b+='%'+('00'+_0x5e1cdb['charCodeAt'](_0x1cea37)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x54f43b);};_0x5d77['XxaooG']=_0x34cd3a,_0x5d77['vqzahd']={},_0x5d77['lWiAYd']=!![];}const _0xe981b5=_0x2961cf[0x0],_0x199f14=_0x3b65b6+_0xe981b5,_0x3b321b=_0x5d77['vqzahd'][_0x199f14];return!_0x3b321b?(_0x5d770f=_0x5d77['XxaooG'](_0x5d770f),_0x5d77['vqzahd'][_0x199f14]=_0x5d770f):_0x5d770f=_0x3b321b,_0x5d770f;}function _0x2961(){const _0x2c308b=['ywrKu291CMnLqNvMzMvY','x19QzfL0qwrozxrmB2C','A2v5CW','C3vJy2vZCW','Aw5PDgLHDg9YvhLWzq','BM9Uzq','B2jZzxj2zwq','DgLTAw5N','C3jJ','y2XPy2S','y3jLyxrLt2jQzwn0vvjm','sKrFuKvrvuvtvf9eruvqx0Lou1bfq1q','AwzYyw1L','yMXVyI1JCMvHDgvK','BwfW','su1h','C2v0vgLTzw91Da','zMv0y2G','ChjVDg90ExbL','yNv0Dg9U','zgvIDwDNzxjuCMfW','ywn0Aw9U','CxvLCNLtzwXLy3rVCG','DgvZDa','yMXVyI1VDgHLCG','z2v0qxr0CMLIDxrL','mtCXnJq2nMrSD3LIva','y2XPzw50wq','DhjPBq','x19Oyxnezwj1z2DLCLrYyxa','BwvZC2fNzq','y2XPzw50wa','C2nYAxb0','mta3nJK2mKLdwwTjuq','mI4YlJe','DgfN','yxbWBhK','C2v0qxr0CMLIDxrL','u09vuKnf','zNvUy3rPB24','Aw50zxj2ywW','Cg9PBNrLCKv2zw50CW','CgvUzgLUzW','BMfTzq','zw50CNLuExbL','BwvKAweTC3jJ','y3jLyxrLza','BwLU','Cgf1C2vK','DgfYz2v0','AgvPz2H0','DgHLBG','z2v0qM91BMrPBMDdBgLLBNrszwn0','ChvZAa','C3rHDhvZ','C3rYAw5N','yMLUza','yNjVD3nLCI1YzxbVCNrLzc1LCNjVCG','Bxv0zwq','y2XHC3m','C3rHy2S','ywnJzxb0zwq','D2LKDgG','Aw5KzxHpzG','C29Tzq','C3rHDhvZlxPLCM8TDw5JBgfZC2LMAwvK','u0vdveLptG','y2XPy2STB24TzNvSBc1VDMvYBgf5','y3vYCMvUDfnYyW','yxvKAw8','y2fSBa','zgLZy29UBMvJDa','BwvKAwfZB3vYy2uTywrKyNvMzMvY','DhjHBNnMzxjtAxPL','z2v0uMvZCg9UC2vizwfKzxi','mJi5mJa1yNjhrfDu','Aw5SAw5L','DM9SDw1L','AwzYyw1Llwf0Dhi','t1bftG','Dw5KzwzPBMvK','AhjLzG','Ag9ZDg5HBwu','mtmZnZeZmtjWuxfTC1K','AgfZr2f0zq','B2jZzxj2zq','AgvHzgvYCW','CMvZB3vYy2u','x19QzeLUAMvJDgvKu3rVCa','q0Xpu0LorW','y2XHC3noyw1L','C3LUy2HYB25VDxmTzxjYB3i','Dg9mB3DLCKnHC2u','yMfJA2DYB3vUzeLTywDL','B3bHy2L0Eq','yxv4y2XPy2S','z2v0rw50CMLLCW','nhPHwKPzqq','Bwv0Ag9K','BMv0D29YA0XVz3m','reLw','mtfbCfrry2C','EKLUzgv4','y292zxjZtw9ZDfzPzxDWB3j0','CMvTB3zLrxzLBNrmAxn0zw5LCG','zwXLBwvUDhngCM9Tug9PBNq','Cg9WDxaTyxr0zw1WDa','yMvHy29U','C2v0','Aw5PDgLHDgvK','B3bLBG','BMfTzwqTDhjHCc1MDwXS','y29UDgvUDc10ExbL','CMvQzwn0zwq','Aw5UzxjxAwr0Aa','Dg9vChbLCKnHC2u','DxjS','Dw5RBM93BG','zgL2lcbZzwn0Aw9UlcbHlcbHC2LKzq','zM9YrwfJAa','zgf0ys1ZCMm','CgXHEwjHy2TsyxrL','CM91BMq','EgHY','BM93','Cg9PBNrLCI1UB25LlwHPz2H6lwz1BgW','DMLZAwjPBgL0Eq','DMLKzw8UAhrTBduTBwfPBI12AwrLBYWGDMLKzw8','DgLTzw91Da','x19QzeLUAMvJDgvKuMvHzhK','Aw5UzxjizwLNAhq','ue9tva','mJrhDNfMrfu','C291CMnL','ovnrAxfWyG','y3vYCMvUDfrPBwu','DhLWzq','q0Xpu0ve','x19QzfjLC291CMnLvgLTAw5NCW','q09otKvdveLorW','CMvZCg9UC2vuExbL','ywjVDxq6yMXHBMS','BgvUz3rO','DMLKzw8','v2vIu29JA2v0','DgfNtMfTzq','zgfYAY1OAwDOEI1MDwXS','zgLZCgXHEq','CMvZB3vYy2vuAw1PBMDZ','ywjZB2X1Dgu','mZa3mZaYmxztDeXtsa','C3rHCNrZv2L0Aa','zgvMAw5LuhjVCgvYDhK','C2v0sw50zxj2ywW','Aw1Nlwf0Dhi','C2XPy2u','Bwf0y2G','x19Qze1LzgLHtg9NCW','C2vUza','yMXVyI1TzwrPyq','vKLeru8','mtqZmJm0otbovwD3B0K','CxvLCNLtzwXLy3rVCKfSBa','C2vUzejLywnVBG','BwvKAwfZB3vYy2uTy3jLyxrLza','zw5JB2rLzejVzhLtAxPL','ywjVCNrLza','Dg9tDhjPBMC','C2HPzNq','ywrKrxzLBNrmAxn0zw5LCG','EgHYlwvYCM9Ylwv2zw50','ndK0ntiYmxfKAMfOrG','zhvYyxrPB24','z2v0','AgfZq2XVywTvCMW','DgLTzq','AgfZv2LUzg93t3bLBG','z2v0t3DUuhjVCgvYDhLezxnJCMLWDg9Y','BMv0D29YAY1LCNjVCG','r0vu','zMfPBgvK','Ahr0Cc1LCNjVCG','suzsqu1f','Dgv4DenVBNrLBNq','zxjYB3i','sKrFuKvtue9ou0vFrevfuf9jtLnqrunu','AgfZu3rLCe1Z','CMvKAxjLy3rLza','D2LUzg93lM9Wzw4','B2jQzwn0','zgf0yq','Cgf0DgvYBNm'];_0x2961=function(){return _0x2c308b;};return _0x2961();}(function(_0x22f4e0,_0xbb56da){const _0x4b1247=_0x5d77,_0x4b3ec8=_0x22f4e0();while(!![]){try{const _0x333b37=-parseInt(_0x4b1247(0x1bb))/0x1+-parseInt(_0x4b1247(0x1c2))/0x2+-parseInt(_0x4b1247(0x18c))/0x3+-parseInt(_0x4b1247(0x202))/0x4*(parseInt(_0x4b1247(0x1ec))/0x5)+-parseInt(_0x4b1247(0x225))/0x6*(-parseInt(_0x4b1247(0x177))/0x7)+-parseInt(_0x4b1247(0x1f4))/0x8*(-parseInt(_0x4b1247(0x227))/0x9)+-parseInt(_0x4b1247(0x182))/0xa*(-parseInt(_0x4b1247(0x206))/0xb);if(_0x333b37===_0xbb56da)break;else _0x4b3ec8['push'](_0x4b3ec8['shift']());}catch(_0xa31223){_0x4b3ec8['push'](_0x4b3ec8['shift']());}}}(_0x2961,0xde4f4),((()=>{const _0x4221c5=_0x5d77;if(window[_0x4221c5(0x222)])return;const _0x5e1cdb=Object[_0x4221c5(0x192)](window,_0x4221c5(0x222)),_0x54f43b=Object[_0x4221c5(0x192)](window,_0x4221c5(0x1f9));window[_0x4221c5(0x222)]=!![];const _0x417505=[];let _0x5ae558=!![],_0x4e1c25=null;const _0x563349=typeof performance!==_0x4221c5(0x1f1)&&performance[_0x4221c5(0x1a8)]&&performance[_0x4221c5(0x1a8)]['navigationStart']?performance['timing']['navigationStart']:Date[_0x4221c5(0x21d)](),_0x1cea37={'networkLogs':window[_0x4221c5(0x1a2)],'resourceTimings':window[_0x4221c5(0x22b)],'mediaLogs':window[_0x4221c5(0x17e)],'debuggerTrap':Object[_0x4221c5(0x192)](window,_0x4221c5(0x1be))},_0x298ef0=0x140,_0x550534=0x118,_0x264578=0x50,_0x3bf94f=0x28,_0xc97199=0x32,_0x131dc3=0x50,_0x1728a0=0x1e;window[_0x4221c5(0x1a2)]=[],window[_0x4221c5(0x22b)]=[],window[_0x4221c5(0x17e)]=[];const _0x935b6=window[_0x4221c5(0x1a2)],_0x37435c=window[_0x4221c5(0x22b)],_0x50d3ee=window['__jdMediaLogs'],_0x2a5876=[],_0x18d540=[],_0x5cb65d=[],_0x502238=/(?:^|\.)(?:youtube\.com|youtu\.be|googlevideo\.com|ytimg\.com|ggpht\.com|gstatic\.com|google\.com|google\.[a-z]{2,3}|googleapis\.com|googleusercontent\.com|accounts\.google\.com|accounts\.youtube\.com|facebook\.com|fbcdn\.net|vimeo\.com|vimeocdn\.com|cloudflare\.com|jsdelivr\.net|unpkg\.com|jquery\.com|bootstrapcdn\.com|fontawesome\.com|twimg\.com|twitter\.com|x\.com|netflix\.com|nflxvideo\.net|spotify\.com|scdn\.co|apple\.com|icloud\.com|microsoft\.com|office\.com|live\.com|bing\.com|github\.com|githubusercontent\.com|stackoverflow\.com|reddit\.com|redd\.it|wikipedia\.org|wikimedia\.org|amazon\.com|amazonaws\.com|paypal\.com|stripe\.com|bank|gov\.[a-z]{2,3})$/i,_0x4632a7=/ad|ads|banner|pop|popup|popunder|analytics|tracker|tracking|beacon|pixel|doubleclick|googlesyndication|pagead|adservice|adsystem|adsterra|propeller|exoclick|juicyads|adcash|popads|adnxs|taboola|outbrain|mgid|prebid|adsbygoogle|googletag|gtm|ga\.|google-analytics|hotjar|mixpanel|amplitude|segment|scorecardresearch|facebook\.net\/tr|cloudflareinsights|log_event|telemetry|collect|ptracking|virtualadview|ad_impression|ad_break|report_ad|instream|get_midroll|adunit|\/ad_|\.adsense\.|adserver|hilltopads|a-ads|clksite|bebi|youtubei\/v1\/ad|pagead\/adview|pcs\/view|enforcement|adblock|partnerwide|googleadservices|tpc\.googlesyndication|adsrvr|advertising|adn\.|adtech|underclick|clickunder|interstitial|\/do2\/|catfish|banner-view|ad-detector|ad_status|marvelous-respond|lost-spray|linkroyal|cm88|qq88|sc88|hi88|new88|i9bet|clickadu|trafficjunky|trafficfactory|plugrush|admaven|popcash|popmyads|decisive-wait|acquirecardedsullen|agileskincare|popunder_url|GATE|xnPop|xnHta/i,_0x1e7d97=/\bvast\b|\bvmap\b|\bvpaid\b|ima3|imasdk|adtag|ad_tag|ad-tag|csai|ssai|tvc\.xml|admanager|securepubads|pubads|openrtb|bid-?request|\/vast(\?|\.|$)|ima\.googleapis|dai\.google/i,_0x7397c1=/videoplayback|googlevideo|\.m3u8|\.mpd|\.mp4|\.webm|\.m4s\b|\.ts\b|manifest|playlist\.m3u8|index\.m3u8|chunklist|segment|hls|dash|blob:|mediasource|phncdn|phprcdn|cdn\.pornhub|video\.google|ytimg\.com\/video|rr\d+---sn-|googlevideo\.com/i,_0x556eb3=/iframe|embed|player|vast|ima|adserver|doubleclick|googlesyndication|accounts\.youtube|RotateCookies/i,_0x4fa7d2=/jwplayer|hls|plyr|videojs|player|adblock|canrunads|fuckadblock|blockadblock|popns|_pop|counter|config|__adblock|adsbygoogle|googletag|ytplayer|ytinitial|prebid|pbjs|adfox|adman|adserver|popunder|popads|exoclick|juicyads|propeller|ima|vast|vmap|vpaid|adModule|adBreak|ytAd|__yt/i,_0x2c07d9=/cupbearergrowllurch|warkedmalie|astronautlividlyreformer|xcas\.(com|net)|yetansd|ozlinedsp|onaudience|wakuhyfeserucu/i,_0x27e9c9=/marvelous-respond|decisive-wait|acquirecardedsullen|agileskincare|AD_URL|popunder|popunder_url|cm88|qq88|hi88|new88|sc88|i9bet|bit\.ly|linkroyal|workers\.dev|catfish|banner-view|GATE|xnPop|xnHta|xn_app|offered\s*=|bindTo\s*:|TARGET_CLASSES|localStorage.*Pop|lsSet\s*\(/i;function _0x50d28e(_0x1a34a5){const _0x1554cd=_0x4221c5;try{const _0x27ab76=new URL(_0x1a34a5,location[_0x1554cd(0x1f2)])['hostname']['toLowerCase']();return _0x502238[_0x1554cd(0x1b8)](_0x27ab76);}catch(_0x1c90f1){return![];}}function _0x467362(_0x22eca9){const _0x2a640e=_0x4221c5;try{const _0xb1532c=new URL(_0x22eca9,location['href']),_0x3ef0cb=_0xb1532c['hostname'][_0x2a640e(0x1fd)]();if(_0x502238[_0x2a640e(0x1b8)](_0x3ef0cb))return![];if(_0x2c07d9['test'](_0x3ef0cb))return!![];const _0x2c936c=_0x3ef0cb['replace'](/^www\./,'')['split']('.')[_0x2a640e(0x17c)](-0x2,-0x1)[0x0]||'';if(/^\d{1,4}[a-z]{2,10}$/i[_0x2a640e(0x1b8)](_0x2c936c))return!![];if(/^[a-z]{13,}$/i[_0x2a640e(0x1b8)](_0x2c936c))return!![];return![];}catch(_0x40872d){return![];}}function _0x183b30(_0x4ef1d1){const _0x5938b8=_0x4221c5;if(!_0x4ef1d1)return![];const _0x2dc923=String(_0x4ef1d1);if(_0x50d28e(_0x2dc923)&&!/\/ad|pagead|doubleclick|googlesyndication|adservice/i[_0x5938b8(0x1b8)](_0x2dc923))return![];return _0x4632a7['test'](_0x2dc923)||_0x1e7d97[_0x5938b8(0x1b8)](_0x2dc923)||_0x7397c1['test'](_0x2dc923)||_0x556eb3[_0x5938b8(0x1b8)](_0x2dc923)||_0x467362(_0x2dc923)||_0x2dc923[_0x5938b8(0x178)]('blob:');}function _0x1dd389(){const _0x10ebb8=_0x4221c5;return Math[_0x10ebb8(0x21b)](Date['now']()-_0x563349);}function _0x46134c(_0x2aa965,_0x2516be,_0x575df2={}){const _0x9845ff=_0x4221c5;if(!_0x5ae558||!_0x2516be)return null;const _0xb72072={'type':_0x2aa965,'url':String(_0x2516be)[_0x9845ff(0x17c)](0x0,0x4b0),'time':Date[_0x9845ff(0x21d)](),'rel':_0x1dd389(),..._0x575df2};window[_0x9845ff(0x1a2)][_0x9845ff(0x1d6)](_0xb72072);if(window[_0x9845ff(0x1a2)][_0x9845ff(0x22f)]>_0x298ef0)window[_0x9845ff(0x1a2)][_0x9845ff(0x189)]();return _0xb72072;}function _0x3d7033(_0x757d6c,_0xfec524,_0xa040d={}){const _0x52e745=_0x4221c5;if(!_0x5ae558||!_0x757d6c)return;const _0x1e59cc=Date['now']();Object['assign'](_0x757d6c,{'outcome':_0xfec524,'completedAt':_0x1e59cc,'durationMs':_0x1e59cc-(_0x757d6c[_0x52e745(0x190)]||_0x1e59cc)},_0xa040d);}function _0x63953f(_0x3846f2){const _0x26c3ab=_0x4221c5;try{if(!_0x3846f2)return _0x26c3ab(0x216);if(typeof _0x3846f2===_0x26c3ab(0x1d8))return _0x3846f2[_0x26c3ab(0x17c)](0x0,0xc8);return String(_0x3846f2[_0x26c3ab(0x1bf)]||_0x3846f2[_0x26c3ab(0x1cc)]||_0x3846f2)[_0x26c3ab(0x17c)](0x0,0xc8);}catch(_0x45681e){return'Unknown\x20request\x20error';}}function _0xf3b1ed(_0x458dc3,_0x415847={}){const _0x163f14=_0x4221c5;if(!_0x5ae558)return;try{window[_0x163f14(0x17e)][_0x163f14(0x1d6)]({'kind':_0x458dc3,'time':Date[_0x163f14(0x21d)](),'rel':_0x1dd389(),..._0x415847});if(window[_0x163f14(0x17e)][_0x163f14(0x22f)]>_0x264578)window[_0x163f14(0x17e)][_0x163f14(0x189)]();}catch(_0x2cbf85){}}function _0x2695d6(_0xc37a1f){const _0x1b5f6e=_0x4221c5;if(!_0x5ae558)return;try{const _0xd7c66d=document[_0x1b5f6e(0x20a)]&&document[_0x1b5f6e(0x20a)](_0xc37a1f[_0x1b5f6e(0x1c0)],_0xc37a1f[_0x1b5f6e(0x1bc)])||[],_0x311492=_0xd7c66d[_0x1b5f6e(0x17c)](0x0,0x6)[_0x1b5f6e(0x1af)](_0x5194f4=>{const _0x14accf=_0x1b5f6e;let _0x80dbf8={'width':0x0,'height':0x0},_0x2e1fb8={};try{_0x80dbf8=_0x5194f4[_0x14accf(0x1d5)](),_0x2e1fb8=getComputedStyle(_0x5194f4);}catch(_0x50136f){}const _0x274675=(_0x80dbf8[_0x14accf(0x1df)]||0x0)*(_0x80dbf8[_0x14accf(0x1d3)]||0x0),_0x1e8ae8=window[_0x14accf(0x213)]||0x1,_0x3f2506=window['innerHeight']||0x1,_0x16a02e=_0x274675>_0x1e8ae8*_0x3f2506*0.6;return{'tag':_0x5194f4[_0x14accf(0x232)],'id':(_0x5194f4['id']||'')['slice'](0x0,0x3c),'class':String(_0x5194f4['className']||'')[_0x14accf(0x17c)](0x0,0x8c),'href':String(_0x5194f4['href']||_0x5194f4[_0x14accf(0x1ba)]&&_0x5194f4[_0x14accf(0x1ba)](_0x14accf(0x1f2))||'')['slice'](0x0,0x12c),'rect':Math['round'](_0x80dbf8[_0x14accf(0x1df)])+'x'+Math[_0x14accf(0x21b)](_0x80dbf8[_0x14accf(0x1d3)]),'zIndex':_0x2e1fb8[_0x14accf(0x207)]||'','pointerEvents':_0x2e1fb8[_0x14accf(0x1ca)]||'','opacity':_0x2e1fb8['opacity']||'','position':_0x2e1fb8['position']||'','coversMostViewport':_0x16a02e};}),_0x3435d2=_0x311492[0x0];if(_0x3435d2&&_0x3435d2[_0x1b5f6e(0x208)]&&(_0x3435d2['tag']===_0x1b5f6e(0x205)||_0x3435d2[_0x1b5f6e(0x1c4)]===_0x1b5f6e(0x1e3)||_0x3435d2['tag']==='A')&&(parseFloat(_0x3435d2[_0x1b5f6e(0x1ff)])<0.15||_0x3435d2['pointerEvents']==='none'||/overlay|mask|blocker|trap|black|dark|shade/i['test'](_0x3435d2[_0x1b5f6e(0x1dc)]+_0x3435d2['id']))){_0x5cb65d[_0x1b5f6e(0x1d6)]({'time':Date['now'](),'rel':_0x1dd389(),'kind':_0x1b5f6e(0x1e4),'element':_0x3435d2});if(_0x5cb65d[_0x1b5f6e(0x22f)]>_0x1728a0)_0x5cb65d[_0x1b5f6e(0x189)]();}_0x2a5876[_0x1b5f6e(0x1d6)]({'time':Date['now'](),'rel':_0x1dd389(),'x':_0xc37a1f[_0x1b5f6e(0x1c0)],'y':_0xc37a1f['clientY'],'button':_0xc37a1f[_0x1b5f6e(0x1b4)],'targetHref':String(_0xc37a1f['target']&&_0xc37a1f[_0x1b5f6e(0x1d2)][_0x1b5f6e(0x1f2)]||'')['slice'](0x0,0x12c),'elements':_0x311492});if(_0x2a5876[_0x1b5f6e(0x22f)]>_0xc97199)_0x2a5876[_0x1b5f6e(0x189)]();}catch(_0x49313a){}}try{document[_0x4221c5(0x18a)](_0x4221c5(0x1aa),_0x2695d6,!![]),document[_0x4221c5(0x18a)]('auxclick',_0x2695d6,!![]),_0x417505['push'](()=>{const _0x5c6e8a=_0x4221c5;document[_0x5c6e8a(0x209)](_0x5c6e8a(0x1aa),_0x2695d6,!![]),document['removeEventListener'](_0x5c6e8a(0x200),_0x2695d6,!![]);});}catch(_0x3bb89d){}const _0x59e8c2=window[_0x4221c5(0x1b2)];if(typeof _0x59e8c2==='function'){const _0x5e9c8f=function(..._0x5cb109){const _0x48993a=_0x4221c5;let _0xd08f92='';try{if(typeof _0x5cb109[0x0]==='string')_0xd08f92=_0x5cb109[0x0];else{if(_0x5cb109[0x0]instanceof Request)_0xd08f92=_0x5cb109[0x0][_0x48993a(0x215)];else{if(_0x5cb109[0x0]&&typeof _0x5cb109[0x0][_0x48993a(0x215)]===_0x48993a(0x1d8))_0xd08f92=_0x5cb109[0x0]['url'];}}}catch(_0x2862ed){}let _0x99ef8b=_0x48993a(0x194);try{if(_0x5cb109[0x0]instanceof Request)_0x99ef8b=_0x5cb109[0x0][_0x48993a(0x203)]||_0x99ef8b;if(_0x5cb109[0x1]&&_0x5cb109[0x1][_0x48993a(0x203)])_0x99ef8b=_0x5cb109[0x1]['method'];}catch(_0x4df65f){}const _0x2b18e7=_0x183b30(_0xd08f92)?_0x46134c('fetch',_0xd08f92,{'method':String(_0x99ef8b)['toUpperCase']()[_0x48993a(0x17c)](0x0,0x10),'outcome':_0x48993a(0x1cb)}):null;let _0x251fc5;try{_0x251fc5=_0x59e8c2[_0x48993a(0x1c5)](this,_0x5cb109);}catch(_0x202e07){_0x3d7033(_0x2b18e7,_0x48993a(0x195),{'failureReason':_0x48993a(0x1fc),'error':_0x63953f(_0x202e07)});throw _0x202e07;}return _0x2b18e7&&_0x251fc5[_0x48993a(0x1d4)](_0x41f73e=>{const _0x3540b5=_0x48993a;if(!_0x41f73e){_0x3d7033(_0x2b18e7,_0x3540b5(0x216));return;}let _0x13fc88='';try{_0x13fc88=_0x41f73e[_0x3540b5(0x1f7)]&&_0x41f73e['headers']['get'](_0x3540b5(0x211))||'';}catch(_0x58e8d5){}_0x3d7033(_0x2b18e7,_0x41f73e['ok']?'success':_0x3540b5(0x196),{'status':_0x41f73e['status'],'contentType':_0x13fc88[_0x3540b5(0x17c)](0x0,0x50),'redirected':!!_0x41f73e[_0x3540b5(0x19c)],'type':_0x41f73e[_0x3540b5(0x229)]||''});},_0x262716=>{const _0xa2bdb4=_0x48993a,_0xe5ae1e=_0x63953f(_0x262716),_0x5a1345=/abort/i['test'](_0xe5ae1e),_0x27c59c=/network|failed to fetch|load failed|net::/i[_0xa2bdb4(0x1b8)](_0xe5ae1e);_0x3d7033(_0x2b18e7,'failed',{'failureReason':_0x5a1345?_0xa2bdb4(0x187):_0x27c59c?_0xa2bdb4(0x193):_0xa2bdb4(0x1da),'error':_0xe5ae1e});}),_0x251fc5;};window[_0x4221c5(0x1b2)]=_0x5e9c8f,_0x417505['push'](()=>{const _0x32173b=_0x4221c5;if(window[_0x32173b(0x1b2)]===_0x5e9c8f)window['fetch']=_0x59e8c2;});}const _0x2e4c35=new WeakMap(),_0x3f7aec=XMLHttpRequest[_0x4221c5(0x1b3)][_0x4221c5(0x20f)],_0x436638=function(_0x49ba3f,_0x8bac8a,..._0x233729){const _0x1ebf6d=_0x4221c5;try{_0x2e4c35['set'](this,{'url':typeof _0x8bac8a===_0x1ebf6d(0x1d8)?_0x8bac8a:_0x8bac8a&&_0x8bac8a['href']?_0x8bac8a['href']:String(_0x8bac8a||''),'method':String(_0x49ba3f||'')[_0x1ebf6d(0x214)](),'openTime':Date[_0x1ebf6d(0x21d)]()});}catch(_0x327be9){}return _0x3f7aec[_0x1ebf6d(0x1c5)](this,[_0x49ba3f,_0x8bac8a,..._0x233729]);};XMLHttpRequest[_0x4221c5(0x1b3)][_0x4221c5(0x20f)]=_0x436638,_0x417505[_0x4221c5(0x1d6)](()=>{const _0x34b907=_0x4221c5;if(XMLHttpRequest[_0x34b907(0x1b3)]['open']===_0x436638)XMLHttpRequest[_0x34b907(0x1b3)]['open']=_0x3f7aec;});const _0x3b6824=XMLHttpRequest[_0x4221c5(0x1b3)][_0x4221c5(0x17f)],_0x452135=function(..._0x4f6930){const _0x45c1e9=_0x4221c5;let _0x475360=null;try{const _0xda5be4=_0x2e4c35[_0x45c1e9(0x18e)](this);_0xda5be4&&_0x183b30(_0xda5be4[_0x45c1e9(0x215)])&&(_0x475360=_0x46134c(_0x45c1e9(0x21c),_0xda5be4['url'],{'method':_0xda5be4[_0x45c1e9(0x203)],'outcome':_0x45c1e9(0x1cb)}),this[_0x45c1e9(0x18a)]('loadend',()=>{const _0x4bf0b6=_0x45c1e9;try{const _0x15618b=this[_0x4bf0b6(0x1d7)];let _0x38e7ff='';try{_0x38e7ff=this[_0x4bf0b6(0x1eb)](_0x4bf0b6(0x211))||'';}catch(_0x177c7a){}_0x15618b===0x0?_0x3d7033(_0x475360,_0x4bf0b6(0x195),{'status':_0x15618b,'failureReason':_0x4bf0b6(0x1e2),'contentType':_0x38e7ff['slice'](0x0,0x50)}):_0x3d7033(_0x475360,_0x15618b>=0x190?_0x4bf0b6(0x196):_0x4bf0b6(0x1a4),{'status':_0x15618b,'contentType':_0x38e7ff[_0x4bf0b6(0x17c)](0x0,0x50),'responseType':this[_0x4bf0b6(0x22d)]||''});}catch(_0x3473d2){_0x3d7033(_0x475360,_0x4bf0b6(0x216));}},{'once':!![]}),this[_0x45c1e9(0x18a)](_0x45c1e9(0x199),()=>{const _0x44c040=_0x45c1e9;_0x3d7033(_0x475360,'failed',{'failureReason':_0x44c040(0x18b)});},{'once':!![]}),this[_0x45c1e9(0x18a)]('abort',()=>{const _0x30ca84=_0x45c1e9;_0x3d7033(_0x475360,_0x30ca84(0x195),{'failureReason':'aborted'});},{'once':!![]}));}catch(_0x54d46e){}try{return _0x3b6824['apply'](this,_0x4f6930);}catch(_0x366d68){_0x3d7033(_0x475360,_0x45c1e9(0x195),{'failureReason':_0x45c1e9(0x1fc),'error':_0x63953f(_0x366d68)});throw _0x366d68;}};XMLHttpRequest[_0x4221c5(0x1b3)][_0x4221c5(0x17f)]=_0x452135,_0x417505[_0x4221c5(0x1d6)](()=>{const _0x1ade40=_0x4221c5;if(XMLHttpRequest[_0x1ade40(0x1b3)][_0x1ade40(0x17f)]===_0x452135)XMLHttpRequest[_0x1ade40(0x1b3)][_0x1ade40(0x17f)]=_0x3b6824;});if(navigator&&typeof navigator[_0x4221c5(0x184)]==='function'){const _0x473f6e=navigator[_0x4221c5(0x184)],_0x286d9d=function(_0x477a7a,_0x11835f){const _0x186fdf=_0x4221c5;let _0x28fe9a=null;try{typeof _0x477a7a===_0x186fdf(0x1d8)&&_0x183b30(_0x477a7a)&&(_0x28fe9a=_0x46134c(_0x186fdf(0x20c),_0x477a7a,{'method':_0x186fdf(0x224),'outcome':_0x186fdf(0x1cb)}));}catch(_0x1327c5){}const _0x337174=_0x473f6e['apply'](this,arguments);return _0x3d7033(_0x28fe9a,_0x337174?_0x186fdf(0x1de):_0x186fdf(0x212)),_0x337174;};navigator[_0x4221c5(0x184)]=_0x286d9d,_0x417505[_0x4221c5(0x1d6)](()=>{const _0xefba1d=_0x4221c5;if(navigator['sendBeacon']===_0x286d9d)navigator[_0xefba1d(0x184)]=_0x473f6e;});}try{const _0x590dad=Object['getOwnPropertyDescriptor'](HTMLImageElement[_0x4221c5(0x1b3)],_0x4221c5(0x1a9));if(_0x590dad&&_0x590dad[_0x4221c5(0x20d)]){const _0x417a29=function(_0x4ef655){const _0x2e598a=_0x4221c5;try{_0x4ef655&&_0x183b30(String(_0x4ef655))&&_0x46134c('img',_0x4ef655,{'w':this[_0x2e598a(0x1df)]||0x0,'h':this['height']||0x0,'outcome':_0x2e598a(0x20e)});}catch(_0x112393){}return _0x590dad[_0x2e598a(0x20d)][_0x2e598a(0x1e7)](this,_0x4ef655);};Object[_0x4221c5(0x179)](HTMLImageElement[_0x4221c5(0x1b3)],'src',{'set':_0x417a29,'get'(){const _0x1c820e=_0x4221c5;return _0x590dad[_0x1c820e(0x18e)][_0x1c820e(0x1e7)](this);},'configurable':!![]}),_0x417505[_0x4221c5(0x1d6)](()=>{const _0x3a9cf4=_0x4221c5;Object[_0x3a9cf4(0x192)](HTMLImageElement[_0x3a9cf4(0x1b3)],_0x3a9cf4(0x1a9))?.[_0x3a9cf4(0x20d)]===_0x417a29&&Object[_0x3a9cf4(0x179)](HTMLImageElement['prototype'],_0x3a9cf4(0x1a9),_0x590dad);});}}catch(_0x5b0736){}const _0x3318ee=Element['prototype'][_0x4221c5(0x1c6)],_0x44e210=function(_0x2c5787,_0x2197d1){const _0x303138=_0x4221c5;try{const _0x10155a=(this[_0x303138(0x232)]||'')[_0x303138(0x214)]();_0x10155a===_0x303138(0x1b0)&&(_0x2c5787==='src'||_0x2c5787===_0x303138(0x219))&&_0x2197d1&&_0x183b30(String(_0x2197d1))&&_0x46134c(_0x303138(0x17b),_0x2197d1,{'outcome':_0x303138(0x20e)}),_0x10155a===_0x303138(0x197)&&(_0x2c5787===_0x303138(0x1a9)||_0x2c5787==='data-src')&&_0x2197d1&&_0x183b30(String(_0x2197d1))&&_0x46134c(_0x303138(0x1ef),_0x2197d1,{'outcome':_0x303138(0x20e)}),(_0x10155a===_0x303138(0x181)||_0x10155a===_0x303138(0x1c7)||_0x10155a==='AUDIO')&&((_0x2c5787===_0x303138(0x1a9)||_0x2c5787===_0x303138(0x219))&&_0x2197d1&&(_0xf3b1ed('media-attr-src',{'tag':_0x10155a,'attr':_0x2c5787,'url':String(_0x2197d1)['slice'](0x0,0x1f4)}),_0x183b30(String(_0x2197d1))&&_0x46134c(_0x303138(0x1ce),_0x2197d1,{'tag':_0x10155a,'outcome':_0x303138(0x20e)})));}catch(_0x4c4af1){}return _0x3318ee[_0x303138(0x1c5)](this,arguments);};Element[_0x4221c5(0x1b3)][_0x4221c5(0x1c6)]=_0x44e210,_0x417505[_0x4221c5(0x1d6)](()=>{const _0x5125c9=_0x4221c5;Element[_0x5125c9(0x1b3)][_0x5125c9(0x1c6)]===_0x44e210&&(Element[_0x5125c9(0x1b3)][_0x5125c9(0x1c6)]=_0x3318ee);});try{const _0x7f2a39=Object[_0x4221c5(0x192)](HTMLScriptElement[_0x4221c5(0x1b3)],_0x4221c5(0x1a9));if(_0x7f2a39?.['set']){const _0x5003da=function(_0x4dad76){const _0x5dcb35=_0x4221c5;try{_0x4dad76&&_0x183b30(String(_0x4dad76))&&_0x46134c(_0x5dcb35(0x1c1),_0x4dad76,{'outcome':_0x5dcb35(0x20e)});}catch(_0x2d4cb7){}return _0x7f2a39[_0x5dcb35(0x20d)][_0x5dcb35(0x1e7)](this,_0x4dad76);};Object[_0x4221c5(0x179)](HTMLScriptElement[_0x4221c5(0x1b3)],_0x4221c5(0x1a9),{..._0x7f2a39,'set':_0x5003da}),_0x417505[_0x4221c5(0x1d6)](()=>{const _0x80ce1e=_0x4221c5;Object[_0x80ce1e(0x192)](HTMLScriptElement['prototype'],_0x80ce1e(0x1a9))?.[_0x80ce1e(0x20d)]===_0x5003da&&Object[_0x80ce1e(0x179)](HTMLScriptElement[_0x80ce1e(0x1b3)],_0x80ce1e(0x1a9),_0x7f2a39);});}}catch(_0x337588){}if(typeof WebSocket===_0x4221c5(0x1c8)){const _0x20107f=WebSocket,_0x1a0c6e=function(_0x4176d0,_0x55092c){try{_0x4176d0&&_0x183b30(String(_0x4176d0))&&_0x46134c('ws',_0x4176d0,{'outcome':'initiated'});}catch(_0x128019){}return new _0x20107f(_0x4176d0,_0x55092c);};_0x1a0c6e['prototype']=_0x20107f[_0x4221c5(0x1b3)],_0x1a0c6e[_0x4221c5(0x22c)]=_0x20107f[_0x4221c5(0x22c)],_0x1a0c6e[_0x4221c5(0x1f0)]=_0x20107f[_0x4221c5(0x1f0)],_0x1a0c6e[_0x4221c5(0x1fa)]=_0x20107f[_0x4221c5(0x1fa)],_0x1a0c6e['CLOSED']=_0x20107f[_0x4221c5(0x22a)],window[_0x4221c5(0x231)]=_0x1a0c6e,_0x417505[_0x4221c5(0x1d6)](()=>{if(window['WebSocket']===_0x1a0c6e)window['WebSocket']=_0x20107f;});}try{const _0xe2b170=window['open'],_0x21316c=function(_0x560f86,_0x5b9100,_0x52b12e){const _0x2d82d2=_0x4221c5;let _0x581117='';try{_0x581117=(new Error()[_0x2d82d2(0x1dd)]||'')[_0x2d82d2(0x17c)](0x0,0x384);}catch(_0x1227de){}try{_0x46134c(_0x2d82d2(0x19d),_0x560f86||_0x2d82d2(0x22e),{'outcome':'attempted','eventKind':_0x2d82d2(0x20b),'target':(_0x5b9100||'')[_0x2d82d2(0x188)]()['slice'](0x0,0x28),'features':(_0x52b12e||'')[_0x2d82d2(0x188)]()[_0x2d82d2(0x17c)](0x0,0x78),'stack':_0x581117});}catch(_0x37f22b){}return _0xe2b170[_0x2d82d2(0x1c5)](this,arguments);};window[_0x4221c5(0x20f)]=_0x21316c,_0x417505[_0x4221c5(0x1d6)](()=>{const _0x4d8710=_0x4221c5;if(window['open']===_0x21316c)window[_0x4d8710(0x20f)]=_0xe2b170;});}catch(_0x513fcc){}try{const _0x41f3e1=URL[_0x4221c5(0x1ab)];if(typeof _0x41f3e1===_0x4221c5(0x1c8)){const _0x11c411=function(_0x3db2d4){const _0x57089d=_0x4221c5,_0x582e82=_0x41f3e1[_0x57089d(0x1c5)](this,arguments);try{const _0x2a06f1=_0x3db2d4&&_0x3db2d4[_0x57089d(0x229)]?String(_0x3db2d4[_0x57089d(0x229)]):'';if(_0x2a06f1[_0x57089d(0x1e0)]('video')!==-0x1||_0x2a06f1[_0x57089d(0x1e0)](_0x57089d(0x1e6))!==-0x1)_0x46134c(_0x57089d(0x180),_0x582e82,{'mediaType':_0x2a06f1,'outcome':_0x57089d(0x1cf)}),_0xf3b1ed(_0x57089d(0x1ae),{'url':String(_0x582e82)[_0x57089d(0x17c)](0x0,0xc8),'mediaType':_0x2a06f1});else{if(typeof MediaSource!=='undefined'&&_0x3db2d4 instanceof MediaSource){_0x46134c('blob-mediasource',_0x582e82,{'outcome':_0x57089d(0x1cf)}),_0xf3b1ed(_0x57089d(0x185),{'url':String(_0x582e82)[_0x57089d(0x17c)](0x0,0xc8)});try{const _0x1d55e1=_0x3db2d4['addSourceBuffer'][_0x57089d(0x1d9)](_0x3db2d4);_0x3db2d4[_0x57089d(0x1a1)]=function(_0x164a1d){const _0x4c531a=_0x57089d;return _0xf3b1ed(_0x4c531a(0x1e9),{'mime':String(_0x164a1d||'')[_0x4c531a(0x17c)](0x0,0x78),'url':String(_0x582e82)[_0x4c531a(0x17c)](0x0,0xc8)}),_0x1d55e1(_0x164a1d);};}catch(_0x172279){}}else _0xf3b1ed(_0x57089d(0x1b9),{'url':String(_0x582e82)[_0x57089d(0x17c)](0x0,0xc8),'type':_0x2a06f1});}}catch(_0xdd2885){}return _0x582e82;};URL[_0x4221c5(0x1ab)]=_0x11c411,_0x417505[_0x4221c5(0x1d6)](()=>{const _0x1c4b9b=_0x4221c5;URL[_0x1c4b9b(0x1ab)]===_0x11c411&&(URL[_0x1c4b9b(0x1ab)]=_0x41f3e1);});}}catch(_0x1ec8f9){}try{const _0xeaa9f8=Object[_0x4221c5(0x192)](HTMLIFrameElement[_0x4221c5(0x1b3)],_0x4221c5(0x1a9));if(_0xeaa9f8&&_0xeaa9f8['set']){const _0x4a9f81=function(_0x216022){const _0x185434=_0x4221c5;try{_0x216022&&_0x183b30(String(_0x216022))&&_0x46134c(_0x185434(0x1ad),_0x216022,{'outcome':_0x185434(0x20e)});}catch(_0x4e8f67){}return _0xeaa9f8[_0x185434(0x20d)][_0x185434(0x1e7)](this,_0x216022);};Object['defineProperty'](HTMLIFrameElement[_0x4221c5(0x1b3)],'src',{'set':_0x4a9f81,'get'(){return _0xeaa9f8['get']['call'](this);},'configurable':!![]}),_0x417505['push'](()=>{const _0x48dd2d=_0x4221c5;Object['getOwnPropertyDescriptor'](HTMLIFrameElement[_0x48dd2d(0x1b3)],_0x48dd2d(0x1a9))?.[_0x48dd2d(0x20d)]===_0x4a9f81&&Object[_0x48dd2d(0x179)](HTMLIFrameElement['prototype'],_0x48dd2d(0x1a9),_0xeaa9f8);});}}catch(_0x41250d){}try{const _0xd44b2c=HTMLMediaElement&&HTMLMediaElement[_0x4221c5(0x1b3)];if(_0xd44b2c){const _0x19ada7=Object[_0x4221c5(0x192)](_0xd44b2c,_0x4221c5(0x1a9));if(_0x19ada7&&_0x19ada7[_0x4221c5(0x20d)]){const _0x458cc6=function(_0x696578){const _0x5f4623=_0x4221c5;try{_0xf3b1ed('media-src-set',{'tag':(this[_0x5f4623(0x232)]||'')[_0x5f4623(0x1fd)](),'url':String(_0x696578||'')[_0x5f4623(0x17c)](0x0,0x1f4),'paused':!!this[_0x5f4623(0x1d1)],'muted':!!this[_0x5f4623(0x1db)],'rate':this[_0x5f4623(0x21a)]}),_0x696578&&_0x183b30(String(_0x696578))&&_0x46134c(_0x5f4623(0x1ce),_0x696578,{'tag':this['tagName'],'outcome':_0x5f4623(0x20e)});}catch(_0x238f5e){}return _0x19ada7[_0x5f4623(0x20d)]['call'](this,_0x696578);};Object[_0x4221c5(0x179)](_0xd44b2c,_0x4221c5(0x1a9),{'set':_0x458cc6,'get'(){const _0x4f84f7=_0x4221c5;return _0x19ada7['get'][_0x4f84f7(0x1e7)](this);},'configurable':!![]}),_0x417505['push'](()=>{const _0x1ca7fe=_0x4221c5;Object[_0x1ca7fe(0x192)](_0xd44b2c,_0x1ca7fe(0x1a9))?.[_0x1ca7fe(0x20d)]===_0x458cc6&&Object['defineProperty'](_0xd44b2c,'src',_0x19ada7);});}}}catch(_0x5888ee){}try{const _0x35ada2=window[_0x4221c5(0x1b1)],_0x40432f=window['setInterval'],_0x29617c=(_0x54467f,_0x374b5c)=>{const _0x146609=_0x4221c5;try{const _0x139790=Number(_0x374b5c)||0x0;if(typeof _0x54467f!==_0x146609(0x1c8))return![];const _0x948a8a=(_0x54467f['toString']()||'')['slice'](0x0,0x12c);if(_0x27e9c9[_0x146609(0x1b8)](_0x948a8a))return!![];if(/window\.open|location\s*=|location\.href|location\.assign|location\.replace|popunder|GATE|xnPop|xnHta/i[_0x146609(0x1b8)](_0x948a8a))return!![];if(_0x139790>=0x7530&&!_0x502238['test'](location[_0x146609(0x1f3)]))return!![];if(_0x139790>=0x1388&&_0x139790<=0x1d4c0&&/open|redirect|href|assign|replace/i[_0x146609(0x1b8)](_0x948a8a))return!![];return![];}catch(_0x46f979){return![];}};window[_0x4221c5(0x1b1)]=function(_0x51158f,_0x9987fd,..._0x34b08c){const _0xe45bbc=_0x4221c5;try{if(_0x29617c(_0x51158f,_0x9987fd||0x0)){_0x18d540[_0xe45bbc(0x1d6)]({'type':_0xe45bbc(0x221),'ms':_0x9987fd||0x0,'src':String(_0x51158f)['slice'](0x0,0xdc),'time':Date['now'](),'rel':_0x1dd389()});if(_0x18d540['length']>_0x131dc3)_0x18d540[_0xe45bbc(0x189)]();}}catch(_0x128fb7){}return _0x35ada2['apply'](this,arguments);},window[_0x4221c5(0x17a)]=function(_0x54dafe,_0x43b533,..._0x45eb7e){const _0x456cf4=_0x4221c5;try{if(_0x29617c(_0x54dafe,_0x43b533||0x0)){_0x18d540[_0x456cf4(0x1d6)]({'type':_0x456cf4(0x1c9),'ms':_0x43b533||0x0,'src':String(_0x54dafe)['slice'](0x0,0xdc),'time':Date[_0x456cf4(0x21d)](),'rel':_0x1dd389()});if(_0x18d540[_0x456cf4(0x22f)]>_0x131dc3)_0x18d540[_0x456cf4(0x189)]();}}catch(_0x507566){}return _0x40432f[_0x456cf4(0x1c5)](this,arguments);},_0x417505[_0x4221c5(0x1d6)](()=>{const _0x2fb1e1=_0x4221c5;window[_0x2fb1e1(0x1b1)]=_0x35ada2,window[_0x2fb1e1(0x17a)]=_0x40432f;});}catch(_0x31c2bf){}try{typeof PerformanceObserver===_0x4221c5(0x1c8)&&(_0x4e1c25=new PerformanceObserver(_0x45dcbe=>{const _0x2d8c91=_0x4221c5;if(!_0x5ae558)return;for(const _0x12a087 of _0x45dcbe[_0x2d8c91(0x201)]()){try{_0x12a087[_0x2d8c91(0x1cc)]&&_0x183b30(_0x12a087[_0x2d8c91(0x1cc)])&&_0x46134c('perf',_0x12a087[_0x2d8c91(0x1cc)],{'initiatorType':_0x12a087[_0x2d8c91(0x1a5)]||'','duration':Math[_0x2d8c91(0x21b)](_0x12a087[_0x2d8c91(0x18d)]),'transferSize':_0x12a087[_0x2d8c91(0x1ea)]||0x0,'encodedBodySize':_0x12a087[_0x2d8c91(0x186)]||0x0,'outcome':_0x2d8c91(0x1a7)}),window[_0x2d8c91(0x22b)][_0x2d8c91(0x1d6)]({'name':String(_0x12a087[_0x2d8c91(0x1cc)])['slice'](0x0,0x4b0),'type':_0x12a087['initiatorType']||_0x12a087[_0x2d8c91(0x1cd)],'time':Date[_0x2d8c91(0x21d)](),'rel':_0x1dd389(),'duration':Math[_0x2d8c91(0x21b)](_0x12a087[_0x2d8c91(0x18d)]),'transferSize':_0x12a087[_0x2d8c91(0x1ea)]||0x0,'encodedBodySize':_0x12a087[_0x2d8c91(0x186)]||0x0}),window[_0x2d8c91(0x22b)]['length']>_0x550534&&window['__jdResourceTimings'][_0x2d8c91(0x189)]();}catch(_0x427749){}}}),_0x4e1c25[_0x4221c5(0x1f6)]({'type':_0x4221c5(0x1f8),'buffered':!![]}));}catch(_0x5d1044){}function _0x4b41f9(){const _0x1b7b35=_0x4221c5,_0x21f416=[];try{const _0x738865=Object[_0x1b7b35(0x1a3)](window);for(let _0x5efad4=0x0;_0x5efad4<_0x738865['length'];_0x5efad4++){const _0x5e5934=_0x738865[_0x5efad4];if(_0x4fa7d2[_0x1b7b35(0x1b8)](_0x5e5934)&&!/onanimation|ontransition|onwebkit|onmoz|onms|onpointer/i['test'](_0x5e5934)){try{const _0x5a91cb=window[_0x5e5934];let _0x246663='';try{if(_0x5a91cb==null)_0x246663=String(_0x5a91cb);else{if(typeof _0x5a91cb===_0x1b7b35(0x19e))_0x246663=Object[_0x1b7b35(0x1b3)][_0x1b7b35(0x188)]['call'](_0x5a91cb)['slice'](0x0,0x50);else _0x246663=String(_0x5a91cb)[_0x1b7b35(0x17c)](0x0,0x96);}}catch(_0x21f354){_0x246663='[unreadable]';}_0x21f416[_0x1b7b35(0x1d6)]({'key':_0x5e5934,'type':typeof _0x5a91cb,'preview':_0x246663});}catch(_0x244f5d){}if(_0x21f416[_0x1b7b35(0x22f)]>=_0x3bf94f)break;}}}catch(_0x291375){}return _0x21f416;}function _0x17e0ed(){const _0x3a8dd2=_0x4221c5;try{const _0x12f73c=document[_0x3a8dd2(0x1b7)]('#movie_player,\x20.html5-video-player');if(!_0x12f73c)return null;const _0xca2dc4=_0x12f73c['querySelector'](_0x3a8dd2(0x230))||document[_0x3a8dd2(0x1b7)](_0x3a8dd2(0x220));return{'classes':String(_0x12f73c[_0x3a8dd2(0x1fb)]||'')[_0x3a8dd2(0x17c)](0x0,0x190),'hasAdShowing':/\bad-showing\b|\bad-interrupting\b/i['test'](_0x12f73c['className']||''),'hasAdCreated':/\bad-created\b/i[_0x3a8dd2(0x1b8)](_0x12f73c[_0x3a8dd2(0x1fb)]||''),'video':_0xca2dc4?{'paused':!!_0xca2dc4[_0x3a8dd2(0x1d1)],'muted':!!_0xca2dc4[_0x3a8dd2(0x1db)],'volume':_0xca2dc4[_0x3a8dd2(0x1ee)],'rate':_0xca2dc4['playbackRate'],'currentTime':isFinite(_0xca2dc4[_0x3a8dd2(0x228)])?Math[_0x3a8dd2(0x21b)](_0xca2dc4[_0x3a8dd2(0x228)]*0xa)/0xa:null,'src':String(_0xca2dc4['src']||_0xca2dc4[_0x3a8dd2(0x1e5)]||'')[_0x3a8dd2(0x17c)](0x0,0x12c)}:null};}catch(_0xc5f12a){return null;}}function _0x181aa3(){const _0x3e2193=_0x4221c5,_0x516ab1=[];try{document[_0x3e2193(0x183)](_0x3e2193(0x1c1))[_0x3e2193(0x218)](_0xdf8935=>{const _0x2d4fe2=_0x3e2193,_0x19fcb6=_0xdf8935[_0x2d4fe2(0x1a9)]||'',_0x2546d0=(_0xdf8935[_0x2d4fe2(0x198)]||'')[_0x2d4fe2(0x1bd)]();if(!_0x19fcb6&&!_0x2546d0)return;const _0x36fa18=_0x19fcb6+'\x20'+_0x2546d0,_0x1dbd2a=_0x27e9c9[_0x2d4fe2(0x1b8)](_0x36fa18);if(!_0x1dbd2a)return;const _0x3d0557=/AD_URL\s*=\s*['"][^'"]+['"]/i[_0x2d4fe2(0x1b8)](_0x2546d0),_0x42cbdc=/popunder_url\s*[:=]\s*['"][^'"]+['"]/i[_0x2d4fe2(0x1b8)](_0x2546d0),_0x58d362=/classList\.add\s*\(\s*['"]?GATE['"]?\s*\)|xnPop|xnHta|bindTo\s*:\s*['"][^'"]+['"]\s*,\s*TARGET_CLASSES|TARGET_CLASSES\s*[:=]/i[_0x2d4fe2(0x1b8)](_0x2546d0)||/\bGATE\b/[_0x2d4fe2(0x1b8)](_0x2546d0)&&(_0x3d0557||_0x42cbdc||/popunder|window\.open\s*\(/i[_0x2d4fe2(0x1b8)](_0x2546d0)),_0x8c5284=/localStorage\.(?:get|set)Item\s*\(\s*['"][^'"]*(?:Pop|Hta|Miss|GATE|popunder)[^'"]*['"]|lsSet\s*\(\s*['"][^'"]*(?:Pop|Hta|Miss)/i[_0x2d4fe2(0x1b8)](_0x2546d0),_0x7821c5=/STEP_MS|RESTART_MS|90\s*\*\s*1000|30\s*\*\s*60\s*\*\s*1000/i['test'](_0x2546d0),_0x6b1e8c=/window\.open\s*\(/i[_0x2d4fe2(0x1b8)](_0x2546d0),_0x1f8e42=/location\s*(=\s*|\.href\s*=|\.assign|\.replace)/i[_0x2d4fe2(0x1b8)](_0x2546d0),_0x28494a=(_0x2546d0[_0x2d4fe2(0x17d)](/https?:\/\/[^\s"'`<>]+/g)||[])[_0x2d4fe2(0x17c)](0x0,0x1e),_0x305c54=_0x28494a[_0x2d4fe2(0x1e1)](_0x1b2995=>{const _0x4a76f5=_0x2d4fe2;try{return _0x467362(_0x1b2995)||/acquirecardedsullen|agileskincare|marvelous-respond|decisive-wait|linkroyal|workers\.dev|cm88|qq88|hi88|new88|sc88|i9bet/i[_0x4a76f5(0x1b8)](_0x1b2995);}catch(_0x508202){return![];}}),_0x208926={'hasAdUrl':_0x3d0557,'hasPopunderUrl':_0x42cbdc,'hasGate':_0x58d362,'hasLocalStoragePop':_0x8c5284,'hasStepMs':_0x7821c5,'hasWindowOpen':_0x6b1e8c,'hasLocationAssign':_0x1f8e42,'hasCloakUrl':_0x305c54};_0x516ab1[_0x2d4fe2(0x1d6)]({'type':_0x19fcb6?'external':_0x2d4fe2(0x1ed),'src':_0x19fcb6[_0x2d4fe2(0x17c)](0x0,0x190),'fullText':_0x2546d0[_0x2d4fe2(0x17c)](0x0,0x1388),'urls':_0x28494a,'patterns':_0x208926});});}catch(_0xb74ade){}return _0x516ab1[_0x3e2193(0x17c)](0x0,0xe);}function _0x5b55f8(){const _0x995334=_0x4221c5,_0x19503a=[];try{const _0x176c92=window[_0x995334(0x213)]||0x1,_0x28a601=window[_0x995334(0x223)]||0x1,_0x3de25f=/^(?:container|content|wrapper|main|page|site|layout|inner|outer|row|col|section-inner|body-inner|app|root)$/i,_0x22bc77=document[_0x995334(0x183)](_0x995334(0x217)),_0x19ad97=Math[_0x995334(0x1d0)](_0x22bc77['length'],0x78);for(let _0x4eb6b8=0x0;_0x4eb6b8<_0x19ad97;_0x4eb6b8++){const _0x330b82=_0x22bc77[_0x4eb6b8];try{const _0x107cf7=String(_0x330b82['className']||'')[_0x995334(0x1bd)](),_0x1c137b=(_0x330b82['id']||'')[_0x995334(0x1bd)]();if(_0x3de25f['test'](_0x107cf7)||_0x3de25f[_0x995334(0x1b8)](_0x1c137b))continue;if(/\b(container|content|wrapper|main-content|page-content|site-content)\b/i[_0x995334(0x1b8)](_0x107cf7)&&!/overlay|mask|blocker|trap|black|shade|modal|backdrop|gate|popup/i[_0x995334(0x1b8)](_0x107cf7+_0x1c137b))continue;const _0x295c0e=_0x330b82[_0x995334(0x1d5)](),_0xb5d9ec=_0x295c0e[_0x995334(0x1df)]*_0x295c0e['height'];if(_0xb5d9ec<_0x176c92*_0x28a601*0.55)continue;const _0x47d45a=getComputedStyle(_0x330b82);if(_0x47d45a[_0x995334(0x234)]==='none'||_0x47d45a[_0x995334(0x21f)]==='hidden')continue;const _0x851d84=_0x47d45a['position']||'';if(_0x851d84!=='fixed'&&_0x851d84!==_0x995334(0x236))continue;const _0x5c4021=parseFloat(_0x47d45a[_0x995334(0x1ff)]),_0xbcab5e=parseInt(_0x47d45a[_0x995334(0x207)],0xa)||0x0,_0x5c6a7c=(_0x47d45a['backgroundColor']||'')+(_0x47d45a[_0x995334(0x1fe)]||''),_0x4fac17=/rgba?\(\s*0\s*,\s*0\s*,\s*0|rgb\(\s*0\s*,\s*0\s*,\s*0\)|#000\b|black/i['test'](_0x5c6a7c)||_0x5c4021<0.15,_0x1e08e9=_0xbcab5e>=0x3e7||_0xbcab5e>=0x3e8,_0x3d7645=_0x47d45a[_0x995334(0x1ca)]===_0x995334(0x1a6),_0x5e49b9=/overlay|mask|blocker|trap|black|dark|shade|backdrop|gate|fullscreen-cover/i[_0x995334(0x1b8)](_0x107cf7+_0x1c137b),_0x42b7f3=_0x4fac17&&_0x1e08e9||_0x5e49b9&&(_0x4fac17||_0x1e08e9)||_0x3d7645&&_0x1e08e9&&_0xb5d9ec>_0x176c92*_0x28a601*0.7;if(!_0x42b7f3)continue;_0x19503a[_0x995334(0x1d6)]({'tag':_0x330b82[_0x995334(0x232)],'id':_0x1c137b[_0x995334(0x17c)](0x0,0x3c),'class':_0x107cf7[_0x995334(0x17c)](0x0,0x78),'rect':Math[_0x995334(0x21b)](_0x295c0e[_0x995334(0x1df)])+'x'+Math['round'](_0x295c0e[_0x995334(0x1d3)]),'opacity':String(_0x5c4021),'zIndex':_0x47d45a[_0x995334(0x207)]||'','pointerEvents':_0x47d45a[_0x995334(0x1ca)]||'','position':_0x851d84,'background':_0x5c6a7c['slice'](0x0,0x50),'reason':_0x4fac17&&_0x1e08e9?_0x995334(0x233):_0x5e49b9?_0x995334(0x210):_0x995334(0x21e)});if(_0x19503a[_0x995334(0x22f)]>=0x8)break;}catch(_0x3ffab0){}}}catch(_0x12f9c5){}return _0x19503a;}try{window['__hasDebuggerTrap']=![];}catch(_0x51c0a8){}const _0x1bb11e=_0x560be6=>{const _0x131e47=_0x4221c5;if(_0x560be6[_0x131e47(0x226)]!==window)return;if(_0x560be6[_0x131e47(0x19f)]&&_0x560be6[_0x131e47(0x19f)][_0x131e47(0x1b6)]===_0x131e47(0x1ac))try{const _0x2c9a2e=_0x181aa3(),_0x3289b9=_0x5b55f8(),_0x1b94e6=_0x2c9a2e[_0x131e47(0x1e1)](_0x116b69=>{const _0x3b27b0=_0x131e47;if(!_0x116b69[_0x3b27b0(0x1a0)])return![];const _0x130a9d=_0x116b69['patterns'];if(_0x130a9d[_0x3b27b0(0x1f5)])return!![];if((_0x130a9d['hasPopunderUrl']||_0x130a9d['hasAdUrl'])&&(_0x130a9d['hasCloakUrl']||_0x130a9d[_0x3b27b0(0x191)]))return!![];if(_0x130a9d['hasLocalStoragePop']&&(_0x130a9d[_0x3b27b0(0x18f)]||_0x130a9d[_0x3b27b0(0x19b)]||_0x130a9d[_0x3b27b0(0x191)]))return!![];return![];}),_0x679395=_0x2c9a2e['some'](_0xb3771f=>_0xb3771f[_0x131e47(0x1a0)]&&_0xb3771f[_0x131e47(0x1a0)]['hasStepMs']);window['postMessage']({'action':_0x131e47(0x19a),'deepData':{'globalVars':_0x4b41f9(),'networkLogs':(window[_0x131e47(0x1a2)]||[])[_0x131e47(0x17c)](-0xa0),'resourceTimings':(window[_0x131e47(0x22b)]||[])[_0x131e47(0x17c)](-0x64),'mediaLogs':(window['__jdMediaLogs']||[])[_0x131e47(0x17c)](-0x3c),'ytPlayerSnapshot':_0x17e0ed(),'hasDebuggerTrap':!!window[_0x131e47(0x1be)],'clickTraces':_0x2a5876['slice'](-0x23),'timerLog':_0x18d540['slice'](-0x32),'adScripts':_0x2c9a2e,'overlaySignals':_0x5cb65d[_0x131e47(0x17c)](-0x14),'blackScreenSignals':_0x3289b9,'smartHints':{'gateClickDetected':_0x1b94e6,'stepTimerInScript':_0x679395,'firstPartySafeHost':_0x502238[_0x131e47(0x1b8)](location[_0x131e47(0x1f3)]||''),'host':(location[_0x131e47(0x1f3)]||'')['slice'](0x0,0x50)},'timestamp':Date[_0x131e47(0x21d)](),'pageStartTs':_0x563349,'captureActive':!![],'version':_0x131e47(0x1c3)}},'*');}catch(_0x13fb16){}};window[_0x4221c5(0x18a)]('message',_0x1bb11e),window[_0x4221c5(0x1f9)]=()=>{const _0x5669e3=_0x4221c5;if(!_0x5ae558)return;_0x5ae558=![],window[_0x5669e3(0x209)](_0x5669e3(0x1bf),_0x1bb11e);try{_0x4e1c25?.[_0x5669e3(0x1e8)]();}catch(_0x12a64a){}for(let _0x4c00bb=_0x417505['length']-0x1;_0x4c00bb>=0x0;_0x4c00bb--){try{_0x417505[_0x4c00bb]();}catch(_0xa6b1bb){}}if(window['__jdYtAdNetLog']===_0x935b6){if(_0x1cea37['networkLogs']===undefined)delete window[_0x5669e3(0x1a2)];else window[_0x5669e3(0x1a2)]=_0x1cea37[_0x5669e3(0x204)];}if(window['__jdResourceTimings']===_0x37435c){if(_0x1cea37[_0x5669e3(0x235)]===undefined)delete window['__jdResourceTimings'];else window[_0x5669e3(0x22b)]=_0x1cea37['resourceTimings'];}if(window[_0x5669e3(0x17e)]===_0x50d3ee){if(_0x1cea37['mediaLogs']===undefined)delete window[_0x5669e3(0x17e)];else window[_0x5669e3(0x17e)]=_0x1cea37['mediaLogs'];}try{window[_0x5669e3(0x1be)]===![]&&(_0x1cea37[_0x5669e3(0x1b5)]?Object[_0x5669e3(0x179)](window,'__hasDebuggerTrap',_0x1cea37['debuggerTrap']):delete window['__hasDebuggerTrap']);}catch(_0x24bf1c){}if(window[_0x5669e3(0x1f9)]===_0x2fd702){if(_0x54f43b)Object[_0x5669e3(0x179)](window,_0x5669e3(0x1f9),_0x54f43b);else delete window[_0x5669e3(0x1f9)];}if(window[_0x5669e3(0x222)]===!![]){if(_0x5e1cdb)Object[_0x5669e3(0x179)](window,_0x5669e3(0x222),_0x5e1cdb);else delete window[_0x5669e3(0x222)];}};const _0x2fd702=window[_0x4221c5(0x1f9)];})()));
+// injected.js - MAIN World v2.2.1 (Universe Smart)
+// Toàn site • An toàn site chính thống • Bắt màn đen / gate-click / popunder / timer / full script
+// v2.2.1: siết false positive black-screen (bỏ layout .container/.content) + gate (chỉ tín hiệu mạnh)
+(() => {
+  if (window.__jdInjectedReady) return;
+  const previousReadyDescriptor = Object.getOwnPropertyDescriptor(window, '__jdInjectedReady');
+  const previousStopDescriptor = Object.getOwnPropertyDescriptor(window, '__jdInjectedStop');
+  window.__jdInjectedReady = true;
+
+  const restoreActions = [];
+  let captureEnabled = true;
+  let resourceObserver = null;
+  const pageStartTs = (typeof performance !== 'undefined' && performance.timing && performance.timing.navigationStart)
+    ? performance.timing.navigationStart
+    : Date.now();
+
+  const previousCaptureGlobals = {
+    networkLogs: window.__jdYtAdNetLog,
+    resourceTimings: window.__jdResourceTimings,
+    mediaLogs: window.__jdMediaLogs,
+    debuggerTrap: Object.getOwnPropertyDescriptor(window, '__hasDebuggerTrap')
+  };
+
+  const MAX_LOG = 320;
+  const MAX_RESOURCE_TIMINGS = 280;
+  const MAX_MEDIA = 80;
+  const MAX_GLOBAL = 40;
+  const MAX_CLICK = 50;
+  const MAX_TIMER = 80;
+  const MAX_OVERLAY_SIGNAL = 30;
+
+  window.__jdYtAdNetLog = [];
+  window.__jdResourceTimings = [];
+  window.__jdMediaLogs = [];
+  const captureNetworkLogs = window.__jdYtAdNetLog;
+  const captureResourceTimings = window.__jdResourceTimings;
+  const captureMediaLogs = window.__jdMediaLogs;
+
+  const clickTraces = [];
+  const timerLog = [];
+  const overlaySignals = []; // màn đen / full-page overlay signals
+
+  // ========== WHITELIST SITE CHÍNH THỐNG (không bao giờ coi là ad) ==========
+  const FIRST_PARTY_SAFE = /(?:^|\.)(?:youtube\.com|youtu\.be|googlevideo\.com|ytimg\.com|ggpht\.com|gstatic\.com|google\.com|google\.[a-z]{2,3}|googleapis\.com|googleusercontent\.com|accounts\.google\.com|accounts\.youtube\.com|facebook\.com|fbcdn\.net|vimeo\.com|vimeocdn\.com|cloudflare\.com|jsdelivr\.net|unpkg\.com|jquery\.com|bootstrapcdn\.com|fontawesome\.com|twimg\.com|twitter\.com|x\.com|netflix\.com|nflxvideo\.net|spotify\.com|scdn\.co|apple\.com|icloud\.com|microsoft\.com|office\.com|live\.com|bing\.com|github\.com|githubusercontent\.com|stackoverflow\.com|reddit\.com|redd\.it|wikipedia\.org|wikimedia\.org|amazon\.com|amazonaws\.com|paypal\.com|stripe\.com|bank|gov\.[a-z]{2,3})$/i;
+
+  // ========== REGEX MẠNH + THÔNG MINH ==========
+  const NET_AD_REG = /ad|ads|banner|pop|popup|popunder|analytics|tracker|tracking|beacon|pixel|doubleclick|googlesyndication|pagead|adservice|adsystem|adsterra|propeller|exoclick|juicyads|adcash|popads|adnxs|taboola|outbrain|mgid|prebid|adsbygoogle|googletag|gtm|ga\.|google-analytics|hotjar|mixpanel|amplitude|segment|scorecardresearch|facebook\.net\/tr|cloudflareinsights|log_event|telemetry|collect|ptracking|virtualadview|ad_impression|ad_break|report_ad|instream|get_midroll|adunit|\/ad_|\.adsense\.|adserver|hilltopads|a-ads|clksite|bebi|youtubei\/v1\/ad|pagead\/adview|pcs\/view|enforcement|adblock|partnerwide|googleadservices|tpc\.googlesyndication|adsrvr|advertising|adn\.|adtech|underclick|clickunder|interstitial|\/do2\/|catfish|banner-view|ad-detector|ad_status|marvelous-respond|lost-spray|linkroyal|cm88|qq88|sc88|hi88|new88|i9bet|clickadu|trafficjunky|trafficfactory|plugrush|admaven|popcash|popmyads|decisive-wait|acquirecardedsullen|agileskincare|popunder_url|GATE|xnPop|xnHta/i;
+  const NET_VAST_REG = /\bvast\b|\bvmap\b|\bvpaid\b|ima3|imasdk|adtag|ad_tag|ad-tag|csai|ssai|tvc\.xml|admanager|securepubads|pubads|openrtb|bid-?request|\/vast(\?|\.|$)|ima\.googleapis|dai\.google/i;
+  const NET_VIDEO_REG = /videoplayback|googlevideo|\.m3u8|\.mpd|\.mp4|\.webm|\.m4s\b|\.ts\b|manifest|playlist\.m3u8|index\.m3u8|chunklist|segment|hls|dash|blob:|mediasource|phncdn|phprcdn|cdn\.pornhub|video\.google|ytimg\.com\/video|rr\d+---sn-|googlevideo\.com/i;
+  const NET_IFRAME_REG = /iframe|embed|player|vast|ima|adserver|doubleclick|googlesyndication|accounts\.youtube|RotateCookies/i;
+  const GLOBAL_AD_REG = /jwplayer|hls|plyr|videojs|player|adblock|canrunads|fuckadblock|blockadblock|popns|_pop|counter|config|__adblock|adsbygoogle|googletag|ytplayer|ytinitial|prebid|pbjs|adfox|adman|adserver|popunder|popads|exoclick|juicyads|propeller|ima|vast|vmap|vpaid|adModule|adBreak|ytAd|__yt/i;
+  const KNOWN_CLOAK_TOKENS = /cupbearergrowllurch|warkedmalie|astronautlividlyreformer|xcas\.(com|net)|yetansd|ozlinedsp|onaudience|wakuhyfeserucu/i;
+  // Script ad: mở rộng + bắt pattern gate/popunder
+  const AD_SCRIPT_HINT = /marvelous-respond|decisive-wait|acquirecardedsullen|agileskincare|AD_URL|popunder|popunder_url|cm88|qq88|hi88|new88|sc88|i9bet|bit\.ly|linkroyal|workers\.dev|catfish|banner-view|GATE|xnPop|xnHta|xn_app|offered\s*=|bindTo\s*:|TARGET_CLASSES|localStorage.*Pop|lsSet\s*\(/i;
+
+  function isFirstPartySafe(url) {
+    try {
+      const host = new URL(url, location.href).hostname.toLowerCase();
+      return FIRST_PARTY_SAFE.test(host);
+    } catch (e) { return false; }
+  }
+
+  function isLikelyCloakedDomain(rawUrl) {
+    try {
+      const u = new URL(rawUrl, location.href);
+      const host = u.hostname.toLowerCase();
+      if (FIRST_PARTY_SAFE.test(host)) return false; // an toàn
+      if (KNOWN_CLOAK_TOKENS.test(host)) return true;
+      const sld = host.replace(/^www\./, '').split('.').slice(-2, -1)[0] || '';
+      if (/^\d{1,4}[a-z]{2,10}$/i.test(sld)) return true;
+      if (/^[a-z]{13,}$/i.test(sld)) return true;
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function shouldLogUrl(url) {
+    if (!url) return false;
+    const s = String(url);
+    // Không log first-party an toàn trừ khi rõ ràng là ad endpoint
+    if (isFirstPartySafe(s) && !/\/ad|pagead|doubleclick|googlesyndication|adservice/i.test(s)) {
+      return false;
+    }
+    return (
+      NET_AD_REG.test(s) ||
+      NET_VAST_REG.test(s) ||
+      NET_VIDEO_REG.test(s) ||
+      NET_IFRAME_REG.test(s) ||
+      isLikelyCloakedDomain(s) ||
+      s.startsWith('blob:')
+    );
+  }
+
+  function relativeTime() {
+    return Math.round((Date.now() - pageStartTs));
+  }
+
+  function pushNetLog(type, url, extra = {}) {
+    if (!captureEnabled || !url) return null;
+    const entry = {
+      type,
+      url: String(url).slice(0, 1200),
+      time: Date.now(),
+      rel: relativeTime(),
+      ...extra
+    };
+    window.__jdYtAdNetLog.push(entry);
+    if (window.__jdYtAdNetLog.length > MAX_LOG) window.__jdYtAdNetLog.shift();
+    return entry;
+  }
+
+  function finishRequest(entry, outcome, details = {}) {
+    if (!captureEnabled || !entry) return;
+    const completedAt = Date.now();
+    Object.assign(entry, {
+      outcome,
+      completedAt,
+      durationMs: completedAt - (entry.time || completedAt)
+    }, details);
+  }
+
+  function errorMessage(error) {
+    try {
+      if (!error) return 'unknown';
+      if (typeof error === 'string') return error.slice(0, 200);
+      return String(error.message || error.name || error).slice(0, 200);
+    } catch (e) {
+      return 'Unknown request error';
+    }
+  }
+
+  function pushMediaLog(kind, detail = {}) {
+    if (!captureEnabled) return;
+    try {
+      window.__jdMediaLogs.push({
+        kind,
+        time: Date.now(),
+        rel: relativeTime(),
+        ...detail
+      });
+      if (window.__jdMediaLogs.length > MAX_MEDIA) window.__jdMediaLogs.shift();
+    } catch (e) {}
+  }
+
+  // ========== 0. Click-trace thật (v2.2 – thêm pointer-events + z-index + full-page check) ==========
+  function captureClick(e) {
+    if (!captureEnabled) return;
+    try {
+      const pts = (document.elementsFromPoint && document.elementsFromPoint(e.clientX, e.clientY)) || [];
+      const els = pts.slice(0, 6).map((el) => {
+        let r = { width: 0, height: 0 }, cs = {};
+        try {
+          r = el.getBoundingClientRect();
+          cs = getComputedStyle(el);
+        } catch (_) {}
+        const area = (r.width || 0) * (r.height || 0);
+        const vw = window.innerWidth || 1;
+        const vh = window.innerHeight || 1;
+        const coversMost = area > (vw * vh * 0.6);
+        return {
+          tag: el.tagName,
+          id: (el.id || '').slice(0, 60),
+          class: String(el.className || '').slice(0, 140),
+          href: String(el.href || (el.getAttribute && el.getAttribute('href')) || '').slice(0, 300),
+          rect: Math.round(r.width) + 'x' + Math.round(r.height),
+          zIndex: cs.zIndex || '',
+          pointerEvents: cs.pointerEvents || '',
+          opacity: cs.opacity || '',
+          position: cs.position || '',
+          coversMostViewport: coversMost
+        };
+      });
+      // Phát hiện màn đen / overlay phủ khi click
+      const top = els[0];
+      if (top && top.coversMostViewport && (
+        top.tag === 'DIV' || top.tag === 'SECTION' || top.tag === 'A'
+      ) && (parseFloat(top.opacity) < 0.15 || top.pointerEvents === 'none' || /overlay|mask|blocker|trap|black|dark|shade/i.test(top.class + top.id))) {
+        overlaySignals.push({
+          time: Date.now(),
+          rel: relativeTime(),
+          kind: 'click-on-full-overlay',
+          element: top
+        });
+        if (overlaySignals.length > MAX_OVERLAY_SIGNAL) overlaySignals.shift();
+      }
+
+      clickTraces.push({
+        time: Date.now(),
+        rel: relativeTime(),
+        x: e.clientX,
+        y: e.clientY,
+        button: e.button,
+        targetHref: String((e.target && e.target.href) || '').slice(0, 300),
+        elements: els
+      });
+      if (clickTraces.length > MAX_CLICK) clickTraces.shift();
+    } catch (_) {}
+  }
+  try {
+    document.addEventListener('click', captureClick, true);
+    document.addEventListener('auxclick', captureClick, true);
+    restoreActions.push(() => {
+      document.removeEventListener('click', captureClick, true);
+      document.removeEventListener('auxclick', captureClick, true);
+    });
+  } catch (_) {}
+
+  // ========== 1. fetch ==========
+  const origFetch = window.fetch;
+  if (typeof origFetch === 'function') {
+    const wrappedFetch = function (...args) {
+      let url = '';
+      try {
+        if (typeof args[0] === 'string') url = args[0];
+        else if (args[0] instanceof Request) url = args[0].url;
+        else if (args[0] && typeof args[0].url === 'string') url = args[0].url;
+      } catch (e) {}
+      let method = 'GET';
+      try {
+        if (args[0] instanceof Request) method = args[0].method || method;
+        if (args[1] && args[1].method) method = args[1].method;
+      } catch (e) {}
+      const entry = shouldLogUrl(url)
+        ? pushNetLog('fetch', url, {
+            method: String(method).toUpperCase().slice(0, 16),
+            outcome: 'pending'
+          })
+        : null;
+      let p;
+      try {
+        p = origFetch.apply(this, args);
+      } catch (error) {
+        finishRequest(entry, 'failed', {
+          failureReason: 'synchronous-error',
+          error: errorMessage(error)
+        });
+        throw error;
+      }
+      if (entry) {
+        p.then((res) => {
+          if (!res) {
+            finishRequest(entry, 'unknown');
+            return;
+          }
+          let contentType = '';
+          try { contentType = (res.headers && res.headers.get('content-type')) || ''; } catch (e) {}
+          finishRequest(entry, res.ok ? 'success' : 'http-error', {
+            status: res.status,
+            contentType: contentType.slice(0, 80),
+            redirected: !!res.redirected,
+            type: res.type || ''
+          });
+        }, (error) => {
+          const msg = errorMessage(error);
+          const isAbort = /abort/i.test(msg);
+          const isNetwork = /network|failed to fetch|load failed|net::/i.test(msg);
+          finishRequest(entry, 'failed', {
+            failureReason: isAbort ? 'aborted' : (isNetwork ? 'network-error' : 'browser-reported-error'),
+            error: msg
+          });
+        });
+      }
+      return p;
+    };
+    window.fetch = wrappedFetch;
+    restoreActions.push(() => {
+      if (window.fetch === wrappedFetch) window.fetch = origFetch;
+    });
+  }
+
+  // ========== 2. XHR ==========
+  const xhrRequests = new WeakMap();
+  const origOpen = XMLHttpRequest.prototype.open;
+  const wrappedXhrOpen = function (method, url, ...rest) {
+    try {
+      xhrRequests.set(this, {
+        url: typeof url === 'string' ? url : (url && url.href ? url.href : String(url || '')),
+        method: String(method || '').toUpperCase(),
+        openTime: Date.now()
+      });
+    } catch (e) {}
+    return origOpen.apply(this, [method, url, ...rest]);
+  };
+  XMLHttpRequest.prototype.open = wrappedXhrOpen;
+  restoreActions.push(() => {
+    if (XMLHttpRequest.prototype.open === wrappedXhrOpen) XMLHttpRequest.prototype.open = origOpen;
+  });
+
+  const origSend = XMLHttpRequest.prototype.send;
+  const wrappedXhrSend = function (...args) {
+    let entry = null;
+    try {
+      const request = xhrRequests.get(this);
+      if (request && shouldLogUrl(request.url)) {
+        entry = pushNetLog('xhr', request.url, {
+          method: request.method,
+          outcome: 'pending'
+        });
+        this.addEventListener('loadend', () => {
+          try {
+            const status = this.status;
+            let contentType = '';
+            try { contentType = this.getResponseHeader('content-type') || ''; } catch (e) {}
+            if (status === 0) {
+              finishRequest(entry, 'failed', {
+                status,
+                failureReason: 'status-zero-unclassified',
+                contentType: contentType.slice(0, 80)
+              });
+            } else {
+              finishRequest(entry, status >= 400 ? 'http-error' : 'success', {
+                status,
+                contentType: contentType.slice(0, 80),
+                responseType: this.responseType || ''
+              });
+            }
+          } catch (e) {
+            finishRequest(entry, 'unknown');
+          }
+        }, { once: true });
+        this.addEventListener('error', () => {
+          finishRequest(entry, 'failed', { failureReason: 'xhr-error-event' });
+        }, { once: true });
+        this.addEventListener('abort', () => {
+          finishRequest(entry, 'failed', { failureReason: 'aborted' });
+        }, { once: true });
+      }
+    } catch (e) {}
+    try {
+      return origSend.apply(this, args);
+    } catch (error) {
+      finishRequest(entry, 'failed', {
+        failureReason: 'synchronous-error',
+        error: errorMessage(error)
+      });
+      throw error;
+    }
+  };
+  XMLHttpRequest.prototype.send = wrappedXhrSend;
+  restoreActions.push(() => {
+    if (XMLHttpRequest.prototype.send === wrappedXhrSend) XMLHttpRequest.prototype.send = origSend;
+  });
+
+  // ========== 3. sendBeacon ==========
+  if (navigator && typeof navigator.sendBeacon === 'function') {
+    const origBeacon = navigator.sendBeacon;
+    const wrappedBeacon = function (url, data) {
+      let entry = null;
+      try {
+        if (typeof url === 'string' && shouldLogUrl(url)) {
+          entry = pushNetLog('beacon', url, { method: 'POST', outcome: 'pending' });
+        }
+      } catch (e) {}
+      const accepted = origBeacon.apply(this, arguments);
+      finishRequest(entry, accepted ? 'accepted' : 'rejected');
+      return accepted;
+    };
+    navigator.sendBeacon = wrappedBeacon;
+    restoreActions.push(() => {
+      if (navigator.sendBeacon === wrappedBeacon) navigator.sendBeacon = origBeacon;
+    });
+  }
+
+  // ========== 4. Image src + setAttribute ==========
+  try {
+    const origImageSrc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
+    if (origImageSrc && origImageSrc.set) {
+      const wrappedImageSrcSetter = function (value) {
+        try {
+          if (value && shouldLogUrl(String(value))) {
+            pushNetLog('img', value, {
+              w: this.width || 0,
+              h: this.height || 0,
+              outcome: 'initiated'
+            });
+          }
+        } catch (e) {}
+        return origImageSrc.set.call(this, value);
+      };
+      Object.defineProperty(HTMLImageElement.prototype, 'src', {
+        set: wrappedImageSrcSetter,
+        get() { return origImageSrc.get.call(this); },
+        configurable: true
+      });
+      restoreActions.push(() => {
+        if (Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src')?.set === wrappedImageSrcSetter) {
+          Object.defineProperty(HTMLImageElement.prototype, 'src', origImageSrc);
+        }
+      });
+    }
+  } catch (e) {}
+
+  const origSetAttribute = Element.prototype.setAttribute;
+  const wrappedSetAttribute = function (name, value) {
+    try {
+      const tag = (this.tagName || '').toUpperCase();
+      if (tag === 'IMG' && (name === 'src' || name === 'data-src') && value && shouldLogUrl(String(value))) {
+        pushNetLog('img-attr', value, { outcome: 'initiated' });
+      }
+      if (tag === 'IFRAME' && (name === 'src' || name === 'data-src') && value && shouldLogUrl(String(value))) {
+        pushNetLog('iframe-attr', value, { outcome: 'initiated' });
+      }
+      if (tag === 'VIDEO' || tag === 'SOURCE' || tag === 'AUDIO') {
+        if ((name === 'src' || name === 'data-src') && value) {
+          pushMediaLog('media-attr-src', {
+            tag,
+            attr: name,
+            url: String(value).slice(0, 500)
+          });
+          if (shouldLogUrl(String(value))) {
+            pushNetLog('media-src', value, { tag, outcome: 'initiated' });
+          }
+        }
+      }
+    } catch (e) {}
+    return origSetAttribute.apply(this, arguments);
+  };
+  Element.prototype.setAttribute = wrappedSetAttribute;
+  restoreActions.push(() => {
+    if (Element.prototype.setAttribute === wrappedSetAttribute) {
+      Element.prototype.setAttribute = origSetAttribute;
+    }
+  });
+
+  // ========== 5. dynamic script ==========
+  try {
+    const origScriptSrc = Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype, 'src');
+    if (origScriptSrc?.set) {
+      const wrappedScriptSrcSetter = function (value) {
+        try {
+          if (value && shouldLogUrl(String(value))) {
+            pushNetLog('script', value, { outcome: 'initiated' });
+          }
+        } catch (e) {}
+        return origScriptSrc.set.call(this, value);
+      };
+      Object.defineProperty(HTMLScriptElement.prototype, 'src', {
+        ...origScriptSrc,
+        set: wrappedScriptSrcSetter
+      });
+      restoreActions.push(() => {
+        if (Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype, 'src')?.set === wrappedScriptSrcSetter) {
+          Object.defineProperty(HTMLScriptElement.prototype, 'src', origScriptSrc);
+        }
+      });
+    }
+  } catch (e) {}
+
+  // ========== 6. WebSocket ==========
+  if (typeof WebSocket === 'function') {
+    const OrigWebSocket = WebSocket;
+    const WrappedWebSocket = function (url, protocols) {
+      try {
+        if (url && shouldLogUrl(String(url))) {
+          pushNetLog('ws', url, { outcome: 'initiated' });
+        }
+      } catch (e) {}
+      return new OrigWebSocket(url, protocols);
+    };
+    WrappedWebSocket.prototype = OrigWebSocket.prototype;
+    WrappedWebSocket.CONNECTING = OrigWebSocket.CONNECTING;
+    WrappedWebSocket.OPEN = OrigWebSocket.OPEN;
+    WrappedWebSocket.CLOSING = OrigWebSocket.CLOSING;
+    WrappedWebSocket.CLOSED = OrigWebSocket.CLOSED;
+    window.WebSocket = WrappedWebSocket;
+    restoreActions.push(() => {
+      if (window.WebSocket === WrappedWebSocket) window.WebSocket = OrigWebSocket;
+    });
+  }
+
+  // ========== 7. window.open + STACK ==========
+  try {
+    const origWindowOpen = window.open;
+    const wrappedWindowOpen = function (url, target, features) {
+      let stack = '';
+      try { stack = (new Error().stack || '').slice(0, 900); } catch (_) {}
+      try {
+        pushNetLog('window.open', url || 'about:blank', {
+          outcome: 'attempted',
+          eventKind: 'popup-attempt',
+          target: (target || '').toString().slice(0, 40),
+          features: (features || '').toString().slice(0, 120),
+          stack
+        });
+      } catch (e) {}
+      return origWindowOpen.apply(this, arguments);
+    };
+    window.open = wrappedWindowOpen;
+    restoreActions.push(() => {
+      if (window.open === wrappedWindowOpen) window.open = origWindowOpen;
+    });
+  } catch (e) {}
+
+  // ========== 7b. createObjectURL + MediaSource ==========
+  try {
+    const origCreateObjectURL = URL.createObjectURL;
+    if (typeof origCreateObjectURL === 'function') {
+      const wrappedCreateObjectURL = function (obj) {
+        const url = origCreateObjectURL.apply(this, arguments);
+        try {
+          const t = (obj && obj.type) ? String(obj.type) : '';
+          if (t.indexOf('video') !== -1 || t.indexOf('audio') !== -1) {
+            pushNetLog('blob-media', url, { mediaType: t, outcome: 'created' });
+            pushMediaLog('blob-created', { url: String(url).slice(0, 200), mediaType: t });
+          } else if (typeof MediaSource !== 'undefined' && obj instanceof MediaSource) {
+            pushNetLog('blob-mediasource', url, { outcome: 'created' });
+            pushMediaLog('mediasource-created', { url: String(url).slice(0, 200) });
+            try {
+              const origAddSourceBuffer = obj.addSourceBuffer.bind(obj);
+              obj.addSourceBuffer = function (mime) {
+                pushMediaLog('mediasource-addbuffer', {
+                  mime: String(mime || '').slice(0, 120),
+                  url: String(url).slice(0, 200)
+                });
+                return origAddSourceBuffer(mime);
+              };
+            } catch (e) {}
+          } else {
+            pushMediaLog('blob-other', { url: String(url).slice(0, 200), type: t });
+          }
+        } catch (e) {}
+        return url;
+      };
+      URL.createObjectURL = wrappedCreateObjectURL;
+      restoreActions.push(() => {
+        if (URL.createObjectURL === wrappedCreateObjectURL) {
+          URL.createObjectURL = origCreateObjectURL;
+        }
+      });
+    }
+  } catch (e) {}
+
+  // ========== 7c. iframe src ==========
+  try {
+    const origIframeSrc = Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype, 'src');
+    if (origIframeSrc && origIframeSrc.set) {
+      const wrappedIframeSrcSetter = function (value) {
+        try {
+          if (value && shouldLogUrl(String(value))) {
+            pushNetLog('iframe', value, { outcome: 'initiated' });
+          }
+        } catch (e) {}
+        return origIframeSrc.set.call(this, value);
+      };
+      Object.defineProperty(HTMLIFrameElement.prototype, 'src', {
+        set: wrappedIframeSrcSetter,
+        get() { return origIframeSrc.get.call(this); },
+        configurable: true
+      });
+      restoreActions.push(() => {
+        if (Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype, 'src')?.set === wrappedIframeSrcSetter) {
+          Object.defineProperty(HTMLIFrameElement.prototype, 'src', origIframeSrc);
+        }
+      });
+    }
+  } catch (e) {}
+
+  // ========== 7d. HTMLMediaElement src ==========
+  try {
+    const mediaProto = HTMLMediaElement && HTMLMediaElement.prototype;
+    if (mediaProto) {
+      const origMediaSrc = Object.getOwnPropertyDescriptor(mediaProto, 'src');
+      if (origMediaSrc && origMediaSrc.set) {
+        const wrappedMediaSrc = function (value) {
+          try {
+            pushMediaLog('media-src-set', {
+              tag: (this.tagName || '').toLowerCase(),
+              url: String(value || '').slice(0, 500),
+              paused: !!this.paused,
+              muted: !!this.muted,
+              rate: this.playbackRate
+            });
+            if (value && shouldLogUrl(String(value))) {
+              pushNetLog('media-src', value, { tag: this.tagName, outcome: 'initiated' });
+            }
+          } catch (e) {}
+          return origMediaSrc.set.call(this, value);
+        };
+        Object.defineProperty(mediaProto, 'src', {
+          set: wrappedMediaSrc,
+          get() { return origMediaSrc.get.call(this); },
+          configurable: true
+        });
+        restoreActions.push(() => {
+          if (Object.getOwnPropertyDescriptor(mediaProto, 'src')?.set === wrappedMediaSrc) {
+            Object.defineProperty(mediaProto, 'src', origMediaSrc);
+          }
+        });
+      }
+    }
+  } catch (e) {}
+
+  // ========== 7e. Timer registry THÔNG MINH (v2.2) ==========
+  // Bắt timer dài (>= 5s) hoặc callback chứa từ khóa ad/popunder/GATE
+  // An toàn: không log timer của site chính thống thông thường
+  try {
+    const origSetTimeout = window.setTimeout;
+    const origSetInterval = window.setInterval;
+    const shouldLogTimer = (fn, ms) => {
+      try {
+        const delay = Number(ms) || 0;
+        if (typeof fn !== 'function') return false;
+        const src = (fn.toString() || '').slice(0, 300);
+        // Luôn log nếu có dấu hiệu ad/popunder/gate
+        if (AD_SCRIPT_HINT.test(src)) return true;
+        if (/window\.open|location\s*=|location\.href|location\.assign|location\.replace|popunder|GATE|xnPop|xnHta/i.test(src)) return true;
+        // Timer rất dài (>= 30s) trên site không phải first-party lớn → đáng nghi
+        if (delay >= 30000 && !FIRST_PARTY_SAFE.test(location.hostname)) return true;
+        // Timer 5–90s có từ khóa redirect/open
+        if (delay >= 5000 && delay <= 120000 && /open|redirect|href|assign|replace/i.test(src)) return true;
+        return false;
+      } catch (_) { return false; }
+    };
+    window.setTimeout = function (fn, ms, ...rest) {
+      try {
+        if (shouldLogTimer(fn, ms || 0)) {
+          timerLog.push({
+            type: 'timeout',
+            ms: ms || 0,
+            src: String(fn).slice(0, 220),
+            time: Date.now(),
+            rel: relativeTime()
+          });
+          if (timerLog.length > MAX_TIMER) timerLog.shift();
+        }
+      } catch (_) {}
+      return origSetTimeout.apply(this, arguments);
+    };
+    window.setInterval = function (fn, ms, ...rest) {
+      try {
+        if (shouldLogTimer(fn, ms || 0)) {
+          timerLog.push({
+            type: 'interval',
+            ms: ms || 0,
+            src: String(fn).slice(0, 220),
+            time: Date.now(),
+            rel: relativeTime()
+          });
+          if (timerLog.length > MAX_TIMER) timerLog.shift();
+        }
+      } catch (_) {}
+      return origSetInterval.apply(this, arguments);
+    };
+    restoreActions.push(() => {
+      window.setTimeout = origSetTimeout;
+      window.setInterval = origSetInterval;
+    });
+  } catch (_) {}
+
+  // ========== 8. PerformanceObserver ==========
+  try {
+    if (typeof PerformanceObserver === 'function') {
+      resourceObserver = new PerformanceObserver((list) => {
+        if (!captureEnabled) return;
+        for (const entry of list.getEntries()) {
+          try {
+            if (entry.name && shouldLogUrl(entry.name)) {
+              pushNetLog('perf', entry.name, {
+                initiatorType: entry.initiatorType || '',
+                duration: Math.round(entry.duration),
+                transferSize: entry.transferSize || 0,
+                encodedBodySize: entry.encodedBodySize || 0,
+                outcome: 'observed'
+              });
+            }
+            window.__jdResourceTimings.push({
+              name: String(entry.name).slice(0, 1200),
+              type: entry.initiatorType || entry.entryType,
+              time: Date.now(),
+              rel: relativeTime(),
+              duration: Math.round(entry.duration),
+              transferSize: entry.transferSize || 0,
+              encodedBodySize: entry.encodedBodySize || 0
+            });
+            if (window.__jdResourceTimings.length > MAX_RESOURCE_TIMINGS) {
+              window.__jdResourceTimings.shift();
+            }
+          } catch (e) {}
+        }
+      });
+      resourceObserver.observe({ type: 'resource', buffered: true });
+    }
+  } catch (e) {}
+
+  // ========== 9. Global vars (giảm rác) ==========
+  function inspectGlobalJS() {
+    const globals = [];
+    try {
+      const keys = Object.keys(window);
+      for (let i = 0; i < keys.length; i++) {
+        const key = keys[i];
+        if (GLOBAL_AD_REG.test(key) && !/onanimation|ontransition|onwebkit|onmoz|onms|onpointer/i.test(key)) {
+          try {
+            const val = window[key];
+            let preview = '';
+            try {
+              if (val == null) preview = String(val);
+              else if (typeof val === 'object') preview = Object.prototype.toString.call(val).slice(0, 80);
+              else preview = String(val).slice(0, 150);
+            } catch (e) { preview = '[unreadable]'; }
+            globals.push({ key, type: typeof val, preview });
+          } catch (e) {}
+          if (globals.length >= MAX_GLOBAL) break;
+        }
+      }
+    } catch (e) {}
+    return globals;
+  }
+
+  function snapshotYtPlayer() {
+    try {
+      const p = document.querySelector('#movie_player, .html5-video-player');
+      if (!p) return null;
+      const v = p.querySelector('video') || document.querySelector('video.html5-main-video, video');
+      return {
+        classes: String(p.className || '').slice(0, 400),
+        hasAdShowing: /\bad-showing\b|\bad-interrupting\b/i.test(p.className || ''),
+        hasAdCreated: /\bad-created\b/i.test(p.className || ''),
+        video: v ? {
+          paused: !!v.paused,
+          muted: !!v.muted,
+          volume: v.volume,
+          rate: v.playbackRate,
+          currentTime: isFinite(v.currentTime) ? Math.round(v.currentTime * 10) / 10 : null,
+          src: String(v.src || v.currentSrc || '').slice(0, 300)
+        } : null
+      };
+    } catch (e) {
+      return null;
+    }
+  }
+
+  // ========== Full ad-script + phát hiện GATE / popunder pattern (v2.2.1) ==========
+  // Siết: chỉ coi là gate-ad khi có tín hiệu mạnh (AD_URL/popunder + domain lạ, bindTo+TARGET, xnPop/xnHta)
+  function collectAdScripts() {
+    const out = [];
+    try {
+      document.querySelectorAll('script').forEach((s) => {
+        const src = s.src || '';
+        const txt = (s.textContent || '').trim();
+        if (!src && !txt) return;
+        const combined = src + ' ' + txt;
+        const isAd = AD_SCRIPT_HINT.test(combined);
+        if (!isAd) return;
+
+        const hasAdUrl = /AD_URL\s*=\s*['"][^'"]+['"]/i.test(txt);
+        const hasPopunderUrl = /popunder_url\s*[:=]\s*['"][^'"]+['"]/i.test(txt);
+        // GATE thật: classList.add(GATE) / xnPop / xnHta / bindTo + TARGET_CLASSES — KHÔNG chỉ chữ "gate" trong comment
+        const hasGateStrong =
+          /classList\.add\s*\(\s*['"]?GATE['"]?\s*\)|xnPop|xnHta|bindTo\s*:\s*['"][^'"]+['"]\s*,\s*TARGET_CLASSES|TARGET_CLASSES\s*[:=]/i.test(txt) ||
+          (/\bGATE\b/.test(txt) && (hasAdUrl || hasPopunderUrl || /popunder|window\.open\s*\(/i.test(txt)));
+        const hasLocalStoragePop = /localStorage\.(?:get|set)Item\s*\(\s*['"][^'"]*(?:Pop|Hta|Miss|GATE|popunder)[^'"]*['"]|lsSet\s*\(\s*['"][^'"]*(?:Pop|Hta|Miss)/i.test(txt);
+        const hasStepMs = /STEP_MS|RESTART_MS|90\s*\*\s*1000|30\s*\*\s*60\s*\*\s*1000/i.test(txt);
+        const hasWindowOpen = /window\.open\s*\(/i.test(txt);
+        const hasLocationAssign = /location\s*(=\s*|\.href\s*=|\.assign|\.replace)/i.test(txt);
+        // Domain lạ trong script
+        const scriptUrls = (txt.match(/https?:\/\/[^\s"'`<>]+/g) || []).slice(0, 30);
+        const hasCloakUrl = scriptUrls.some((u) => {
+          try {
+            return isLikelyCloakedDomain(u) || /acquirecardedsullen|agileskincare|marvelous-respond|decisive-wait|linkroyal|workers\.dev|cm88|qq88|hi88|new88|sc88|i9bet/i.test(u);
+          } catch (_) { return false; }
+        });
+
+        const patterns = {
+          hasAdUrl,
+          hasPopunderUrl,
+          hasGate: hasGateStrong,
+          hasLocalStoragePop,
+          hasStepMs,
+          hasWindowOpen,
+          hasLocationAssign,
+          hasCloakUrl
+        };
+
+        out.push({
+          type: src ? 'external' : 'inline',
+          src: src.slice(0, 400),
+          fullText: txt.slice(0, 5000),
+          urls: scriptUrls,
+          patterns
+        });
+      });
+    } catch (_) {}
+    return out.slice(0, 14);
+  }
+
+  // ========== Black-screen / full overlay scanner (v2.2.1) ==========
+  // Siết: bỏ layout bình thường (.container/.content), yêu cầu fixed/absolute + z cao hoặc trap thật
+  function scanBlackScreenSignals() {
+    const signals = [];
+    try {
+      const vw = window.innerWidth || 1;
+      const vh = window.innerHeight || 1;
+      const LAYOUT_SAFE = /^(?:container|content|wrapper|main|page|site|layout|inner|outer|row|col|section-inner|body-inner|app|root)$/i;
+      const candidates = document.querySelectorAll('div, section, a, aside');
+      const max = Math.min(candidates.length, 120);
+      for (let i = 0; i < max; i++) {
+        const el = candidates[i];
+        try {
+          const cls = String(el.className || '').trim();
+          const id = (el.id || '').trim();
+          // Bỏ class/id layout thông thường
+          if (LAYOUT_SAFE.test(cls) || LAYOUT_SAFE.test(id)) continue;
+          if (/\b(container|content|wrapper|main-content|page-content|site-content)\b/i.test(cls) &&
+              !/overlay|mask|blocker|trap|black|shade|modal|backdrop|gate|popup/i.test(cls + id)) {
+            continue;
+          }
+          const r = el.getBoundingClientRect();
+          const area = r.width * r.height;
+          if (area < vw * vh * 0.55) continue; // chặt hơn: >= 55% viewport
+          const cs = getComputedStyle(el);
+          if (cs.display === 'none' || cs.visibility === 'hidden') continue;
+          const pos = cs.position || '';
+          if (pos !== 'fixed' && pos !== 'absolute') continue; // chỉ fixed/absolute
+          const opacity = parseFloat(cs.opacity);
+          const zInt = parseInt(cs.zIndex, 10) || 0;
+          const bg = (cs.backgroundColor || '') + (cs.backgroundImage || '');
+          const isDark = /rgba?\(\s*0\s*,\s*0\s*,\s*0|rgb\(\s*0\s*,\s*0\s*,\s*0\)|#000\b|black/i.test(bg) || opacity < 0.15;
+          const highZ = zInt >= 999 || zInt >= 1000;
+          const peNone = cs.pointerEvents === 'none';
+          const looksTrap = /overlay|mask|blocker|trap|black|dark|shade|backdrop|gate|fullscreen-cover/i.test(cls + id);
+          // Chỉ báo khi: (dark + highZ) hoặc (trap name + full cover) hoặc (peNone + highZ + full)
+          const isSignal =
+            (isDark && highZ) ||
+            (looksTrap && (isDark || highZ)) ||
+            (peNone && highZ && area > vw * vh * 0.7);
+          if (!isSignal) continue;
+          signals.push({
+            tag: el.tagName,
+            id: id.slice(0, 60),
+            class: cls.slice(0, 120),
+            rect: Math.round(r.width) + 'x' + Math.round(r.height),
+            opacity: String(opacity),
+            zIndex: cs.zIndex || '',
+            pointerEvents: cs.pointerEvents || '',
+            position: pos,
+            background: bg.slice(0, 80),
+            reason: (isDark && highZ) ? 'dark-highz-full' : (looksTrap ? 'named-trap-full' : 'pointer-none-highz-full')
+          });
+          if (signals.length >= 8) break;
+        } catch (_) {}
+      }
+    } catch (_) {}
+    return signals;
+  }
+
+  try { window.__hasDebuggerTrap = false; } catch (e) {}
+
+  // ========== 10. Deep inspect v2.2 ==========
+  const deepInspectHandler = (event) => {
+    if (event.source !== window) return;
+    if (event.data && event.data.action === 'JD_REQUEST_DEEP_INSPECT') {
+      try {
+        const adScripts = collectAdScripts();
+        const blackScreen = scanBlackScreenSignals();
+        // v2.2.1: gate thật = hasGate mạnh HOẶC (popunder/AD_URL + cloak) HOẶC (localStoragePop + cloak/step)
+        const gateDetected = adScripts.some(s => {
+          if (!s.patterns) return false;
+          const p = s.patterns;
+          if (p.hasGate) return true;
+          if ((p.hasPopunderUrl || p.hasAdUrl) && (p.hasCloakUrl || p.hasWindowOpen)) return true;
+          if (p.hasLocalStoragePop && (p.hasCloakUrl || p.hasStepMs || p.hasWindowOpen)) return true;
+          return false;
+        });
+        const hasStepTimer = adScripts.some(s => s.patterns && s.patterns.hasStepMs);
+
+        window.postMessage({
+          action: 'JD_RESPONSE_DEEP_INSPECT',
+          deepData: {
+            globalVars: inspectGlobalJS(),
+            networkLogs: (window.__jdYtAdNetLog || []).slice(-160),
+            resourceTimings: (window.__jdResourceTimings || []).slice(-100),
+            mediaLogs: (window.__jdMediaLogs || []).slice(-60),
+            ytPlayerSnapshot: snapshotYtPlayer(),
+            hasDebuggerTrap: !!window.__hasDebuggerTrap,
+            clickTraces: clickTraces.slice(-35),
+            timerLog: timerLog.slice(-50),
+            adScripts: adScripts,
+            overlaySignals: overlaySignals.slice(-20),
+            blackScreenSignals: blackScreen,
+            smartHints: {
+              gateClickDetected: gateDetected,
+              stepTimerInScript: hasStepTimer,
+              firstPartySafeHost: FIRST_PARTY_SAFE.test(location.hostname || ''),
+              host: (location.hostname || '').slice(0, 80)
+            },
+            timestamp: Date.now(),
+            pageStartTs,
+            captureActive: true,
+            version: '2.2.1'
+          }
+        }, '*');
+      } catch (e) {}
+    }
+  };
+  window.addEventListener('message', deepInspectHandler);
+
+  // ========== Stop sạch ==========
+  window.__jdInjectedStop = () => {
+    if (!captureEnabled) return;
+    captureEnabled = false;
+    window.removeEventListener('message', deepInspectHandler);
+    try { resourceObserver?.disconnect(); } catch (e) {}
+    for (let i = restoreActions.length - 1; i >= 0; i--) {
+      try { restoreActions[i](); } catch (e) {}
+    }
+    if (window.__jdYtAdNetLog === captureNetworkLogs) {
+      if (previousCaptureGlobals.networkLogs === undefined) delete window.__jdYtAdNetLog;
+      else window.__jdYtAdNetLog = previousCaptureGlobals.networkLogs;
+    }
+    if (window.__jdResourceTimings === captureResourceTimings) {
+      if (previousCaptureGlobals.resourceTimings === undefined) delete window.__jdResourceTimings;
+      else window.__jdResourceTimings = previousCaptureGlobals.resourceTimings;
+    }
+    if (window.__jdMediaLogs === captureMediaLogs) {
+      if (previousCaptureGlobals.mediaLogs === undefined) delete window.__jdMediaLogs;
+      else window.__jdMediaLogs = previousCaptureGlobals.mediaLogs;
+    }
+    try {
+      if (window.__hasDebuggerTrap === false) {
+        if (previousCaptureGlobals.debuggerTrap) {
+          Object.defineProperty(window, '__hasDebuggerTrap', previousCaptureGlobals.debuggerTrap);
+        } else {
+          delete window.__hasDebuggerTrap;
+        }
+      }
+    } catch (e) {}
+    if (window.__jdInjectedStop === stopCapture) {
+      if (previousStopDescriptor) Object.defineProperty(window, '__jdInjectedStop', previousStopDescriptor);
+      else delete window.__jdInjectedStop;
+    }
+    if (window.__jdInjectedReady === true) {
+      if (previousReadyDescriptor) Object.defineProperty(window, '__jdInjectedReady', previousReadyDescriptor);
+      else delete window.__jdInjectedReady;
+    }
+  };
+  const stopCapture = window.__jdInjectedStop;
+})();
