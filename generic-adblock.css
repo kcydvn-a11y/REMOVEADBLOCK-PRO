@@ -536,3 +536,52 @@ div.banner.player__banner-appeal-vip.radius-2,
     display: none !important;
     height: 0 !important;
 }
+
+/* ============================================================
+   V3 – Banner nhà cái / affiliate TỰ HOST (ảnh .gif/.webp nằm trên chính site nên DNR không chặn được)
+   Bằng chứng thật: quatvn.best, sexhay*, phimsex* - link bọc ảnh đi qua link rút gọn / Cloudflare Workers,
+   class đặt tên bình thường ("top-banner-grid", "after-content-list", "sticky-footer-grid"), không có rel=sponsored.
+   Đây chỉ là lớp CSS "không chớp nháy" cho các mẫu CHẮC CHẮN. Phần suy luận linh hoạt (nhóm banner, thương hiệu lạ,
+   popup + màn nền đen, dọn khung cha rỗng) do heuristic-adblock.js (isAdBannerLinkV3) đảm nhiệm.
+   CỐ TÌNH KHÔNG chặn chung chung [href*="workers.dev"] hay [href*="bit.ly"] - rất nhiều link/app hợp lệ dùng chúng.
+   Mọi luật dưới đây đều đòi hỏi LINK CHỈ BỌC ẢNH (:has(> img)) + 1 bằng chứng riêng (domain QC / tên ảnh nhà cái / nhãn alt).
+   ============================================================ */
+
+/* 1. Link-ảnh tới domain chuyên dùng cho QC nhà cái (shortlink.*, linkroyal, thlink.cc, c168n.*, short-link.app) */
+a[target="_blank"]:is([href*="://shortlink."], [href*="linkroyal"], [href*="://thlink.cc/"], [href*="://c168n."], [href*="short-link.app/"]):has(> img),
+
+/* 2. Link-ảnh mở tab mới mà TÊN FILE ẢNH là thương hiệu nhà cái (/hi88-v3.gif, /qq88.gif, /cm88.webp, /ok9.webp ...) */
+a[target="_blank"]:has(> img:is(
+    [src*="/hi88" i], [src*="/qq88" i], [src*="/cm88" i], [src*="/sc88" i], [src*="/xx88" i], [src*="/ad88" i],
+    [src*="/c168" i], [src*="/78win" i], [src*="/789bet" i], [src*="/shbet" i], [src*="/jun88" i], [src*="/8xbet" i],
+    [src*="/ok9." i], [src*="/ok9-" i], [src*="/ok99" i], [src*="/ok365" i], [src*="/f8bet" i], [src*="/kubet" i],
+    [src*="/mb66" i], [src*="/new88" i], [src*="/vn88" i], [src*="/sunwin" i], [src*="/hitclub" i]
+)),
+
+/* 3. Ảnh TỰ KHAI là quảng cáo ("Quảng cáo 1", "Quảng cáo 2"...) + link nofollow + mở tab mới.
+      (Chỉ dạng NFC; dạng NFD - dấu ghép rời - do heuristic-adblock.js xử lý bằng .normalize('NFC')) */
+a[target="_blank"][rel~="nofollow"]:has(> img[alt^="Quảng cáo" i]),
+a[target="_blank"][rel~="nofollow"]:has(> img[alt^="Quang cao" i]),
+
+/* 4. Khung bọc banner tự đặt tên rõ ràng / tự khai data-ad-key */
+.vb-ad,
+[data-ad-key],
+#afterContentAds,
+.sticky-footer-grid:has(> a[target="_blank"] > img),
+.top-banner-grid:has(> a[target="_blank"][rel~="nofollow"] > img),
+.after-content-list:has(> a[target="_blank"][rel~="nofollow"] > img),
+#hay-header-banner:has(> a[target="_blank"] > img),
+
+/* 5. Popup QC (ảnh bọc link nhà cái) + màn nền đen đi kèm */
+#popupBanner:has(a[href*="ok999"], a[href*="shortlink."], a[href*="linkroyal"], a[href*="thlink.cc"], a[href*="c168n."]),
+#popupBanner:has(a[href*="ok999"], a[href*="shortlink."], a[href*="linkroyal"], a[href*="thlink.cc"], a[href*="c168n."]) + #popupOverlay,
+#popupOverlay:has(+ #popupBanner a[href*="ok999"]),
+#popupOverlay:has(+ #popupBanner a[href*="shortlink."]) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+}
