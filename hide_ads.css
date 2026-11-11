@@ -61,3 +61,29 @@ ytmusic-app-layout ytmusic-mealbar-promo-renderer {
     width: 0 !important;
     max-height: 0 !important;
 }
+
+/* --- V3 ZERO-FLASH: LỚP NỀN ĐEN MỜ CỦA BẢNG CHỐNG ADBLOCK ---
+   (Bản tham chiếu - CSS THẬT đang chạy nằm trong content.js, biến EXTRA_CSS; file này không được manifest nạp.)
+   Chỉ ẩn khi trang đang có bảng enforcement, không đụng backdrop của hộp thoại hợp lệ (Chia sẻ, Lưu, Báo cáo...). */
+html:has(ytd-enforcement-message-view-model) tp-yt-iron-overlay-backdrop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+#error-screen:has(ytd-enforcement-message-view-model) {
+    display: none !important;
+}
+html:has(ytd-enforcement-message-view-model),
+html:has(ytd-enforcement-message-view-model) body {
+    overflow-y: auto !important;
+}
+
+/* --- V3 (bản tham chiếu - CSS thật nằm trong content.js, biến EXTRA_CSS) ---
+   Phần tử bị bộ diệt theo NỘI DUNG/HÀNH VI đánh dấu: toast "Experiencing interruptions?" và màn phủ toàn màn hình tự bật. */
+[data-jd-kill-toast], [data-jd-kill-overlay] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
