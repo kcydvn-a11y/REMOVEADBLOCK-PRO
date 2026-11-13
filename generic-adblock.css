@@ -3,6 +3,11 @@
    như .ad/.ads dễ ẩn nhầm nội dung thật không liên quan quảng cáo). */
 
 ins.adsbygoogle,
+/* Interstitial TrafficStars ("Close ad"): mọi phần tử mang tên ts-interstitial (khung, header, nút Close ad/X)
+   là của mạng quảng cáo, không phải nội dung trang. Khung bọc fixed phía ngoài do heuristic-adblock.js
+   (scanInterstitialAds) leo lên ẩn nốt. */
+[class*="ts-interstitial"],
+[id*="ts-interstitial"],
 /* Lớp phủ nền đen (backdrop) của thư viện react-modal - tên class CHUẨN MẶC ĐỊNH công khai của thư
    viện này (không phải đoán riêng cho site nào), luôn bọc ngoài .ReactModal__Content. Khi nội dung
    dialog bên trong đã bị 1 lớp khác đánh dấu là quảng cáo (data-jd-heuristic-hidden), lớp phủ nền
