@@ -1,14 +1,16 @@
 {
   "formatVersion": 2,
-  "updatedAt": "2026-09-16",
-  "_comment": "Danh sách hạt giống (seed) ban đầu, nạp sẵn trong extension. background.js sẽ tự động tải bản mới hơn từ GitHub (PHISHING_LIST_URL) mỗi vài giờ để cập nhật thêm domain mới mà không cần người dùng tự cập nhật extension. officialDomains đã được mở rộng hỗ trợ subdomain phổ biến của ngân hàng.",
+  "updatedAt": "2026-11-14",
+  "_comment": "Seed + catalog tool convert_phishing_list.py. Ưu tiên VN + toàn cầu. background.js fetch bản mới từ PHISHING_LIST_URL khi online.",
   "brands": [
     {
       "name": "Vietcombank",
       "keywords": [
         "vietcombank",
         "vietcom",
-        "digibank"
+        "digibank",
+        "vcb",
+        "vcb digibank"
       ],
       "officialDomains": [
         "vietcombank.com.vn",
@@ -23,7 +25,8 @@
       "name": "Techcombank",
       "keywords": [
         "techcombank",
-        "techcom"
+        "techcom",
+        "tcbank"
       ],
       "officialDomains": [
         "techcombank.com.vn",
@@ -36,7 +39,8 @@
       "name": "BIDV",
       "keywords": [
         "bidv",
-        "smartbanking"
+        "smartbanking",
+        "bidv smart"
       ],
       "officialDomains": [
         "bidv.com.vn",
@@ -62,7 +66,8 @@
         "mbbank",
         "mb bank",
         "mb-bank",
-        "mbanx"
+        "mbanx",
+        "app mb"
       ],
       "officialDomains": [
         "mbbank.com.vn",
@@ -74,7 +79,8 @@
     {
       "name": "ACB",
       "keywords": [
-        "acbone"
+        "acbone",
+        "acb bank"
       ],
       "officialDomains": [
         "acb.com.vn",
@@ -85,7 +91,8 @@
     {
       "name": "VPBank",
       "keywords": [
-        "vpbank"
+        "vpbank",
+        "vp bank"
       ],
       "officialDomains": [
         "vpbank.com.vn",
@@ -109,7 +116,8 @@
     {
       "name": "TPBank",
       "keywords": [
-        "tpbank"
+        "tpbank",
+        "tpb"
       ],
       "officialDomains": [
         "tpbank.com.vn",
@@ -123,7 +131,8 @@
       "keywords": [
         "vietinbank",
         "vietin",
-        "ipos"
+        "ipos",
+        "ipay vietin"
       ],
       "officialDomains": [
         "vietinbank.vn",
@@ -147,7 +156,8 @@
       "name": "SHB",
       "keywords": [
         "shbfinance",
-        "shbvn"
+        "shbvn",
+        "shb bank"
       ],
       "officialDomains": [
         "shb.com.vn",
@@ -170,7 +180,8 @@
     {
       "name": "MSB",
       "keywords": [
-        "maritimebank"
+        "maritimebank",
+        "msb bank"
       ],
       "officialDomains": [
         "msb.com.vn",
@@ -192,7 +203,9 @@
     {
       "name": "OCB",
       "keywords": [
-        "omni"
+        "omni",
+        "omni ocb",
+        "ocb bank"
       ],
       "officialDomains": [
         "ocb.com.vn",
@@ -259,7 +272,8 @@
       "name": "Bac A Bank",
       "keywords": [
         "bacabank",
-        "bac a"
+        "bac a",
+        "bac a bank"
       ],
       "officialDomains": [
         "baca-bank.vn",
@@ -269,7 +283,8 @@
     {
       "name": "SCB",
       "keywords": [
-        "saigonbank"
+        "saigonbank",
+        "scb bank"
       ],
       "officialDomains": [
         "scb.com.vn",
@@ -277,76 +292,15 @@
       ]
     },
     {
-      "name": "Vietbank",
-      "keywords": [
-        "vietbank"
-      ],
-      "officialDomains": [
-        "vietbank.com.vn"
-      ]
-    },
-    {
-      "name": "PGBank",
-      "keywords": [
-        "pgbank",
-        "petrolimex"
-      ],
-      "officialDomains": [
-        "pgbank.com.vn"
-      ]
-    },
-    {
-      "name": "KienlongBank",
-      "keywords": [
-        "kienlongbank"
-      ],
-      "officialDomains": [
-        "kienlongbank.com.vn"
-      ]
-    },
-    {
-      "name": "NCB",
-      "keywords": [],
-      "officialDomains": [
-        "ncb-bank.vn"
-      ]
-    },
-    {
-      "name": "Cake by VPBank",
-      "keywords": [
-        "cake.vn",
-        "cakebyvpbank"
-      ],
-      "officialDomains": [
-        "cake.vn"
-      ]
-    },
-    {
-      "name": "Timo",
-      "keywords": [
-        "timo"
-      ],
-      "officialDomains": [
-        "timo.vn"
-      ]
-    },
-    {
-      "name": "TNEX",
-      "keywords": [
-        "tnex"
-      ],
-      "officialDomains": [
-        "tnex.com.vn"
-      ]
-    },
-    {
       "name": "Momo",
       "keywords": [
         "momo",
-        "m-service"
+        "m-service",
+        "ví momo"
       ],
       "officialDomains": [
-        "momo.vn"
+        "momo.vn",
+        "m.momo.vn"
       ]
     },
     {
@@ -361,7 +315,8 @@
     {
       "name": "VNPay",
       "keywords": [
-        "vnpay"
+        "vnpay",
+        "vnpayqr"
       ],
       "officialDomains": [
         "vnpay.vn",
@@ -372,7 +327,8 @@
       "name": "Viettel Money",
       "keywords": [
         "viettelmoney",
-        "viettelpay"
+        "viettelpay",
+        "viettel money"
       ],
       "officialDomains": [
         "viettelmoney.vn",
@@ -390,6 +346,270 @@
       ]
     },
     {
+      "name": "Cổng Dịch vụ công / VNeID",
+      "keywords": [
+        "vneid",
+        "dichvucong",
+        "dinh danh"
+      ],
+      "officialDomains": [
+        "dichvucong.gov.vn",
+        "vneid.gov.vn",
+        "xacthuc.dichvucong.gov.vn"
+      ]
+    },
+    {
+      "name": "Cong Dich vu cong / VNeID",
+      "keywords": [
+        "vneid",
+        "dichvucong",
+        "dinh danh"
+      ],
+      "officialDomains": [
+        "dichvucong.gov.vn",
+        "vneid.gov.vn",
+        "xacthuc.dichvucong.gov.vn"
+      ]
+    },
+    {
+      "name": "Tổng cục Thuế",
+      "keywords": [
+        "etax",
+        "tong cuc thue",
+        "thuedientu"
+      ],
+      "officialDomains": [
+        "gdt.gov.vn",
+        "etax.gdt.gov.vn",
+        "thuedientu.gdt.gov.vn"
+      ]
+    },
+    {
+      "name": "Tong cuc Thue",
+      "keywords": [
+        "etax",
+        "thuedientu",
+        "gdt"
+      ],
+      "officialDomains": [
+        "gdt.gov.vn",
+        "etax.gdt.gov.vn",
+        "thuedientu.gdt.gov.vn"
+      ]
+    },
+    {
+      "name": "Bảo hiểm xã hội",
+      "keywords": [
+        "bhxh",
+        "bao hiem xa hoi",
+        "baohiemxahoi"
+      ],
+      "officialDomains": [
+        "baohiemxahoi.gov.vn",
+        "vssid.baohiemxahoi.gov.vn"
+      ]
+    },
+    {
+      "name": "Bao hiem xa hoi",
+      "keywords": [
+        "bhxh",
+        "baohiemxahoi"
+      ],
+      "officialDomains": [
+        "baohiemxahoi.gov.vn",
+        "vssid.baohiemxahoi.gov.vn"
+      ]
+    },
+    {
+      "name": "Ngân hàng Nhà nước",
+      "keywords": [
+        "ngan hang nha nuoc",
+        "nhnn",
+        "sbv"
+      ],
+      "officialDomains": [
+        "sbv.gov.vn"
+      ]
+    },
+    {
+      "name": "Ngan hang Nha nuoc",
+      "keywords": [
+        "sbv",
+        "nhnn"
+      ],
+      "officialDomains": [
+        "sbv.gov.vn"
+      ]
+    },
+    {
+      "name": "Vietbank",
+      "keywords": [
+        "vietbank"
+      ],
+      "officialDomains": [
+        "vietbank.com.vn"
+      ]
+    },
+    {
+      "name": "PGBank",
+      "keywords": [
+        "pgbank",
+        "petrolimex",
+        "petrolimex bank"
+      ],
+      "officialDomains": [
+        "pgbank.com.vn"
+      ]
+    },
+    {
+      "name": "KienlongBank",
+      "keywords": [
+        "kienlongbank"
+      ],
+      "officialDomains": [
+        "kienlongbank.com.vn"
+      ]
+    },
+    {
+      "name": "NCB",
+      "keywords": [
+        "ncb bank",
+        "national citizen bank"
+      ],
+      "officialDomains": [
+        "ncb-bank.vn"
+      ]
+    },
+    {
+      "name": "Cake by VPBank",
+      "keywords": [
+        "cake.vn",
+        "cakebyvpbank",
+        "cake bank"
+      ],
+      "officialDomains": [
+        "cake.vn"
+      ]
+    },
+    {
+      "name": "Timo",
+      "keywords": [
+        "timo",
+        "timo bank"
+      ],
+      "officialDomains": [
+        "timo.vn"
+      ]
+    },
+    {
+      "name": "TNEX",
+      "keywords": [
+        "tnex"
+      ],
+      "officialDomains": [
+        "tnex.com.vn"
+      ]
+    },
+    {
+      "name": "Public Bank Vietnam",
+      "keywords": [
+        "publicbank",
+        "public bank viet",
+        "public bank"
+      ],
+      "officialDomains": [
+        "publicbank.com.vn"
+      ]
+    },
+    {
+      "name": "Shinhan Bank Vietnam",
+      "keywords": [
+        "shinhan vietnam",
+        "shinhanbank",
+        "shinhan"
+      ],
+      "officialDomains": [
+        "shinhan.com.vn"
+      ]
+    },
+    {
+      "name": "Woori Bank Vietnam",
+      "keywords": [
+        "woori vietnam",
+        "wooribank",
+        "woori"
+      ],
+      "officialDomains": [
+        "woori.com.vn"
+      ]
+    },
+    {
+      "name": "Hong Leong Bank Vietnam",
+      "keywords": [
+        "hong leong vietnam",
+        "hong leong"
+      ],
+      "officialDomains": [
+        "hlbank.com.vn"
+      ]
+    },
+    {
+      "name": "Indovina Bank",
+      "keywords": [
+        "indovina"
+      ],
+      "officialDomains": [
+        "indovinabank.com.vn"
+      ]
+    },
+    {
+      "name": "VRB",
+      "keywords": [
+        "vrb bank",
+        "vietnam russia bank"
+      ],
+      "officialDomains": [
+        "vrb.com.vn"
+      ]
+    },
+    {
+      "name": "CBBank",
+      "keywords": [
+        "cbbank"
+      ],
+      "officialDomains": [
+        "cbbank.vn"
+      ]
+    },
+    {
+      "name": "OceanBank",
+      "keywords": [
+        "oceanbank"
+      ],
+      "officialDomains": [
+        "oceanbank.com.vn"
+      ]
+    },
+    {
+      "name": "GPBank",
+      "keywords": [
+        "gpbank"
+      ],
+      "officialDomains": [
+        "gpbank.com.vn"
+      ]
+    },
+    {
+      "name": "DongA Bank",
+      "keywords": [
+        "dongabank",
+        "dong a bank"
+      ],
+      "officialDomains": [
+        "dongabank.com.vn"
+      ]
+    },
+    {
       "name": "VNPT Money",
       "keywords": [
         "vnpt money",
@@ -397,6 +617,258 @@
       ],
       "officialDomains": [
         "vnptmoney.vn"
+      ]
+    },
+    {
+      "name": "Payoo",
+      "keywords": [
+        "payoo"
+      ],
+      "officialDomains": [
+        "payoo.vn"
+      ]
+    },
+    {
+      "name": "Foxpay",
+      "keywords": [
+        "foxpay"
+      ],
+      "officialDomains": [
+        "foxpay.vn"
+      ]
+    },
+    {
+      "name": "TrueMoney Vietnam",
+      "keywords": [
+        "truemoney"
+      ],
+      "officialDomains": [
+        "truemoney.com.vn"
+      ]
+    },
+    {
+      "name": "Viettel",
+      "keywords": [
+        "viettel",
+        "vietteltelecom"
+      ],
+      "officialDomains": [
+        "viettel.vn",
+        "vietteltelecom.vn",
+        "viettelstore.vn"
+      ]
+    },
+    {
+      "name": "Mobifone",
+      "keywords": [
+        "mobifone"
+      ],
+      "officialDomains": [
+        "mobifone.vn"
+      ]
+    },
+    {
+      "name": "Vinaphone",
+      "keywords": [
+        "vinaphone"
+      ],
+      "officialDomains": [
+        "vinaphone.com.vn",
+        "vnpt.vn"
+      ]
+    },
+    {
+      "name": "FPT",
+      "keywords": [
+        "fpt telecom",
+        "fpt shop",
+        "fpt"
+      ],
+      "officialDomains": [
+        "fpt.vn",
+        "fptshop.com.vn",
+        "fpttelecom.com.vn",
+        "fptplay.vn"
+      ]
+    },
+    {
+      "name": "Shopee",
+      "keywords": [
+        "shopee"
+      ],
+      "officialDomains": [
+        "shopee.vn"
+      ]
+    },
+    {
+      "name": "Lazada",
+      "keywords": [
+        "lazada"
+      ],
+      "officialDomains": [
+        "lazada.vn"
+      ]
+    },
+    {
+      "name": "Tiki",
+      "keywords": [
+        "tiki"
+      ],
+      "officialDomains": [
+        "tiki.vn"
+      ]
+    },
+    {
+      "name": "Sendo",
+      "keywords": [
+        "sendo"
+      ],
+      "officialDomains": [
+        "sendo.vn"
+      ]
+    },
+    {
+      "name": "The Gioi Di Dong",
+      "keywords": [
+        "thegioididong",
+        "tgdd"
+      ],
+      "officialDomains": [
+        "thegioididong.com"
+      ]
+    },
+    {
+      "name": "Dien May Xanh",
+      "keywords": [
+        "dienmayxanh"
+      ],
+      "officialDomains": [
+        "dienmayxanh.com"
+      ]
+    },
+    {
+      "name": "Bach Hoa Xanh",
+      "keywords": [
+        "bachhoaxanh"
+      ],
+      "officialDomains": [
+        "bachhoaxanh.com"
+      ]
+    },
+    {
+      "name": "Grab Vietnam",
+      "keywords": [
+        "grab"
+      ],
+      "officialDomains": [
+        "grab.com"
+      ]
+    },
+    {
+      "name": "Be Group",
+      "keywords": [
+        "be.xyz",
+        "be group"
+      ],
+      "officialDomains": [
+        "be.com.vn"
+      ]
+    },
+    {
+      "name": "Xanh SM",
+      "keywords": [
+        "xanhsm",
+        "xanh sm",
+        "gsm"
+      ],
+      "officialDomains": [
+        "xanhsm.com"
+      ]
+    },
+    {
+      "name": "Vingroup",
+      "keywords": [
+        "vingroup"
+      ],
+      "officialDomains": [
+        "voup.com",
+        "vingroup.net",
+        "vingroup.com.vn"
+      ]
+    },
+    {
+      "name": "VinFast",
+      "keywords": [
+        "vinfast"
+      ],
+      "officialDomains": [
+        "vinfastauto.com"
+      ]
+    },
+    {
+      "name": "VNExpress",
+      "keywords": [
+        "vnexpress"
+      ],
+      "officialDomains": [
+        "vnexpress.net"
+      ]
+    },
+    {
+      "name": "Zalo",
+      "keywords": [
+        "zalo"
+      ],
+      "officialDomains": [
+        "zalo.me",
+        "zalo.vn"
+      ]
+    },
+    {
+      "name": "Cổng thông tin điện tử Chính phủ",
+      "keywords": [
+        "chinhphu"
+      ],
+      "officialDomains": [
+        "chinhphu.vn",
+        "www.chinhphu.vn"
+      ]
+    },
+    {
+      "name": "Bộ Công an",
+      "keywords": [
+        "bocongan"
+      ],
+      "officialDomains": [
+        "bocongan.gov.vn"
+      ]
+    },
+    {
+      "name": "Cổng dịch vụ công Bộ Công an",
+      "keywords": [
+        "dichvucong bocongan"
+      ],
+      "officialDomains": [
+        "dichvucong.bocongan.gov.vn"
+      ]
+    },
+    {
+      "name": "Cục Cảnh sát giao thông",
+      "keywords": [
+        "csgt"
+      ],
+      "officialDomains": [
+        "csgt.vn"
+      ]
+    },
+    {
+      "name": "Tổng cục Hải quan",
+      "keywords": [
+        "hai quan",
+        "customs vietnam"
+      ],
+      "officialDomains": [
+        "customs.gov.vn"
       ]
     },
     {
@@ -454,7 +926,8 @@
       ],
       "officialDomains": [
         "hsbc.com.vn",
-        "hsbc.com"
+        "hsbc.com",
+        "hsbc.co.uk"
       ]
     },
     {
@@ -558,7 +1031,8 @@
       "name": "DBS Bank",
       "keywords": [
         "dbs bank",
-        "dbsbank"
+        "dbsbank",
+        "dbs"
       ],
       "officialDomains": [
         "dbs.com"
@@ -627,7 +1101,8 @@
         "whatsapp"
       ],
       "officialDomains": [
-        "whatsapp.com"
+        "whatsapp.com",
+        "web.whatsapp.com"
       ]
     },
     {
@@ -655,7 +1130,8 @@
         "yahoo"
       ],
       "officialDomains": [
-        "yahoo.com"
+        "yahoo.com",
+        "mail.yahoo.com"
       ]
     },
     {
@@ -773,7 +1249,8 @@
       ],
       "officialDomains": [
         "steampowered.com",
-        "steamcommunity.com"
+        "steamcommunity.com",
+        "store.steampowered.com"
       ]
     },
     {
@@ -786,7 +1263,9 @@
         "facebook.com",
         "fb.com",
         "messenger.com",
-        "meta.com"
+        "meta.com",
+        "m.facebook.com",
+        "web.facebook.com"
       ]
     },
     {
@@ -799,7 +1278,11 @@
         "google.com",
         "google.com.vn",
         "accounts.google.com",
-        "gmail.com"
+        "gmail.com",
+        "mail.google.com",
+        "drive.google.com",
+        "docs.google.com",
+        "play.google.com"
       ]
     },
     {
@@ -809,7 +1292,10 @@
       ],
       "officialDomains": [
         "amazon.com",
-        "amazon.co.uk"
+        "amazon.co.uk",
+        "amazon.de",
+        "amazon.co.jp",
+        "aws.amazon.com"
       ]
     },
     {
@@ -821,7 +1307,9 @@
       ],
       "officialDomains": [
         "apple.com",
-        "icloud.com"
+        "icloud.com",
+        "appleid.apple.com",
+        "idmsa.apple.com"
       ]
     },
     {
@@ -829,13 +1317,16 @@
       "keywords": [
         "microsoft",
         "outlook",
-        "office365"
+        "office365",
+        "onedrive"
       ],
       "officialDomains": [
         "microsoft.com",
         "outlook.com",
         "live.com",
-        "office.com"
+        "office.com",
+        "login.microsoftonline.com",
+        "onedrive.live.com"
       ]
     },
     {
@@ -848,16 +1339,6 @@
       ]
     },
     {
-      "name": "Zalo",
-      "keywords": [
-        "zalo"
-      ],
-      "officialDomains": [
-        "zalo.me",
-        "zalo.vn"
-      ]
-    },
-    {
       "name": "Telegram",
       "keywords": [
         "telegram",
@@ -865,7 +1346,8 @@
       ],
       "officialDomains": [
         "telegram.org",
-        "t.me"
+        "t.me",
+        "web.telegram.org"
       ]
     },
     {
@@ -878,45 +1360,20 @@
       ]
     },
     {
-      "name": "Shopee",
-      "keywords": [
-        "shopee"
-      ],
-      "officialDomains": [
-        "shopee.vn"
-      ]
-    },
-    {
-      "name": "Lazada",
-      "keywords": [
-        "lazada"
-      ],
-      "officialDomains": [
-        "lazada.vn"
-      ]
-    },
-    {
-      "name": "Tiki",
-      "keywords": [
-        "tiki"
-      ],
-      "officialDomains": [
-        "tiki.vn"
-      ]
-    },
-    {
       "name": "Binance",
       "keywords": [
         "binance"
       ],
       "officialDomains": [
-        "binance.com"
+        "binance.com",
+        "www.binance.com"
       ]
     },
     {
       "name": "OKX",
       "keywords": [
-        "okex"
+        "okex",
+        "okx"
       ],
       "officialDomains": [
         "okx.com"
@@ -941,50 +1398,6 @@
       ]
     },
     {
-      "name": "Cổng Dịch vụ công / VNeID",
-      "keywords": [
-        "vneid",
-        "dichvucong",
-        "dinh danh"
-      ],
-      "officialDomains": [
-        "dichvucong.gov.vn",
-        "vneid.gov.vn"
-      ]
-    },
-    {
-      "name": "Tổng cục Thuế",
-      "keywords": [
-        "etax",
-        "tong cuc thue"
-      ],
-      "officialDomains": [
-        "gdt.gov.vn",
-        "etax.gdt.gov.vn",
-        "thuedientu.gdt.gov.vn"
-      ]
-    },
-    {
-      "name": "Bảo hiểm xã hội",
-      "keywords": [
-        "bhxh",
-        "bao hiem xa hoi"
-      ],
-      "officialDomains": [
-        "baohiemxahoi.gov.vn"
-      ]
-    },
-    {
-      "name": "Ngân hàng Nhà nước",
-      "keywords": [
-        "ngan hang nha nuoc",
-        "nhnn"
-      ],
-      "officialDomains": [
-        "sbv.gov.vn"
-      ]
-    },
-    {
       "name": "Chính phủ Mỹ (USA.gov & Cơ quan trọng yếu)",
       "keywords": [
         "usa.gov",
@@ -1002,7 +1415,8 @@
         "state.gov",
         "treasury.gov",
         "fbi.gov",
-        "cdc.gov"
+        "cdc.gov",
+        "uscis.gov"
       ]
     },
     {
@@ -1096,6 +1510,997 @@
         "interieur.gouv.fr",
         "legifrance.gouv.fr"
       ]
+    },
+    {
+      "name": "Discord",
+      "keywords": [
+        "discord"
+      ],
+      "officialDomains": [
+        "discord.com",
+        "discordapp.com"
+      ]
+    },
+    {
+      "name": "Snapchat",
+      "keywords": [
+        "snapchat"
+      ],
+      "officialDomains": [
+        "snapchat.com"
+      ]
+    },
+    {
+      "name": "Pinterest",
+      "keywords": [
+        "pinterest"
+      ],
+      "officialDomains": [
+        "pinterest.com"
+      ]
+    },
+    {
+      "name": "Reddit",
+      "keywords": [
+        "reddit"
+      ],
+      "officialDomains": [
+        "reddit.com",
+        "redd.it"
+      ]
+    },
+    {
+      "name": "YouTube",
+      "keywords": [
+        "youtube"
+      ],
+      "officialDomains": [
+        "youtube.com",
+        "youtu.be",
+        "m.youtube.com"
+      ]
+    },
+    {
+      "name": "Epic Games",
+      "keywords": [
+        "epicgames",
+        "epic games"
+      ],
+      "officialDomains": [
+        "epicgames.com",
+        "store.epicgames.com"
+      ]
+    },
+    {
+      "name": "PlayStation",
+      "keywords": [
+        "playstation",
+        "psn"
+      ],
+      "officialDomains": [
+        "playstation.com"
+      ]
+    },
+    {
+      "name": "Xbox",
+      "keywords": [
+        "xbox"
+      ],
+      "officialDomains": [
+        "xbox.com"
+      ]
+    },
+    {
+      "name": "Booking.com",
+      "keywords": [
+        "booking.com"
+      ],
+      "officialDomains": [
+        "booking.com"
+      ]
+    },
+    {
+      "name": "Airbnb",
+      "keywords": [
+        "airbnb"
+      ],
+      "officialDomains": [
+        "airbnb.com"
+      ]
+    },
+    {
+      "name": "Uber",
+      "keywords": [
+        "uber"
+      ],
+      "officialDomains": [
+        "uber.com"
+      ]
+    },
+    {
+      "name": "Trust Wallet",
+      "keywords": [
+        "trustwallet",
+        "trust wallet"
+      ],
+      "officialDomains": [
+        "trustwallet.com"
+      ]
+    },
+    {
+      "name": "Huobi / HTX",
+      "keywords": [
+        "huobi",
+        "htx"
+      ],
+      "officialDomains": [
+        "htx.com",
+        "huobi.com"
+      ]
+    },
+    {
+      "name": "KuCoin",
+      "keywords": [
+        "kucoin"
+      ],
+      "officialDomains": [
+        "kucoin.com"
+      ]
+    },
+    {
+      "name": "Gate.io",
+      "keywords": [
+        "gate.io",
+        "gateio"
+      ],
+      "officialDomains": [
+        "gate.io"
+      ]
+    },
+    {
+      "name": "NatWest",
+      "keywords": [
+        "natwest"
+      ],
+      "officialDomains": [
+        "natwest.com"
+      ]
+    },
+    {
+      "name": "Santander",
+      "keywords": [
+        "santander"
+      ],
+      "officialDomains": [
+        "santander.com",
+        "santander.co.uk",
+        "santander.com.br"
+      ]
+    },
+    {
+      "name": "OCBC",
+      "keywords": [
+        "ocbc"
+      ],
+      "officialDomains": [
+        "ocbc.com"
+      ]
+    },
+    {
+      "name": "UOB",
+      "keywords": [
+        "uob",
+        "united overseas bank"
+      ],
+      "officialDomains": [
+        "uob.com.sg",
+        "uobgroup.com"
+      ]
+    },
+    {
+      "name": "Maybank",
+      "keywords": [
+        "maybank"
+      ],
+      "officialDomains": [
+        "maybank.com",
+        "maybank2u.com.my"
+      ]
+    },
+    {
+      "name": "Bangkok Bank",
+      "keywords": [
+        "bangkok bank"
+      ],
+      "officialDomains": [
+        "bangkokbank.com"
+      ]
+    },
+    {
+      "name": "Kasikornbank",
+      "keywords": [
+        "kasikorn",
+        "kbank"
+      ],
+      "officialDomains": [
+        "kasikornbank.com",
+        "kasikornbank.co.th"
+      ]
+    },
+    {
+      "name": "Siam Commercial Bank",
+      "keywords": [
+        "scb thailand"
+      ],
+      "officialDomains": [
+        "scb.co.th"
+      ]
+    },
+    {
+      "name": "BDO Unibank",
+      "keywords": [
+        "bdo unibank"
+      ],
+      "officialDomains": [
+        "bdo.com.ph"
+      ]
+    },
+    {
+      "name": "BCA",
+      "keywords": [
+        "bank bca"
+      ],
+      "officialDomains": [
+        "bca.co.id"
+      ]
+    },
+    {
+      "name": "Bank Mandiri",
+      "keywords": [
+        "bank mandiri",
+        "mandiri"
+      ],
+      "officialDomains": [
+        "bankmandiri.co.id"
+      ]
+    },
+    {
+      "name": "BRI",
+      "keywords": [
+        "bank bri"
+      ],
+      "officialDomains": [
+        "bri.co.id"
+      ]
+    },
+    {
+      "name": "BNI",
+      "keywords": [
+        "bank bni"
+      ],
+      "officialDomains": [
+        "bni.co.id"
+      ]
+    },
+    {
+      "name": "ICBC",
+      "keywords": [
+        "icbc"
+      ],
+      "officialDomains": [
+        "icbc.com.cn",
+        "icbc-ltd.com"
+      ]
+    },
+    {
+      "name": "Bank of China",
+      "keywords": [
+        "bank of china"
+      ],
+      "officialDomains": [
+        "boc.cn",
+        "bankofchina.com"
+      ]
+    },
+    {
+      "name": "China Construction Bank",
+      "keywords": [
+        "china construction bank"
+      ],
+      "officialDomains": [
+        "ccb.com"
+      ]
+    },
+    {
+      "name": "Mitsubishi UFJ",
+      "keywords": [
+        "mufg",
+        "mitsubishi ufj"
+      ],
+      "officialDomains": [
+        "mufg.jp",
+        "bk.mufg.jp"
+      ]
+    },
+    {
+      "name": "Mizuho",
+      "keywords": [
+        "mizuho"
+      ],
+      "officialDomains": [
+        "mizuhobank.co.jp"
+      ]
+    },
+    {
+      "name": "Sumitomo Mitsui",
+      "keywords": [
+        "smbc",
+        "sumitomo mitsui"
+      ],
+      "officialDomains": [
+        "smbc.co.jp"
+      ]
+    },
+    {
+      "name": "Deutsche Bank",
+      "keywords": [
+        "deutsche bank"
+      ],
+      "officialDomains": [
+        "db.com",
+        "deutsche-bank.de"
+      ]
+    },
+    {
+      "name": "BNP Paribas",
+      "keywords": [
+        "bnp paribas"
+      ],
+      "officialDomains": [
+        "bnpparibas.com"
+      ]
+    },
+    {
+      "name": "Societe Generale",
+      "keywords": [
+        "societe generale"
+      ],
+      "officialDomains": [
+        "societegenerale.com"
+      ]
+    },
+    {
+      "name": "ING",
+      "keywords": [
+        "ing bank"
+      ],
+      "officialDomains": [
+        "ing.com",
+        "ing.nl",
+        "ing.de"
+      ]
+    },
+    {
+      "name": "Rabobank",
+      "keywords": [
+        "rabobank"
+      ],
+      "officialDomains": [
+        "rabobank.nl",
+        "rabobank.com"
+      ]
+    },
+    {
+      "name": "Commonwealth Bank",
+      "keywords": [
+        "commbank",
+        "commonwealth bank"
+      ],
+      "officialDomains": [
+        "commbank.com.au"
+      ]
+    },
+    {
+      "name": "ANZ",
+      "keywords": [
+        "anz bank",
+        "anz"
+      ],
+      "officialDomains": [
+        "anz.com"
+      ]
+    },
+    {
+      "name": "Westpac",
+      "keywords": [
+        "westpac"
+      ],
+      "officialDomains": [
+        "westpac.com.au"
+      ]
+    },
+    {
+      "name": "NAB",
+      "keywords": [
+        "national australia bank"
+      ],
+      "officialDomains": [
+        "nab.com.au"
+      ]
+    },
+    {
+      "name": "RBC",
+      "keywords": [
+        "royal bank of canada",
+        "rbc"
+      ],
+      "officialDomains": [
+        "rbc.com",
+        "royalbank.com"
+      ]
+    },
+    {
+      "name": "Scotiabank",
+      "keywords": [
+        "scotiabank"
+      ],
+      "officialDomains": [
+        "scotiabank.com"
+      ]
+    },
+    {
+      "name": "BMO",
+      "keywords": [
+        "bmo bank",
+        "bank of montreal"
+      ],
+      "officialDomains": [
+        "bmo.com"
+      ]
+    },
+    {
+      "name": "CIBC",
+      "keywords": [
+        "cibc"
+      ],
+      "officialDomains": [
+        "cibc.com"
+      ]
+    },
+    {
+      "name": "Itau",
+      "keywords": [
+        "itau"
+      ],
+      "officialDomains": [
+        "itau.com.br"
+      ]
+    },
+    {
+      "name": "Bradesco",
+      "keywords": [
+        "bradesco"
+      ],
+      "officialDomains": [
+        "bradesco.com.br"
+      ]
+    },
+    {
+      "name": "BBVA",
+      "keywords": [
+        "bbva"
+      ],
+      "officialDomains": [
+        "bbva.com",
+        "bbva.es"
+      ]
+    },
+    {
+      "name": "CaixaBank",
+      "keywords": [
+        "caixabank"
+      ],
+      "officialDomains": [
+        "caixabank.es"
+      ]
+    },
+    {
+      "name": "UniCredit",
+      "keywords": [
+        "unicredit"
+      ],
+      "officialDomains": [
+        "unicreditgroup.eu",
+        "unicredit.it"
+      ]
+    },
+    {
+      "name": "Intesa Sanpaolo",
+      "keywords": [
+        "intesa sanpaolo"
+      ],
+      "officialDomains": [
+        "intesasanpaolo.com"
+      ]
+    },
+    {
+      "name": "Chinh phu My (USA.gov)",
+      "keywords": [
+        "usa.gov",
+        "social security",
+        "whitehouse",
+        "irs.gov"
+      ],
+      "officialDomains": [
+        "usa.gov",
+        "www.usa.gov",
+        "irs.gov",
+        "ssa.gov",
+        "whitehouse.gov",
+        "state.gov",
+        "treasury.gov",
+        "fbi.gov",
+        "cdc.gov",
+        "uscis.gov"
+      ]
+    },
+    {
+      "name": "Chinh phu Duc (Bund.de)",
+      "keywords": [
+        "bund.de",
+        "finanzamt",
+        "arbeitsagentur",
+        "bzst"
+      ],
+      "officialDomains": [
+        "bund.de",
+        "service.bund.de",
+        "arbeitsagentur.de",
+        "bzst.de",
+        "auswaertiges-amt.de",
+        "bmi.bund.de",
+        "bundesregierung.de"
+      ]
+    },
+    {
+      "name": "Chinh phu Nga (Gosuslugi)",
+      "keywords": [
+        "gosuslugi",
+        "kremlin",
+        "nalog"
+      ],
+      "officialDomains": [
+        "gosuslugi.ru",
+        "gov.ru",
+        "kremlin.ru",
+        "nalog.gov.ru",
+        "mvd.ru",
+        "economy.gov.ru"
+      ]
+    },
+    {
+      "name": "Chinh phu Canada (Canada.ca)",
+      "keywords": [
+        "canada.ca",
+        "ircc",
+        "cra-arc"
+      ],
+      "officialDomains": [
+        "canada.ca",
+        "cra-arc.gc.ca",
+        "ircc.canada.ca",
+        "cic.gc.ca",
+        "fin.gc.ca"
+      ]
+    },
+    {
+      "name": "Chinh phu Hong Kong (GovHK)",
+      "keywords": [
+        "gov.hk",
+        "immd",
+        "ird.gov.hk"
+      ],
+      "officialDomains": [
+        "gov.hk",
+        "www.gov.hk",
+        "immd.gov.hk",
+        "ird.gov.hk",
+        "police.gov.hk",
+        "dh.gov.hk"
+      ]
+    },
+    {
+      "name": "Chinh phu Phap (Service-Public)",
+      "keywords": [
+        "service-public",
+        "impots",
+        "gouvernement.fr",
+        "ameli"
+      ],
+      "officialDomains": [
+        "service-public.fr",
+        "impots.gouv.fr",
+        "gouvernement.fr",
+        "ameli.fr",
+        "interieur.gouv.fr",
+        "legifrance.gouv.fr"
+      ]
+    },
+    {
+      "name": "Chinh phu Anh (GOV.UK)",
+      "keywords": [
+        "gov.uk",
+        "hmrc"
+      ],
+      "officialDomains": [
+        "gov.uk",
+        "www.gov.uk",
+        "hmrc.gov.uk",
+        "nhs.uk"
+      ]
+    },
+    {
+      "name": "Chinh phu Uc (Australia.gov)",
+      "keywords": [
+        "australia.gov",
+        "ato.gov"
+      ],
+      "officialDomains": [
+        "australia.gov.au",
+        "ato.gov.au",
+        "my.gov.au"
+      ]
+    },
+    {
+      "name": "Chinh phu Singapore (Gov.sg)",
+      "keywords": [
+        "gov.sg",
+        "singpass"
+      ],
+      "officialDomains": [
+        "gov.sg",
+        "singpass.gov.sg",
+        "iras.gov.sg"
+      ]
+    },
+    {
+      "name": "Chinh phu Nhat (e-Gov)",
+      "keywords": [
+        "e-gov",
+        "nta.go.jp"
+      ],
+      "officialDomains": [
+        "e-gov.go.jp",
+        "nta.go.jp",
+        "mofa.go.jp"
+      ]
+    },
+    {
+      "name": "Chinh phu Han Quoc",
+      "keywords": [
+        "gov.kr",
+        "nhis"
+      ],
+      "officialDomains": [
+        "gov.kr",
+        "nhis.or.kr",
+        "nts.go.kr"
+      ]
+    },
+    {
+      "name": "Chinh phu Thai Lan",
+      "keywords": [
+        "gov.go.th"
+      ],
+      "officialDomains": [
+        "gov.go.th",
+        "rd.go.th"
+      ]
+    },
+    {
+      "name": "Chinh phu Indonesia",
+      "keywords": [
+        "indonesia.go.id"
+      ],
+      "officialDomains": [
+        "indonesia.go.id",
+        "pajak.go.id"
+      ]
+    },
+    {
+      "name": "Chinh phu An Do",
+      "keywords": [
+        "india.gov",
+        "uidai",
+        "aadhaar"
+      ],
+      "officialDomains": [
+        "india.gov.in",
+        "uidai.gov.in",
+        "incometax.gov.in"
+      ]
+    },
+    {
+      "name": "VietABank",
+      "keywords": [
+        "vietabank",
+        "viet a bank"
+      ],
+      "officialDomains": [
+        "vietabank.com.vn"
+      ]
+    },
+    {
+      "name": "BaoViet Bank",
+      "keywords": [
+        "baovietbank",
+        "bao viet bank"
+      ],
+      "officialDomains": [
+        "baovietbank.com.vn"
+      ]
+    },
+    {
+      "name": "Saigonbank",
+      "keywords": [
+        "saigonbank"
+      ],
+      "officialDomains": [
+        "saigonbank.com.vn"
+      ]
+    },
+    {
+      "name": "Viet Capital Bank",
+      "keywords": [
+        "vietcapitalbank",
+        "ban viet"
+      ],
+      "officialDomains": [
+        "vietcapitalbank.com.vn",
+        "bvbank.com.vn"
+      ]
+    },
+    {
+      "name": "BVBank",
+      "keywords": [
+        "bvbank"
+      ],
+      "officialDomains": [
+        "bvbank.com.vn"
+      ]
+    },
+    {
+      "name": "Co-opBank",
+      "keywords": [
+        "coopbank",
+        "ngan hang hop tac"
+      ],
+      "officialDomains": [
+        "coopbank.com.vn"
+      ]
+    },
+    {
+      "name": "CIMB Vietnam",
+      "keywords": [
+        "cimb vietnam",
+        "cimb"
+      ],
+      "officialDomains": [
+        "cimb.com.vn"
+      ]
+    },
+    {
+      "name": "UOB Vietnam",
+      "keywords": [
+        "uob vietnam"
+      ],
+      "officialDomains": [
+        "uob.com.vn"
+      ]
+    },
+    {
+      "name": "Standard Chartered Vietnam",
+      "keywords": [
+        "standard chartered vietnam"
+      ],
+      "officialDomains": [
+        "sc.com",
+        "sc.com.vn"
+      ]
+    },
+    {
+      "name": "HSBC Vietnam",
+      "keywords": [
+        "hsbc vietnam"
+      ],
+      "officialDomains": [
+        "hsbc.com.vn"
+      ]
+    },
+    {
+      "name": "IBK Vietnam",
+      "keywords": [
+        "ibk vietnam"
+      ],
+      "officialDomains": [
+        "ibk.co.kr"
+      ]
+    },
+    {
+      "name": "Ví Việt",
+      "keywords": [
+        "viviet"
+      ],
+      "officialDomains": [
+        "viviet.vn"
+      ]
+    },
+    {
+      "name": "Fundiin",
+      "keywords": [
+        "fundiin"
+      ],
+      "officialDomains": [
+        "fundiin.vn"
+      ]
+    },
+    {
+      "name": "Kredivo",
+      "keywords": [
+        "kredivo"
+      ],
+      "officialDomains": [
+        "kredivo.vn"
+      ]
+    },
+    {
+      "name": "Home Credit Vietnam",
+      "keywords": [
+        "home credit",
+        "homecredit"
+      ],
+      "officialDomains": [
+        "homecredit.vn"
+      ]
+    },
+    {
+      "name": "FE Credit",
+      "keywords": [
+        "fe credit",
+        "fecredit"
+      ],
+      "officialDomains": [
+        "fecredit.com.vn"
+      ]
+    },
+    {
+      "name": "MCredit",
+      "keywords": [
+        "mcredit"
+      ],
+      "officialDomains": [
+        "mcredit.com.vn"
+      ]
+    },
+    {
+      "name": "Easy Credit",
+      "keywords": [
+        "easy credit"
+      ],
+      "officialDomains": [
+        "easycredit.vn"
+      ]
+    },
+    {
+      "name": "Cainetwork",
+      "keywords": [
+        "cainetwork"
+      ],
+      "officialDomains": [
+        "cainetwork.vn"
+      ]
+    },
+    {
+      "name": "Grab",
+      "keywords": [
+        "grab"
+      ],
+      "officialDomains": [
+        "grab.com"
+      ]
+    },
+    {
+      "name": "TikTok Vietnam",
+      "keywords": [
+        "tiktok"
+      ],
+      "officialDomains": [
+        "tiktok.com"
+      ]
+    },
+    {
+      "name": "Chinhphu.vn",
+      "keywords": [
+        "chinhphu"
+      ],
+      "officialDomains": [
+        "chinhphu.vn",
+        "www.chinhphu.vn"
+      ]
+    },
+    {
+      "name": "Bo Cong an",
+      "keywords": [
+        "bocongan"
+      ],
+      "officialDomains": [
+        "bocongan.gov.vn"
+      ]
+    },
+    {
+      "name": "Dich vu cong Bo Cong an",
+      "keywords": [
+        "dichvucong.bocongan"
+      ],
+      "officialDomains": [
+        "dichvucong.bocongan.gov.vn"
+      ]
+    },
+    {
+      "name": "CSGT",
+      "keywords": [
+        "csgt"
+      ],
+      "officialDomains": [
+        "csgt.vn"
+      ]
+    },
+    {
+      "name": "Hai quan",
+      "keywords": [
+        "customs.gov.vn"
+      ],
+      "officialDomains": [
+        "customs.gov.vn"
+      ]
+    },
+    {
+      "name": "Bo Y te",
+      "keywords": [
+        "moh",
+        "bo y te"
+      ],
+      "officialDomains": [
+        "moh.gov.vn"
+      ]
+    },
+    {
+      "name": "Bo GD-DT",
+      "keywords": [
+        "moet"
+      ],
+      "officialDomains": [
+        "moet.gov.vn"
+      ]
+    },
+    {
+      "name": "Bo TT&TT",
+      "keywords": [
+        "mic.gov.vn"
+      ],
+      "officialDomains": [
+        "mic.gov.vn"
+      ]
+    },
+    {
+      "name": "Can cuoc cong dan",
+      "keywords": [
+        "cccd",
+        "can cuoc"
+      ],
+      "officialDomains": [
+        "cccd.gov.vn"
+      ]
     }
   ],
   "suspiciousTLDs": [
@@ -1123,11 +2528,23 @@
     "cyou",
     "click",
     "link",
-    "pw"
+    "pw",
+    "sbs",
+    "bond",
+    "quest",
+    "zip",
+    "mov",
+    "country",
+    "cam",
+    "lol",
+    "pics",
+    "hair",
+    "makeup",
+    "lat",
+    "mom"
   ],
   "blockedDomains": [],
   "malwareDomains": [],
-  "_dangerousDownloadExtensionsComment": "Theo yêu cầu người dùng: BỎ 'exe' và 'apk' khỏi danh sách cảnh báo - đây là định dạng cài đặt CHƯƠNG TRÌNH thông thường, người dùng còn phải tự thao tác thêm (double-click, cấp quyền UAC/cài đặt) mới chạy được, và là loại tải về HỢP LỆ/PHỔ BIẾN trên rất nhiều trang (app, game, trình phát video...) - cảnh báo mỗi lần tải loại này là dư thừa, gây phiền không cần thiết. Danh sách còn lại giữ nguyên: đây đều là dạng SCRIPT/THỰC THI mà 1 trang web THÔNG THƯỜNG hầu như không có lý do hợp lệ nào để bắt người dùng tải về (không ai vào xem phim/đọc báo mà cần tải 1 file .vbs/.ps1/.hta cả) - cảnh báo ở đây là cảnh báo THẬT, cần biết.",
   "dangerousDownloadExtensions": [
     "scr",
     "bat",
@@ -1159,7 +2576,6 @@
     "cpl",
     "ocx"
   ],
-  "_scamContentComment": "Dùng cho lớp phát hiện scam theo NỘI DUNG (không cần giả danh thương hiệu nào) - chỉ báo động khi trang VỪA có form xin OTP/mật khẩu VỪA chứa đủ số từ khoá lừa đảo tài chính dưới đây. Kết hợp với cơ chế bỏ qua officialDomains (kể cả subdomain) trong phishing-guard.js để không chặn nhầm trang ngân hàng thật.",
   "scamKeywords": [
     "lãi suất",
     "%/ngày",
@@ -1217,7 +2633,59 @@
     "urgent action required",
     "connect wallet",
     "claim airdrop",
-    "seed phrase"
+    "seed phrase",
+    "hoan tien ngay",
+    "rut von 1 cham",
+    "nang han muc the",
+    "phi kich hoat the",
+    "doi soat giao dich",
+    "giao dich bat thuong",
+    "khoa the tam thoi",
+    "xac minh sinh trac",
+    "cap nhat chip can cuoc",
+    "dong bo vneid",
+    "hoan thue gtgt",
+    "truy thu thue",
+    "phat nguoi online",
+    "nop phat giao thong online",
+    "tuyen CTV san",
+    "lam viec 30 phut/ngay",
+    "nap USDT",
+    "rut USDT",
+    "seed 12 tu",
+    "wire transfer now",
+    "gift card payment",
+    "pay with bitcoin",
+    "unlock your account",
+    "suspicious login attempt",
+    "confirm your identity now",
+    "update billing information",
+    "your package is held",
+    "customs fee required",
+    "crypto giveaway",
+    "send eth to receive",
+    "wallet drain",
+    "approve transaction",
+    "hoàn tiền ngay",
+    "rút vốn 1 chạm",
+    "nâng hạn mức thẻ",
+    "phí kích hoạt thẻ",
+    "đối soát giao dịch",
+    "giao dịch bất thường",
+    "khoá thẻ tạm thời",
+    "xác minh sinh trắc",
+    "cập nhật chip căn cước",
+    "đồng bộ vneid",
+    "hoàn thuế gtgt",
+    "truy thu thuế",
+    "phạt nguội online",
+    "nộp phạt giao thông online",
+    "tuyển CTV sàn",
+    "làm việc 30 phút/ngày",
+    "nạp USDT",
+    "rút USDT",
+    "seed 12 từ",
+    "ví nóng"
   ],
   "credentialFieldHints": [
     "otp",
@@ -1238,7 +2706,18 @@
     "seed phrase",
     "cccd",
     "căn cước",
-    "cmnd"
+    "cmnd",
+    "ma giao dich",
+    "transaction code",
+    "security pin",
+    "recovery phrase",
+    "mnemonic",
+    "so can cuoc",
+    "so cmnd",
+    "citizen id",
+    "mã giao dịch",
+    "số căn cước",
+    "số cmnd"
   ],
   "minScamKeywordHits": 2
 }
